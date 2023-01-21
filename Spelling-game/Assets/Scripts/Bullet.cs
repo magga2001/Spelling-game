@@ -35,8 +35,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-
-        Debug.Log(enemy);
         if(enemy != null && ShotByPlayer)
         {
             enemy.TakeDamage(damage);
@@ -48,7 +46,6 @@ public class Bullet : MonoBehaviour
         }
 
         Player player = collision.GetComponent<Player>();
-
         if(player != null && !ShotByPlayer)
         {
             player.TakeDamage(damage);
