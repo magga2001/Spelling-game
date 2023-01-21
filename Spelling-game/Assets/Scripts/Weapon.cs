@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private int damage;
     // Start is called before the first frame update
+
     void Start()
     {
         

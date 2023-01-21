@@ -6,11 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpSpeed;
-    [SerializeField] private float moveVertical;
+
     private float moveHorizontal;
-
-    [SerializeField] private bool isAttacking;
-
     private bool jump = false;
     private bool crouch = false;
 
