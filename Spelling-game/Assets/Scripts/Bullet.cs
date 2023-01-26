@@ -5,26 +5,35 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 20f;
-    [SerializeField]
-    private Rigidbody2D rb;
+    [SerializeField] private float speed = 20f;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float lifeDuration;
+    private float lifeTimer;
     private bool shotByPlayer;
-    [SerializeField]
     public bool ShotByPlayer { get { return shotByPlayer; } set { shotByPlayer = value; } }
 
     private int damage;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        lifeTimer = lifeDuration;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += transform.up * speed * Time.deltaTime;
+        decreaseLifeTime();
+    }
+
+    private void decreaseLifeTime()
+    {
+        lifeTimer -= Time.deltaTime;
+        if (lifeTimer <= 0f)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void DamageSetUp(int damage)
