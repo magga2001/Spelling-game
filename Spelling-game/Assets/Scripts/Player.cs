@@ -34,6 +34,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void IncreaseHealth(int health)
+    {
+        currentHealth += health;
+        healthBar.SetHealth(currentHealth);
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+        }
+    }
+
     public void Die()
     {
         if(life <= 0)
