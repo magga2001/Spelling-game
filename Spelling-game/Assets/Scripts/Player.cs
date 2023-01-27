@@ -6,11 +6,12 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private int maxHealth;
-    [SerializeField] private int life;
+    [SerializeField] private int lives;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Life life;
     private int currentHealth;
 
-    public int Life { get { return life; } set { life = value; } }
+    public int Lives { get { return lives; } set { lives = value; } }
 
     // Start is called before the first frame update
     void Start()
@@ -48,16 +49,20 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        if(life <= 0)
+        lives--;
+        if (lives <= 0)
         {
+            life.updateLife(lives);
+            Debug.Log("Gameover");
             //Set the game active false
             //Spawn death effect
         }
         else
         {
-            life--;
+            Debug.Log("DIED");
+            life.updateLife(lives);
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
-        }
+        }                                           
     }
 }
