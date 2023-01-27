@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         lives--;
+        currentHealth = 0;
         if (lives <= 0)
         {
             life.updateLife(lives);
