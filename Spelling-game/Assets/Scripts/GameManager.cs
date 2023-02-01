@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     private bool GameIsOver;
+    private bool spelling_mode;
 
     [SerializeField] private Player player;
 
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GameIsOver = false;
+        // Change this later when saving the current game mode
+        spelling_mode = false;
     }
 
     // Update is called once per frame
