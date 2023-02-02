@@ -2,23 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using Random = System.Random;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class FillInTheBlankGame : MonoBehaviour
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
+    [SerializeField] private TextMeshProUGUI word;
+    [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        //Temporary
+        if (Input.GetKey(KeyCode.T))
+        {
+            createBlankCharacter();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             checkAnswer();
         }
@@ -36,7 +45,10 @@ public class FillInTheBlankGame : MonoBehaviour
         if (answer == currentAnswer)
         {
             Debug.Log("Correct");
-        }else
+            vm.nextWord();
+            inputText.text = "";
+        }
+        else
         {
             Debug.Log("Incorrect");
         }
@@ -49,5 +61,6 @@ public class FillInTheBlankGame : MonoBehaviour
         Random rnd = new Random();
         int number = rnd.Next(0, correctWord.Length);
 
+        word.text = correctWord.Substring(0, number) + "_" + correctWord.Substring(number + 1);
     }
 }

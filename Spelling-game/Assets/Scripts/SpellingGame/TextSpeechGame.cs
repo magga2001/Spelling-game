@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TextSpeechGame : MonoBehaviour
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
+    [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
     // Start is called before the first frame update
@@ -26,7 +28,6 @@ public class TextSpeechGame : MonoBehaviour
     public void updateAnswer(string input)
     {
         currentAnswer = input;
-        Debug.Log(input);
 
     }
 
@@ -38,6 +39,7 @@ public class TextSpeechGame : MonoBehaviour
         {
             Debug.Log("Correct");
             vm.nextWord();
+            inputText.text = "";
         }
         else
         {
