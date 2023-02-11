@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Puzzle
   m_EditorClassIdentifier: 
   rows: 2
-  columns: 1
+  columns: 2
