@@ -10,13 +10,16 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BoardData : ScriptableObject
 {
-    [SerializeField] private int rows;
-    [SerializeField] private int columns;
+    private int rows;
+    private int columns;
 
     public int Rows { get { return rows; } set { rows = value; } }
     public int Columns { get { return columns; } set { columns = value; } }
 
-    [SerializeField] private string[,] board;
+    private string[,] board;
+
+    [SerializeField] private List<string> words;
+    public List<string> Words { get { return words; } set { words = value; } }
 
     public void CreateNewBoard()
     {

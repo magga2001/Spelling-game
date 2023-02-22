@@ -14,10 +14,26 @@ public class LetterBox : MonoBehaviour
 
     private Sprite wrong_alphabet;
 
+    private WordSearchGame wordSearchGame;
 
-    private string letter;  
+    private string letter;
+    private (int, int) position;
     public string Letter { get { return letter; } set { letter = value; } }
-   
+    public (int, int) Position { get { return position; } set { position = value; } }
+
+    private bool selected;
+
+    private bool disabled;
+
+    private void OnEnable()
+    {
+        selected = false;
+        disabled = false;
+
+       // Still have to assign 
+       // wordSearchGame = GameObject.Fin
+    }
+
     public void SetLetter(string letter)
     {
         this.letter = letter;
@@ -40,8 +56,29 @@ public class LetterBox : MonoBehaviour
         //this.GetComponent<SpriteRenderer>().sprite = currentSprite;
     }
 
+    public void SetPosition(int col, int row)
+    {
+        position = (col, row);
+    }
+
     public void UpdateCurrentSprite()
     {
         //TODO
+    }
+
+    private void OnMouseDown()
+    {
+
+        if (wordSearchGame.CheckIfMatchesRecentAlphabet(this.gameObject) && selected)
+        {
+            wordSearchGame.RemoveRecentAlphabet();  
+        }
+
+        if(!selected)
+        {
+            wordSearchGame.AddAlphabetToWordOrder(this.gameObject);
+        }
+
+        selected = !selected;
     }
 }

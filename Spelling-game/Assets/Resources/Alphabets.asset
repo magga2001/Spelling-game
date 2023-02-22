@@ -15,12 +15,36 @@ MonoBehaviour:
   default_alphabets:
   - alphabet: A
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: B
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: C
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: D
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   selected_alphabets:
   - alphabet: A
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: B
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: C
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: D
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   correct_alphabets:
   - alphabet: A
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: B
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: C
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: D
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   wrong_alphabets:
   - alphabet: A
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: B
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: C
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: D
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}

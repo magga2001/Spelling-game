@@ -37,6 +37,10 @@ public class BoardDataEditor : Editor
             SaveBoardButton();
         }
 
+        EditorGUILayout.LabelField("Word to be searched");
+
+        DrawDefaultInspector();
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(boardData);

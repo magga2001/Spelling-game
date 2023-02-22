@@ -38,7 +38,9 @@ public class LetterObjectPoolingManager : MonoBehaviour
         Sprite default_alphabet,
         Sprite selected_alphabet,
         Sprite correct_alphabet,
-        Sprite wrong_alphabet)
+        Sprite wrong_alphabet, 
+        int col, 
+        int row)
     {
         foreach (GameObject letter in letters)
         {
@@ -51,6 +53,7 @@ public class LetterObjectPoolingManager : MonoBehaviour
                     selected_alphabet,
                     correct_alphabet,
                     wrong_alphabet);
+                letter.GetComponent<LetterBox>().SetPosition(col, row);
                 return letter;
             }
         }
@@ -63,6 +66,7 @@ public class LetterObjectPoolingManager : MonoBehaviour
             selected_alphabet,
             correct_alphabet,
             wrong_alphabet);
+        prefabInstance.GetComponent<LetterBox>().SetPosition(col, row);
         letters.Add(prefabInstance);
         return prefabInstance;
     }
