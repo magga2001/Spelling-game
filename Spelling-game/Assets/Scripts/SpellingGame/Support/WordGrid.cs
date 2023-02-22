@@ -11,6 +11,7 @@ public class WordGrid : MonoBehaviour
     [SerializeField] private List<GameObject> letters;
     [SerializeField] private List<string> words;
     [SerializeField] private Camera cam;
+    [SerializeField] private float margin;
 
     private string[,] board;
     private int rows;
@@ -73,24 +74,24 @@ public class WordGrid : MonoBehaviour
     public void PlaceGridOnScreen()
     {
         Vector3 centerPos = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f));
-        float offset = letters[0].transform.localScale.x + 0.25f;
+        float offset = letters[0].transform.localScale.x + margin;
         float localRowOffset = 0f;
         float localColOffset = 0f;
-        int row = 0;
+        int col = 0;
 
         foreach (var letter in letters)
         {
             letter.transform.position = centerPos + new Vector3(-offset * rows/2 + localRowOffset, offset * columns/2 - localColOffset, 0f);
-            row++;
-            if(row >= rows)
+            col++;
+            if (col >= columns)
             {
-                row = 0;
-                localRowOffset = 0f;
-                localColOffset += offset;
+                col = 0;
+                localColOffset = 0f;
+                localRowOffset += offset;
             }
             else
             {
-                localRowOffset += offset;
+                localColOffset += offset;
             }
         }
     }

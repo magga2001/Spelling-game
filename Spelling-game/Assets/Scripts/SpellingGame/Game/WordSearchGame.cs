@@ -1,28 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WordSearchGame : MonoBehaviour
 {
     private Stack<GameObject> currentWordOrder = new Stack<GameObject>();
 
     [SerializeField] private WordGrid currentWordGrid;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Camera cam;
+    [SerializeField] LineRenderer lineRenderer;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hit.collider != null)
+            {
+                if (hit.collider.CompareTag("LetterBox"))
+                {
+                    Main(hit.transform.gameObject, hit.transform.GetComponent<LetterBox>());
+                }
+            }
+        }
+    }
+
+    private void Main(GameObject letter, LetterBox letterBox)
+    {
+        if (CheckIfMatchesRecentAlphabet(letter) && letterBox.Selected)
+        {
+            RemoveRecentAlphabet();
+        }
+
+        if (!letterBox.Selected)
+        {
+           AddAlphabetToWordOrder(letter);
+        }
+
+        letterBox.Selected = !letterBox.Selected;
+
+        ConstructLine();
     }
 
     public void AddAlphabetToWordOrder(GameObject alphabet)
     {
-        if (GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
+        if(currentWordOrder.Count == 0)
+        {
+            currentWordOrder.Push(alphabet);
+        }
+        else if (GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
         {
             currentWordOrder.Push(alphabet);
         }
@@ -42,7 +72,12 @@ public class WordSearchGame : MonoBehaviour
 
     public bool CheckIfMatchesRecentAlphabet(GameObject alphabet)
     {
-        return GameObject.ReferenceEquals(currentWordOrder.Peek(), alphabet);
+        if (currentWordOrder.Count == 0)
+        {
+            return false;
+        }
+
+        return ReferenceEquals(currentWordOrder.Peek(), alphabet);
     }
 
     public void ResetWordOrder()
@@ -72,5 +107,15 @@ public class WordSearchGame : MonoBehaviour
     private bool IsLegal((int col, int row) selection)
     {
         return selection.col >= 0 && selection.row >= 0 && selection.col <= currentWordGrid.Columns && selection.row <= currentWordGrid.Rows;
+    }
+
+    private void ConstructLine()
+    {
+        List<GameObject> currentWordOrderList = currentWordOrder.ToList();
+
+        lineRenderer.SetPosition(0, currentWordOrderList[0].transform.position);
+        lineRenderer.startWidth = 0.15f;
+        lineRenderer.endWidth = 0.15f;
+        lineRenderer.SetPosition(1, currentWordOrderList[currentWordOrderList.Count - 1].transform.position);
     }
 }

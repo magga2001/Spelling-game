@@ -21,7 +21,8 @@ public class LetterBox : MonoBehaviour
     public string Letter { get { return letter; } set { letter = value; } }
     public (int, int) Position { get { return position; } set { position = value; } }
 
-    private bool selected;
+    public bool selected;
+    public bool Selected { get { return selected; } set { selected = value; } }
 
     private bool disabled;
 
@@ -64,21 +65,5 @@ public class LetterBox : MonoBehaviour
     public void UpdateCurrentSprite()
     {
         //TODO
-    }
-
-    private void OnMouseDown()
-    {
-
-        if (wordSearchGame.CheckIfMatchesRecentAlphabet(this.gameObject) && selected)
-        {
-            wordSearchGame.RemoveRecentAlphabet();  
-        }
-
-        if(!selected)
-        {
-            wordSearchGame.AddAlphabetToWordOrder(this.gameObject);
-        }
-
-        selected = !selected;
     }
 }
