@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ public class WordSearchGame : MonoBehaviour
     [SerializeField] private WordGrid currentWordGrid;
     [SerializeField] private Camera cam;
     [SerializeField] LineRenderer lineRenderer;
+    private List<string> wordsFounded = new List<string>();
 
     // Update is called once per frame
     void Update()
@@ -34,25 +36,31 @@ public class WordSearchGame : MonoBehaviour
         if (CheckIfMatchesRecentAlphabet(letter) && letterBox.Selected)
         {
             RemoveRecentAlphabet();
+            letterBox.Selected = !letterBox.Selected;
         }
 
-        if (!letterBox.Selected)
+        else if (!letterBox.Selected)
         {
            AddAlphabetToWordOrder(letter);
+           letterBox.Selected = !letterBox.Selected;
         }
-
-        letterBox.Selected = !letterBox.Selected;
 
         ConstructLine();
     }
 
     public void AddAlphabetToWordOrder(GameObject alphabet)
     {
-        if(currentWordOrder.Count == 0)
+        int wordOrderLength = currentWordOrder.Count;
+
+        if (wordOrderLength == 0)
         {
             currentWordOrder.Push(alphabet);
         }
-        else if (GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
+        else if (wordOrderLength == 1 && GetFirstLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
+        {
+            currentWordOrder.Push(alphabet);
+        }
+        else if (wordOrderLength >= 2 && GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position) == alphabet.GetComponent<LetterBox>().Position)
         {
             currentWordOrder.Push(alphabet);
         }
@@ -60,6 +68,8 @@ public class WordSearchGame : MonoBehaviour
         {
             Debug.Log("No legal moves");
         }
+
+        MatchWord();
     }
 
     public void RemoveRecentAlphabet()
@@ -85,7 +95,7 @@ public class WordSearchGame : MonoBehaviour
         currentWordOrder.Clear();
     }
 
-    public List<(int,int)> GetLegalSelection((int col, int row) position)
+    public List<(int,int)> GetFirstLegalSelection((int col, int row) position)
     {
         List<(int,int)> selections = new List<(int,int)>();
 
@@ -104,6 +114,56 @@ public class WordSearchGame : MonoBehaviour
         return selections.FindAll(e => IsLegal(e));
     }
 
+    public (int, int) GetLegalSelection((int col, int row) position)
+    {
+        int col = position.col;
+        int row = position.row;
+
+        List<GameObject> currentWordOrderList = currentWordOrder.ToList();
+        currentWordOrderList.Reverse();
+
+        var lastItem = currentWordOrderList[currentWordOrderList.Count - 1].GetComponent<LetterBox>().Position;
+        var preLastitem = currentWordOrderList[currentWordOrderList.Count - 2].GetComponent<LetterBox>().Position;
+
+        int magnitude_col = lastItem.col - preLastitem.col;
+        int magnitude_row = lastItem.row - preLastitem.row;
+
+        if (magnitude_col < 0 && magnitude_row < 0 && IsLegal((col - 1, row - 1)))
+        {
+           return (col - 1, row - 1);
+        }
+        if (magnitude_col > 0 && magnitude_row > 0 && IsLegal((col + 1, row + 1)))
+        {
+            return (col + 1, row + 1);
+        }
+        if (magnitude_col == 0 && magnitude_row < 0 && IsLegal((col, row - 1)))
+        {
+            return (col, row - 1);
+        }
+        if (magnitude_col < 0 && magnitude_row == 0 && IsLegal((col - 1, row)))
+        {
+            return (col - 1, row);
+        }
+        if (magnitude_col == 0 && magnitude_row > 0 && IsLegal((col, row + 1)))
+        {
+            return (col, row + 1);
+        }
+        if (magnitude_col > 0 && magnitude_row == 0 && IsLegal((col + 1, row)))
+        {
+            return (col + 1, row);
+        }
+        if (magnitude_col > 0 && magnitude_row < 0 && IsLegal((col + 1, row - 1)))
+        {
+            return (col + 1, row - 1);
+        }
+        if (magnitude_col < 0 && magnitude_row > 0 && IsLegal((col - 1, row + 1)))
+        {
+            return (col - 1, row + 1);
+        }
+
+        return (col, row);
+    }
+
     private bool IsLegal((int col, int row) selection)
     {
         return selection.col >= 0 && selection.row >= 0 && selection.col <= currentWordGrid.Columns && selection.row <= currentWordGrid.Rows;
@@ -111,11 +171,47 @@ public class WordSearchGame : MonoBehaviour
 
     private void ConstructLine()
     {
-        List<GameObject> currentWordOrderList = currentWordOrder.ToList();
+        if(currentWordOrder.Count > 0)
+        {
+            List<GameObject> currentWordOrderList = currentWordOrder.ToList();
+            currentWordOrderList.Reverse();
 
-        lineRenderer.SetPosition(0, currentWordOrderList[0].transform.position);
-        lineRenderer.startWidth = 0.15f;
-        lineRenderer.endWidth = 0.15f;
-        lineRenderer.SetPosition(1, currentWordOrderList[currentWordOrderList.Count - 1].transform.position);
+            lineRenderer.SetPosition(0, currentWordOrderList[0].transform.position);
+            lineRenderer.startWidth = 0.15f;
+            lineRenderer.endWidth = 0.15f;
+            lineRenderer.SetPosition(1, currentWordOrderList[currentWordOrderList.Count - 1].transform.position);
+        }
+        else
+        {
+            lineRenderer.SetPosition(0, Vector3.zero);
+            lineRenderer.SetPosition(1, Vector3.zero);
+        }
     }
+
+    private void MatchWord()
+    {
+        if (currentWordOrder.Count > 0)
+        {
+            List<GameObject> currentWordOrderList = currentWordOrder.ToList();
+            currentWordOrderList.Reverse();
+
+            string currentWord = "";
+
+            foreach (var word in currentWordOrderList)
+            {
+                currentWord += word.GetComponent<LetterBox>().Letter;
+            }
+
+            if (currentWordGrid.Words.Contains(currentWord) && !wordsFounded.Contains(currentWord))
+            {
+                wordsFounded.Add(currentWord);
+                var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
+                word.GetComponent<WordBox>().WordFounded();
+                ResetWordOrder();
+                ConstructLine();
+            }
+        }
+    }
+
+    
 }

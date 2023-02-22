@@ -16,10 +16,14 @@ public class WordGrid : MonoBehaviour
     private string[,] board;
     private int rows;
     private int columns;
+    [SerializeField] private List<GameObject> wordBoxes;
 
     public string[,] Board { get { return board; } set { board = value; } }
     public int Rows { get { return rows; } set { rows = value; } }
     public int Columns { get { return columns; } set { columns = value; } }
+
+    public List<string> Words { get { return words; } set { words = value; } }
+    public List<GameObject> WordBoxes { get { return wordBoxes; } set { wordBoxes = value; } }
 
     void Awake()
     {
@@ -68,10 +72,20 @@ public class WordGrid : MonoBehaviour
             }
         }
 
+        foreach (var word in words)
+        {
+            wordBoxes.Add(WordObjectPoolingManager.Instance.GetWord(word));
+        }
+
         PlaceGridOnScreen();
+
+        if(wordBoxes.Count > 0)
+        {
+            PlaceWordBoxOnScreen();
+        }
     }
 
-    public void PlaceGridOnScreen()
+    private void PlaceGridOnScreen()
     {
         Vector3 centerPos = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 10f));
         float offset = letters[0].transform.localScale.x + margin;
@@ -92,6 +106,33 @@ public class WordGrid : MonoBehaviour
             else
             {
                 localColOffset += offset;
+            }
+        }
+    }
+
+    private void PlaceWordBoxOnScreen()
+    {
+        Vector3 sidePos = cam.ViewportToWorldPoint(new Vector3(0.8f, 0.3f, 10f));
+        float offset = wordBoxes[0].transform.localScale.x + 0.25f;
+
+        int maxPerRow = 3;
+        float localRowOffset = 0f;
+        float localColOffset = 0f;
+        int row = 0;
+
+        foreach(var word in wordBoxes)
+        {
+            word.transform.position = sidePos + new Vector3(-offset * rows / 2 + localRowOffset, offset * columns / 2 - localColOffset, 0f);
+            row++;
+            if (row >= maxPerRow)
+            {
+                row = 0;
+                localRowOffset = 0f;
+                localColOffset += offset;
+            }
+            else
+            {
+                localRowOffset += offset;
             }
         }
     }

@@ -19,7 +19,7 @@ public class LetterBox : MonoBehaviour
     private string letter;
     private (int, int) position;
     public string Letter { get { return letter; } set { letter = value; } }
-    public (int, int) Position { get { return position; } set { position = value; } }
+    public (int col, int row) Position { get { return position; } set { position = value; } }
 
     public bool selected;
     public bool Selected { get { return selected; } set { selected = value; } }

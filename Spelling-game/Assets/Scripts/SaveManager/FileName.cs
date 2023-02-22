@@ -6,4 +6,5 @@ static class FileName
 {
     public const string player = "/player.exe";
     public const string puzzle = "/puzzle.exe";
+    public const string randomPuzzle = "/randomPuzzle.exe";
 }
