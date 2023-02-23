@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public enum Difficulties { EASY, MEDIUM, HARD };
+
+    private int XP_per_difficulties;
+
     private bool GameIsOver;
     private bool spelling_mode;
 
