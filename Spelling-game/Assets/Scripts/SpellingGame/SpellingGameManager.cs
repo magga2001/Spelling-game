@@ -21,29 +21,19 @@ public class SpellingGameManager : MonoBehaviour
     [SerializeField] private SpellingGame[] games;
 
     private int currentGame = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        GenerateRandomSpellingGame();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Temporary
-        if (Input.GetKey(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.K))
         {
             GenerateRandomSpellingGame();
         }
     }
-
     public void GenerateRandomSpellingGame()
     {
         games[currentGame].Canvas.SetActive(false);
         games[currentGame].Game.SetActive(false);
 
-        Random rnd = new Random();
+        Random rnd = new();
         int number = rnd.Next(0, games.Length);
         currentGame = number;
 
@@ -52,5 +42,11 @@ public class SpellingGameManager : MonoBehaviour
 
         Debug.Log(games[currentGame].Name);
 
+    }
+
+    public void ResetScreen()
+    {
+        games[currentGame].Canvas.SetActive(false);
+        games[currentGame].Game.SetActive(false);
     }
 }

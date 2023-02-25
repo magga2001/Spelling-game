@@ -69,7 +69,7 @@ public class RandomWordGrid : MonoBehaviour
         {
             letter.transform.position = centerPos + new Vector3(-offset * rows / 2 + localRowOffset, offset * columns / 2 - localColOffset, 0f);
             col++;
-            if (col >= columns)
+            if (col >= Rows)
             {
                 col = 0;
                 localColOffset = 0f;

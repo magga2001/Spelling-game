@@ -40,13 +40,15 @@ public class FillInTheBlankGame : MonoBehaviour
 
     public void checkAnswer()
     {
-        string answer = vm.getCurrentWord();
+        string answer = vm.GetCurrentWord();
 
         if (answer == currentAnswer)
         {
             Debug.Log("Correct");
-            vm.nextWord();
+            vm.NextWord();
             inputText.text = "";
+            //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
+            CombatSystem.Instance.IncreaseSessionXP(10);
         }
         else
         {
@@ -56,7 +58,7 @@ public class FillInTheBlankGame : MonoBehaviour
 
     private void createBlankCharacter()
     {
-        string correctWord = vm.getCurrentWord();
+        string correctWord = vm.GetCurrentWord();
 
         Random rnd = new Random();
         int number = rnd.Next(0, correctWord.Length);

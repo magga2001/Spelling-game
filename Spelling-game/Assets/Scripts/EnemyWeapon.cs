@@ -11,15 +11,19 @@ public class EnemyWeapon : MonoBehaviour
 
     [SerializeField] private Transform[] firePoints;
 
-    public float fireDelay = 2f;
-    public float initialDelay = 5f;
-    public bool canShoot = true;
+    [SerializeField] private float fireDelay;
+    [SerializeField] private float initialDelay;
+    [SerializeField] private bool canShoot;
+
+    private bool activate;
 
     private bool coroutineAllowed;
     // Start is called before the first frame update
 
     void Start()
     {
+        activate = false;
+
         try
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -33,9 +37,16 @@ public class EnemyWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(activate)
+        {
+            initialDelay -= Time.deltaTime;
+            Shoot();
+        }
+    }
 
-        initialDelay -= Time.deltaTime;
-        Shoot();
+    public void StartAttacking()
+    {
+        activate = true;
     }
 
     private void Shoot()

@@ -35,7 +35,7 @@ public class VocabularyManager : MonoBehaviour
         
     }
 
-    public void nextWord()
+    public void NextWord()
     {
         currentWordIndex++;
         if (currentWordIndex < vocabularyLevels[currentLevel - 1].Words.Length)
@@ -50,7 +50,7 @@ public class VocabularyManager : MonoBehaviour
         }
     }
 
-    public string getCurrentWord()
+    public string GetCurrentWord()
     {
         return vocabularyLevels[currentLevel - 1].Words[currentWordIndex];
     }

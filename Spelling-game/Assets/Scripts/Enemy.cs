@@ -7,7 +7,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private int maxHealth = 100;
 
-    [SerializeField] private int damage;
+    [SerializeField] private EnemyWeapon weapon;
+
+    public EnemyWeapon Weapon { get { return weapon; } set { weapon = value; } }
 
     private int currentHealth;
 
@@ -15,12 +17,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void TakeDamage(int damage)
@@ -37,7 +33,13 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy has died");
 
+        gameObject.SetActive(false);
+
+        //CombatSystem.Instance.EndCombat();
+
         //Spawn dying effect
         //Audio dying effect
+
+        //Maybe spawn a coin?
     }
 }

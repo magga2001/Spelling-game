@@ -24,5 +24,12 @@ public class Weapon : MonoBehaviour
             bullet.transform.right = -firePoint.transform.up;
         }
     }
+
+    public void Fire()
+    {
+        GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
+        bullet.transform.position = firePoint.transform.position;
+        bullet.transform.right = -firePoint.transform.up;
+    }
 }
 

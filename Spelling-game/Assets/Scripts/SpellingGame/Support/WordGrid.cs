@@ -25,11 +25,6 @@ public class WordGrid : MonoBehaviour
     public List<string> Words { get { return words; } set { words = value; } }
     public List<GameObject> WordBoxes { get { return wordBoxes; } set { wordBoxes = value; } }
 
-    void Awake()
-    {
-        
-    }
-
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
@@ -97,7 +92,7 @@ public class WordGrid : MonoBehaviour
         {
             letter.transform.position = centerPos + new Vector3(-offset * rows/2 + localRowOffset, offset * columns/2 - localColOffset, 0f);
             col++;
-            if (col >= columns)
+            if (col >= Rows)
             {
                 col = 0;
                 localColOffset = 0f;

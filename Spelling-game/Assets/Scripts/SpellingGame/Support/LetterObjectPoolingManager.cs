@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AlphabetData;
 
 public class LetterObjectPoolingManager : MonoBehaviour
 {
@@ -53,6 +54,7 @@ public class LetterObjectPoolingManager : MonoBehaviour
                     correct_alphabet,
                     wrong_alphabet);
                 letter.GetComponent<LetterBox>().SetPosition(col, row);
+                letter.GetComponent<LetterBox>().Selected = false;
                 return letter;
             }
         }
@@ -66,6 +68,7 @@ public class LetterObjectPoolingManager : MonoBehaviour
             correct_alphabet,
             wrong_alphabet);
         prefabInstance.GetComponent<LetterBox>().SetPosition(col, row);
+        prefabInstance.GetComponent<LetterBox>().Selected = false;
         letters.Add(prefabInstance);
         return prefabInstance;
     }

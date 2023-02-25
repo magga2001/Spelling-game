@@ -102,7 +102,7 @@ MonoBehaviour:
   firePoints:
   - {fileID: 1108398251132448673}
   fireDelay: 2
-  initialDelay: 5
+  initialDelay: 10
   canShoot: 1
 --- !u!1 &6060008464930862432
 GameObject:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  damage: 20
+  weapon: {fileID: 1066788279578701658}
 --- !u!1 &6114143718665463554
 GameObject:
   m_ObjectHideFlags: 0

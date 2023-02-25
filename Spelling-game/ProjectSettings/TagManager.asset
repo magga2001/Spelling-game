@@ -39,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3719872887
+    locked: 0
+  - name: Wall
+    uniqueID: 530469399
+    locked: 0
+  - name: BackgroundSkyProp
+    uniqueID: 2912482859
+    locked: 0
+  - name: BackgroundProp
+    uniqueID: 3440911423
+    locked: 0
+  - name: Ground
+    uniqueID: 721831179
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

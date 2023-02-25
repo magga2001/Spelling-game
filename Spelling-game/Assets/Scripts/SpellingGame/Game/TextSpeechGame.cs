@@ -21,25 +21,27 @@ public class TextSpeechGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            checkAnswer();
+            CheckAnswer();
         }
     }
 
-    public void updateAnswer(string input)
+    public void UpdateAnswer(string input)
     {
         currentAnswer = input;
 
     }
 
-    public void checkAnswer()
+    public void CheckAnswer()
     {
-        string answer = vm.getCurrentWord();
+        string answer = vm.GetCurrentWord();
 
         if (answer == currentAnswer)
         {
             Debug.Log("Correct");
-            vm.nextWord();
+            vm.NextWord();
             inputText.text = "";
+            //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
+            CombatSystem.Instance.IncreaseSessionXP(10);
         }
         else
         {

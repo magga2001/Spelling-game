@@ -25,6 +25,7 @@ public class WordSearchGame : MonoBehaviour
             {
                 if (hit.collider.CompareTag("LetterBox"))
                 {
+                    Debug.Log(hit.transform.GetComponent<LetterBox>().Letter);
                     Main(hit.transform.gameObject, hit.transform.GetComponent<LetterBox>());
                 }
             }
@@ -41,28 +42,30 @@ public class WordSearchGame : MonoBehaviour
 
         else if (!letterBox.Selected)
         {
-           AddAlphabetToWordOrder(letter);
-           letterBox.Selected = !letterBox.Selected;
+           AddAlphabetToWordOrder(letter, letterBox);
         }
 
         ConstructLine();
     }
 
-    public void AddAlphabetToWordOrder(GameObject alphabet)
+    public void AddAlphabetToWordOrder(GameObject alphabet, LetterBox letterBox)
     {
         int wordOrderLength = currentWordOrder.Count;
 
         if (wordOrderLength == 0)
         {
             currentWordOrder.Push(alphabet);
+            letterBox.Selected = !letterBox.Selected;
         }
         else if (wordOrderLength == 1 && GetFirstLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
         {
             currentWordOrder.Push(alphabet);
+            letterBox.Selected = !letterBox.Selected;
         }
         else if (wordOrderLength >= 2 && GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position) == alphabet.GetComponent<LetterBox>().Position)
         {
             currentWordOrder.Push(alphabet);
+            letterBox.Selected = !letterBox.Selected;
         }
         else
         {
@@ -207,6 +210,8 @@ public class WordSearchGame : MonoBehaviour
                 wordsFounded.Add(currentWord);
                 var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
                 word.GetComponent<WordBox>().WordFounded();
+                //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
+                CombatSystem.Instance.IncreaseSessionXP(10);
                 ResetWordOrder();
                 ConstructLine();
             }
