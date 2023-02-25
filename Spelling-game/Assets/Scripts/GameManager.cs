@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
 
-    private bool GameIsOver;
+    private bool gameIsOver;
     private bool combat;
     private bool travelling;
     private bool gameStart;
+
+    public bool GameIsOver { get { return gameIsOver; } set { gameIsOver = value; } }
 
     [System.Serializable]
     public class Combat
@@ -42,7 +44,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameIsOver = false;
+        gameIsOver = false;
         combat = false;
         travelling = false;
     }
