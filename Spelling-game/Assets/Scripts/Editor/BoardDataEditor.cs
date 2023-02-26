@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Random = System.Random;
 
 [CustomEditor(typeof(BoardData), false), CanEditMultipleObjects]
 public class BoardDataEditor : Editor
@@ -24,7 +25,7 @@ public class BoardDataEditor : Editor
         EditorGUILayout.Space();
 
         LoadSavedBoardButton();
-        DeleteSavedBoard();
+        DeleteSavedBoardButton();
 
         if (boardData.GetBoardData() != null && boardData.Rows > 0 && boardData.Columns > 0)
         {
@@ -36,6 +37,8 @@ public class BoardDataEditor : Editor
             ResetBoardButton();
             SaveBoardButton();
         }
+
+        AutoFillButton();
 
         EditorGUILayout.LabelField("Word to be searched");
 
@@ -124,15 +127,51 @@ public class BoardDataEditor : Editor
         if (GUILayout.Button("Save Board"))
         {
             boardData.SaveBoard();
+            StandardiseBoard();
         }
     }
 
-    private void DeleteSavedBoard()
+    private void DeleteSavedBoardButton()
     {
         if (GUILayout.Button("Delete Saved Board"))
         {
             boardData.ClearBoard();
             boardData.DeleteSavedBoard();   
+        }
+    }
+
+    private void AutoFillButton()
+    {
+        string alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        if (GUILayout.Button("Auto-fill board"))
+        {
+            for (int i = 0; i < boardData.Columns; i++)
+            {
+                for (int j = 0; j < boardData.Rows; j++)
+                {
+                    if (boardData.GetBoardData()[i,j] == "")
+                    {
+                        Random rnd = new();
+                        int index = rnd.Next(0, alphabets.Length);
+                        boardData.GetBoardData()[i, j] = alphabets[index].ToString();
+                    }
+                }
+            }
+        }
+    }
+
+    private void StandardiseBoard()
+    {
+        for (int i = 0; i < boardData.Columns; i++)
+        {
+            for (int j = 0; j < boardData.Rows; j++)
+            {
+                if (boardData.GetBoardData()[i, j] != "")
+                {
+                    boardData.GetBoardData()[i, j] = boardData.GetBoardData()[i, j][0].ToString().ToUpper();
+                }
+            }
         }
     }
 }

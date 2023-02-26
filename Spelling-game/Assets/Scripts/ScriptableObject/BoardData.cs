@@ -61,6 +61,7 @@ public class BoardData : ScriptableObject
     public void ClearBoard()
     {
         Array.Clear(board, 0, board.Length);
+        CreateNewBoard();
     }
 
     public void SaveBoard()
