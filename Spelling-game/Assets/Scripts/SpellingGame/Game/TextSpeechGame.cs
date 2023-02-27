@@ -41,11 +41,16 @@ public class TextSpeechGame : MonoBehaviour
             vm.NextWord();
             inputText.text = "";
             //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-            CombatSystem.Instance.IncreaseSessionXP(10);
+            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer));
         }
         else
         {
             Debug.Log("Incorrect");
         }
+    }
+
+    private int CalculateReward(string word)
+    {
+        return word.Length * 100;
     }
 }

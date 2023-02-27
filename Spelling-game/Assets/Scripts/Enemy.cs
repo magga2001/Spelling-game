@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private EnemyWeapon weapon;
 
+    [SerializeField] private int reward;
+
     public EnemyWeapon Weapon { get { return weapon; } set { weapon = value; } }
 
     private int currentHealth;
@@ -34,6 +36,8 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy has died");
 
         gameObject.SetActive(false);
+
+        ScoreSystem.Instance.IncreaseScore(reward);
 
         //CombatSystem.Instance.EndCombat();
 

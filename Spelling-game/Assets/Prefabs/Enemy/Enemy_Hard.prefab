@@ -253,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   weapon: {fileID: 1066788279578701658}
+  reward: 300
 --- !u!1 &6114143718665463554
 GameObject:
   m_ObjectHideFlags: 0

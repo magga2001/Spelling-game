@@ -211,12 +211,17 @@ public class WordSearchGame : MonoBehaviour
                 var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
                 word.GetComponent<WordBox>().WordFounded();
                 //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-                CombatSystem.Instance.IncreaseSessionXP(10);
+                ScoreSystem.Instance.IncreaseScore(CalculateReward(currentWord));
                 ResetWordOrder();
                 ConstructLine();
             }
         }
     }
 
-    
+    private int CalculateReward(string word)
+    {
+        return word.Length * 100;
+    }
+
+
 }

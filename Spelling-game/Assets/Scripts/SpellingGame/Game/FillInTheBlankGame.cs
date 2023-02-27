@@ -43,7 +43,7 @@ public class FillInTheBlankGame : MonoBehaviour
             vm.NextWord();
             inputText.text = "";
             //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-            CombatSystem.Instance.IncreaseSessionXP(10);
+            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer));
         }
         else
         {
@@ -60,4 +60,11 @@ public class FillInTheBlankGame : MonoBehaviour
 
         word.text = correctWord.Substring(0, number) + "_" + correctWord.Substring(number + 1);
     }
+
+    private int CalculateReward(string word)
+    {
+        return word.Length * 100;
+    }
+
+
 }

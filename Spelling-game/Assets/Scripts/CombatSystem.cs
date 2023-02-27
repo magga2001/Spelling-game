@@ -2,35 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.XPath;
 using UnityEngine;
+using TMPro;
 
 public class CombatSystem : MonoBehaviour
 {
     private static CombatSystem instance;
     public static CombatSystem Instance { get { return instance; } }
 
-    [SerializeField] private Weapon playerWeapon;
-
     [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
 
-    private int sessionXP;
-    private float sessionTime;
     private GameObject currentEnemy;
 
     private void Awake()
     {
-        instance = this;    
+        instance = this;
     }
 
     public void SetUpCombat(Transform enemySpawnLocation)
     {
-        sessionXP = 0;
         currentEnemy = ObjectPoolingManager.Instance.GetEnemy(spellingDifficultiesManager.Difficulties, enemySpawnLocation);
         currentEnemy.GetComponent<Enemy>().Weapon.StartAttacking();
-    }
-
-    private void Update()
-    {
-        sessionTime += Time.deltaTime;
     }
 
     public bool CheckIsCombatSession()
@@ -56,18 +47,5 @@ public class CombatSystem : MonoBehaviour
     public void EndCombat()
     {
         GameManager.Instance.ContinueToNextOpponent();
-    }
-
-    public void IncreaseSessionXP(int newXP)
-    {
-        playerWeapon.Fire();
-        sessionXP += newXP;
-    }
-
-    public int GetTotalXP()
-    {
-        sessionXP -= (int) sessionTime;
-
-        return sessionXP;
     }
 }
