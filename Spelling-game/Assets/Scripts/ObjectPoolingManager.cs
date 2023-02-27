@@ -8,14 +8,20 @@ public class ObjectPoolingManager : MonoBehaviour
     public static ObjectPoolingManager Instance { get { return instance; } }
 
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject easyEnemyPrefab;
+    [SerializeField] private GameObject mediumEnemyPrefab;
+    [SerializeField] private GameObject hardEnemyPrefab;
 
     [SerializeField] private int bulletAmount = 10;
-    [SerializeField] private int enemyAmount = 10;
+    [SerializeField] private int easyEnemyAmount = 1;
+    [SerializeField] private int mediumEnemyAmount = 1;
+    [SerializeField] private int hardEnemyAmount = 1;
 
 
     private List<GameObject> bullets;
-    private List<GameObject> enemies;
+    private List<GameObject> easyEnemies;
+    private List<GameObject> mediumEnemies;
+    private List<GameObject> hardEnemies;
 
 
     void Awake()
@@ -35,15 +41,37 @@ public class ObjectPoolingManager : MonoBehaviour
         }
 
         //Preload enemies
-        enemies = new List<GameObject>(enemyAmount);
-        for (int i = 0; i < enemyAmount; i++)
+        easyEnemies = new List<GameObject>(easyEnemyAmount);
+        for (int i = 0; i < easyEnemyAmount; i++)
         {
-            GameObject prefabInstance = Instantiate(enemyPrefab);
+            GameObject prefabInstance = Instantiate(easyEnemyPrefab);
             //So the prefabInstance will be under this ObjectPooling Manager for organisation
             prefabInstance.transform.SetParent(transform);
             prefabInstance.SetActive(false);
 
-            enemies.Add(prefabInstance);
+            easyEnemies.Add(prefabInstance);
+        }
+
+        mediumEnemies = new List<GameObject>(mediumEnemyAmount);
+        for (int i = 0; i < mediumEnemyAmount; i++)
+        {
+            GameObject prefabInstance = Instantiate(mediumEnemyPrefab);
+            //So the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.SetActive(false);
+
+            mediumEnemies.Add(prefabInstance);
+        }
+
+        hardEnemies = new List<GameObject>(hardEnemyAmount);
+        for (int i = 0; i < hardEnemyAmount; i++)
+        {
+            GameObject prefabInstance = Instantiate(hardEnemyPrefab);
+            //So the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.SetActive(false);
+
+            hardEnemies.Add(prefabInstance);
         }
     }
 
@@ -68,32 +96,63 @@ public class ObjectPoolingManager : MonoBehaviour
         return prefabInstance;
     }
 
-    public GameObject GetEnemy()
+    public GameObject GetEnemy(Difficulties difficulties, Transform enemySpawnLocation)
     {
-        foreach (GameObject enemy in enemies)
+
+        if(difficulties == Difficulties.EASY)
         {
-            if (!enemy.activeInHierarchy)
+            foreach (GameObject enemy in easyEnemies)
             {
-                enemy.SetActive(true);
-                return enemy;
+                if (!enemy.activeInHierarchy)
+                {
+                    enemy.SetActive(true);
+                    enemy.transform.position = enemySpawnLocation.position;
+                    Debug.Log("bruh");
+                    return enemy;
+                }
             }
+            GameObject prefabInstance = Instantiate(easyEnemyPrefab);
+            //so the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.transform.position = enemySpawnLocation.position;
+            easyEnemies.Add(prefabInstance);
+            return prefabInstance;
         }
-        GameObject prefabInstance = Instantiate(enemyPrefab);
-        //so the prefabInstance will be under this ObjectPooling Manager for organisation
-        prefabInstance.transform.SetParent(transform);
-        enemies.Add(prefabInstance);
-        return prefabInstance;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else if (difficulties == Difficulties.MEDIUM)
+        {
+            foreach (GameObject enemy in mediumEnemies)
+            {
+                if (!enemy.activeInHierarchy)
+                {
+                    enemy.SetActive(true);
+                    enemy.transform.position = enemySpawnLocation.position;
+                    return enemy;
+                }
+            }
+            GameObject prefabInstance = Instantiate(mediumEnemyPrefab);
+            //so the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.transform.position = enemySpawnLocation.position;
+            mediumEnemies.Add(prefabInstance);
+            return prefabInstance;
+        }
+        else
+        {
+            foreach (GameObject enemy in hardEnemies)
+            {
+                if (!enemy.activeInHierarchy)
+                {
+                    enemy.SetActive(true);
+                    enemy.transform.position = enemySpawnLocation.position;
+                    return enemy;
+                }
+            }
+            GameObject prefabInstance = Instantiate(hardEnemyPrefab);
+            //so the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.transform.position = enemySpawnLocation.position;
+            hardEnemies.Add(prefabInstance);
+            return prefabInstance;
+        }
     }
 }

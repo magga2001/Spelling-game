@@ -24,7 +24,7 @@ public class VocabularyLibrary : MonoBehaviour
 {
     [SerializeField] private List<TextAsset> vocabulariesJson;
     private List<VocabularyList> vocabularyCategories = new List<VocabularyList>();
-    void Start()
+    void Awake()
     {
         foreach (var vocabularyJson in vocabulariesJson)
         {
@@ -36,18 +36,33 @@ public class VocabularyLibrary : MonoBehaviour
 
 
         //For debugging purpose
-        foreach (var vocabularyCategory in vocabularyCategories)
-        {
-            Debug.Log("Difficulty: " + vocabularyCategory.Difficulty);
-            if (vocabularyCategory.Vocabularies.Count > 0)
-            {
-                Debug.Log(vocabularyCategory.Vocabularies[0].Word);
-                Debug.Log(vocabularyCategory.Vocabularies[0].Definition);
-            }
-            else
-            {
-                Debug.LogWarning("No vocabularies found for difficulty " + vocabularyCategory.Difficulty);
-            }
-        }
+        //foreach (var vocabularyCategory in vocabularyCategories)
+        //{
+            //Debug.Log("Difficulty: " + vocabularyCategory.Difficulty);
+            //if (vocabularyCategory.Vocabularies.Count > 0)
+            //{
+                //Debug.Log(vocabularyCategory.Vocabularies[0].Word);
+                //Debug.Log(vocabularyCategory.Vocabularies[0].Definition);
+            //}
+            //else
+            //{
+                //Debug.LogWarning("No vocabularies found for difficulty " + vocabularyCategory.Difficulty);
+            //}
+        //}
+    }
+
+    public VocabularyList GetEasyVocabularies()
+    {
+        return vocabularyCategories.Find(e => e.Difficulty == "easy");
+    }
+
+    public VocabularyList GetMediumVocabularies()
+    {
+        return vocabularyCategories.Find(e => e.Difficulty == "medium");
+    }
+
+    public VocabularyList GetHardVocabularies()
+    {
+        return vocabularyCategories.Find(e => e.Difficulty == "hard");
     }
 }

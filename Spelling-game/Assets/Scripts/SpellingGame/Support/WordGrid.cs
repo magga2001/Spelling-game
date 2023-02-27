@@ -99,7 +99,7 @@ public class WordGrid : MonoBehaviour
                 localRowOffset += offset;
             }
             else
-            {
+            {   
                 localColOffset += offset;
             }
         }

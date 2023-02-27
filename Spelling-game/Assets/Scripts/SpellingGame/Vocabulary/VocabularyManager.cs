@@ -1,57 +1,79 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VocabularyManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class VocabularyLevel
-    {
-        [SerializeField] private int level;
-        [SerializeField] private string[] words;
-
-        public int Level { get { return level; } set { level = value; } }
-        public string[] Words { get { return words; } set { words = value; } }
-    }
-
-    [SerializeField] private VocabularyLevel[] vocabularyLevels;
-    private int currentWordIndex;
-    private int currentLevel;
+    [SerializeField] private VocabularyLibrary library;
+    private SpellingDifficultiesManager spellingDifficultiesManager;
+    private Queue<Vocabulary> vocabularies = new ();
     private string currentWord;
-
-    //public string CurrentWord { get { return currentWord; } set { currentWord = value; } }
+    private string currentDefinition;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = 1;
-        currentWordIndex = 0;
-        currentWord = vocabularyLevels[currentLevel - 1].Words[currentWordIndex];
+        SetUpDifficulty(Difficulties.MEDIUM);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetUpDifficulty(Difficulties difficulties)
     {
-        
+        vocabularies.Clear();
+
+        var vocabulariesLibrary = new List<Vocabulary>();  
+
+        switch (difficulties)
+        {
+            case Difficulties.EASY:
+                vocabulariesLibrary = library.GetEasyVocabularies().Vocabularies;
+                break;
+            case Difficulties.MEDIUM:
+                vocabulariesLibrary = library.GetMediumVocabularies().Vocabularies;
+                break;
+            case Difficulties.HARD:
+                vocabulariesLibrary = library.GetHardVocabularies().Vocabularies;
+                break;
+        }
+
+        foreach(var vocabulary in vocabulariesLibrary)
+        {
+            vocabularies.Enqueue(vocabulary);
+        }
+
+        Debug.Log(vocabularies.Count);
+
+        DequeueWord();
     }
 
     public void NextWord()
     {
-        currentWordIndex++;
-        if (currentWordIndex < vocabularyLevels[currentLevel - 1].Words.Length)
+        if(vocabularies.Count != 0)
         {
-            currentWord = vocabularyLevels[currentLevel - 1].Words[currentWordIndex];
+            DequeueWord();
         }
         else
         {
-            //For now reset to first word
-            currentWordIndex = 0;
-            currentWord = vocabularyLevels[currentLevel - 1].Words[currentWordIndex];
+            spellingDifficultiesManager.PromoteDifficulty();
+            SetUpDifficulty(spellingDifficultiesManager.Difficulties);
         }
+    }
+
+    private void DequeueWord()
+    {
+        currentWord = vocabularies.Dequeue().Word;
+        currentDefinition = vocabularies.Dequeue().Definition;
+
+        Debug.Log(currentWord);
     }
 
     public string GetCurrentWord()
     {
-        return vocabularyLevels[currentLevel - 1].Words[currentWordIndex];
+        return currentWord;
+    }
+
+    public string GetCurrentWordDefinition()
+    {
+        return currentDefinition;
     }
 }

@@ -10,6 +10,8 @@ public class CombatSystem : MonoBehaviour
 
     [SerializeField] private Weapon playerWeapon;
 
+    [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
+
     private int sessionXP;
     private float sessionTime;
     private GameObject currentEnemy;
@@ -19,10 +21,10 @@ public class CombatSystem : MonoBehaviour
         instance = this;    
     }
 
-    public void SetUpCombat(GameObject enemy)
+    public void SetUpCombat(Transform enemySpawnLocation)
     {
         sessionXP = 0;
-        currentEnemy = enemy;
+        currentEnemy = ObjectPoolingManager.Instance.GetEnemy(spellingDifficultiesManager.Difficulties, enemySpawnLocation);
         currentEnemy.GetComponent<Enemy>().Weapon.StartAttacking();
     }
 

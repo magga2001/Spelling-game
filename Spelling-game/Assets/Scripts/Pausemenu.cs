@@ -87,7 +87,7 @@ public class Pausemenu : MonoBehaviour
 
         if (focus == false && !GameManager.Instance.GameIsOver)
         {   
-            GameIsPaused = true;
+            //GameIsPaused = true;
         }
     }
 

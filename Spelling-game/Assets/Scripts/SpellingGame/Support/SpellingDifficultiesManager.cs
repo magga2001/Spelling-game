@@ -4,25 +4,18 @@ using UnityEngine;
 
 public class SpellingDifficultiesManager : MonoBehaviour
 {
-    private static SpellingDifficultiesManager instance;
-    public static SpellingDifficultiesManager Instance { get { return instance; } }
-    public enum Difficulties { EASY, MEDIUM, HARD };
 
     [SerializeField] private int XP_per_difficulties;
 
     private int currentXP;
 
     private Difficulties currentDifficulties;
+    public Difficulties Difficulties { get { return currentDifficulties; } }    
 
     private void Awake()
     {
-        instance = this;
-    }
-
-    private void Start()
-    {
         currentXP = 0;
-        currentDifficulties = Difficulties.EASY;
+        currentDifficulties = Difficulties.MEDIUM;
     }
 
     public void PromoteDifficulty()

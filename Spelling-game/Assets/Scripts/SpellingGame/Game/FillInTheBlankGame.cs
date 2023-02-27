@@ -13,36 +13,31 @@ public class FillInTheBlankGame : MonoBehaviour
     [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
         //Temporary
         if (Input.GetKey(KeyCode.T))
         {
-            createBlankCharacter();
+            CreateBlankCharacter();
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            checkAnswer();
+            CheckAnswer();
         }
     }
 
-    public void updateAnswer(string input)
+    public void UpdateAnswer(string input)
     {
         currentAnswer = input;
     }
 
-    public void checkAnswer()
+    public void CheckAnswer()
     {
-        string answer = vm.GetCurrentWord();
+        string answer = vm.GetCurrentWord().Trim();
 
-        if (answer == currentAnswer)
+        if (answer == currentAnswer.Trim())
         {
             Debug.Log("Correct");
             vm.NextWord();
@@ -56,7 +51,7 @@ public class FillInTheBlankGame : MonoBehaviour
         }
     }
 
-    private void createBlankCharacter()
+    private void CreateBlankCharacter()
     {
         string correctWord = vm.GetCurrentWord();
 

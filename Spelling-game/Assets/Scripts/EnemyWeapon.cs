@@ -16,13 +16,13 @@ public class EnemyWeapon : MonoBehaviour
     [SerializeField] private bool canShoot;
 
     private bool activate;
-
-    private bool coroutineAllowed;
-    // Start is called before the first frame update
-
-    void Start()
+    private float delay;
+    private bool shoot;
+    private void OnEnable()
     {
         activate = false;
+        delay = initialDelay;
+        shoot = canShoot;
 
         try
         {
@@ -39,7 +39,7 @@ public class EnemyWeapon : MonoBehaviour
     {
         if(activate)
         {
-            initialDelay -= Time.deltaTime;
+            delay -= Time.deltaTime;
             Shoot();
         }
     }
@@ -51,9 +51,9 @@ public class EnemyWeapon : MonoBehaviour
 
     private void Shoot()
     {
-        if (canShoot && player != null && initialDelay < 0)
+        if (shoot && player != null && delay < 0)
         {
-            canShoot = false;
+            shoot = false;
 
             for (int i = 0; i < firePoints.Length; i++)
             {
@@ -71,7 +71,7 @@ public class EnemyWeapon : MonoBehaviour
     {
         yield return new WaitForSeconds(fireDelay);
 
-        canShoot = true;
+        shoot = true;
 
     }
 

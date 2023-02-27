@@ -21,9 +21,10 @@ public class GameManager : MonoBehaviour
     public class Combat
     {
         [SerializeField] private Transform playerLocation;
-        [SerializeField] private GameObject enemy;
+        [SerializeField] private Transform enemyLocation;
+        
         public Transform PlayerLocation { get { return playerLocation; } set { playerLocation = value; } }
-        public GameObject Enemy { get { return enemy; } set { enemy = value; } }
+        public Transform EnemyLocation { get { return enemyLocation; } set { enemyLocation = value; } }
 
     }
 
@@ -73,8 +74,8 @@ public class GameManager : MonoBehaviour
             combat = true;
             travelling = false;
             spellingGameManager.GenerateRandomSpellingGame();
-            cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].Enemy.transform);
-            CombatSystem.Instance.SetUpCombat(combats[currentCombat].Enemy);
+            cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
+            CombatSystem.Instance.SetUpCombat(combats[currentCombat].EnemyLocation);
         }   
     }
 
