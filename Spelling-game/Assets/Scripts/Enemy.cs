@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private int reward;
 
+    [SerializeField] private EnemyHealthBar healthBar;
+
     public EnemyWeapon Weapon { get { return weapon; } set { weapon = value; } }
 
     private int currentHealth;
@@ -19,13 +21,15 @@ public class Enemy : MonoBehaviour
     private void OnEnable()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(currentHealth);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
