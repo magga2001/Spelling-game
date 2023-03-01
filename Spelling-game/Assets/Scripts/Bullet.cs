@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float speed = 20f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float lifeDuration;
+    [SerializeField] private GameObject playerBulletEffect;
+    [SerializeField] private GameObject enemyBulletEffect;
     private float lifeTimer;
     private bool shotByPlayer;
     public bool ShotByPlayer { get { return shotByPlayer; } set { shotByPlayer = value; } }
@@ -18,16 +20,18 @@ public class Bullet : MonoBehaviour
     void OnEnable()
     {
         lifeTimer = lifeDuration;
+        Effect();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += transform.up * speed * Time.deltaTime;
-        decreaseLifeTime();
+        DecreaseLifeTime();
+        Effect();
     }
 
-    private void decreaseLifeTime()
+    private void DecreaseLifeTime()
     {
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0f)
@@ -39,6 +43,22 @@ public class Bullet : MonoBehaviour
     public void DamageSetUp(int damage)
     {
         this.damage = damage;
+    }
+
+    private void Effect()
+    {
+        if (ShotByPlayer)
+        {
+            enemyBulletEffect.SetActive(false);
+            playerBulletEffect.SetActive(true);
+        }
+        else
+        {
+            playerBulletEffect.SetActive(false);
+            enemyBulletEffect.SetActive(true);
+
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -268,7 +268,7 @@ MonoBehaviour:
   firePoints:
   - {fileID: 1108398251132448673}
   fireDelay: 2
-  initialDelay: 10
+  initialDelay: 3
   canShoot: 1
 --- !u!1 &6060008464930862432
 GameObject:
