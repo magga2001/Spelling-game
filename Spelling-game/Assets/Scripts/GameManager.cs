@@ -4,6 +4,7 @@ using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     private bool gameIsOver;
     private bool combat;
     private bool travelling;
-    private bool gameStart;
+    private bool sceneOver;
 
     public bool GameIsOver { get { return gameIsOver; } set { gameIsOver = value; } }
 
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Player player;
     [SerializeField] private PlayerMotion playerMotion;
+    [SerializeField] private Transform portal;
+    [SerializeField] private LevelLoader transition;
     [SerializeField] private CameraSystem cameraSystem;
     [SerializeField] private List<Combat> combats;
     [SerializeField] private SpellingGameManager spellingGameManager;
@@ -63,20 +66,36 @@ public class GameManager : MonoBehaviour
             CombatSystem.Instance.EndCombat();
         }
 
-        if(!combat && travelling)
+        if(!sceneOver)
         {
-            playerMotion.NextLocation(combats[currentCombat].PlayerLocation);
-        }
+            if (!combat && travelling)
+            {
+                playerMotion.NextLocation(combats[currentCombat].PlayerLocation);
+            }
 
-        if(player.transform.position == combats[currentCombat].PlayerLocation.position)  
+            if (player.transform.position == combats[currentCombat].PlayerLocation.position)
+            {
+                // So the player can stop at desire location and enter combat mode
+                combat = true;
+                travelling = false;
+                spellingGameManager.GenerateRandomSpellingGame();
+                cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
+                CombatSystem.Instance.SetUpCombat(combats[currentCombat].EnemyLocation);
+            }
+        }
+        else
         {
-            // So the player can stop at desire location and enter combat mode
-            combat = true;
-            travelling = false;
-            spellingGameManager.GenerateRandomSpellingGame();
-            cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
-            CombatSystem.Instance.SetUpCombat(combats[currentCombat].EnemyLocation);
-        }   
+            if (travelling)
+            {
+                playerMotion.NextLocation(portal);
+            }
+
+            if (player.transform.position == portal.position)
+            {
+                travelling = false;
+            }
+
+        }
     }
 
     public void ContinueToNextOpponent()
@@ -84,19 +103,25 @@ public class GameManager : MonoBehaviour
         if(combat && !travelling)
         {
             combat = false;
-            StartCoroutine(MovingToNextOpponent());
+            StartCoroutine(MovingToNextLocation());
         }
     }
 
-    IEnumerator MovingToNextOpponent()
+    IEnumerator MovingToNextLocation()
     {
         yield return new WaitForSeconds(3);
 
         currentCombat++;
         if (currentCombat >= combats.Count)
         {
-            //Fade in fade out and restart...
-            Debug.Log("Reached the end");
+            sceneOver = true;
+            travelling = true;
+            cameraSystem.AdjustWalkingCamera(player.transform);
+            spellingGameManager.ResetScreen();
+            yield return new WaitForSeconds(8);
+            //transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            transition.LoadingLevel(0);
+
         }
         else
         {
@@ -109,7 +134,7 @@ public class GameManager : MonoBehaviour
     public void StartButton()
     {
         travelling = true;
-        gameStart = true;
+        sceneOver = false;
         startButton.gameObject.SetActive(false);
     }
 }
