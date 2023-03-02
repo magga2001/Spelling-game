@@ -61,8 +61,10 @@ public class VocabularyManager : MonoBehaviour
 
     private void DequeueWord()
     {
-        currentWord = vocabularies.Dequeue().Word;
-        currentDefinition = vocabularies.Dequeue().Definition;
+        var word = vocabularies.Dequeue();
+
+        currentWord = word.Word;
+        currentDefinition = word.Definition;
 
         Debug.Log(currentWord);
     }

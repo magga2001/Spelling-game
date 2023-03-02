@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class FillInTheBlankGame : MonoBehaviour
+public class FillInTheBlankGame : Subject<NotificationText>
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
@@ -39,15 +39,15 @@ public class FillInTheBlankGame : MonoBehaviour
 
         if (answer == currentAnswer.Trim())
         {
-            Debug.Log("Correct");
             vm.NextWord();
             inputText.text = "";
             //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
             ScoreSystem.Instance.IncreaseScore(CalculateReward(answer));
+            NotifyObservers(NotificationText.CORRECT);
         }
         else
         {
-            Debug.Log("Incorrect");
+            NotifyObservers(NotificationText.INCORRECT);
         }
     }
 
@@ -55,7 +55,7 @@ public class FillInTheBlankGame : MonoBehaviour
     {
         string correctWord = vm.GetCurrentWord();
 
-        Random rnd = new Random();
+        Random rnd = new();
         int number = rnd.Next(0, correctWord.Length);
 
         word.text = correctWord.Substring(0, number) + "_" + correctWord.Substring(number + 1);

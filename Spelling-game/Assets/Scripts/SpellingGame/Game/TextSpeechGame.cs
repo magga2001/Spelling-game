@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TextSpeechGame : MonoBehaviour
+public class TextSpeechGame : Subject<NotificationText>
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
@@ -37,15 +37,15 @@ public class TextSpeechGame : MonoBehaviour
 
         if (answer == currentAnswer)
         {
-            Debug.Log("Correct");
             vm.NextWord();
             inputText.text = "";
             //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer));
+            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer)); 
+            NotifyObservers(NotificationText.CORRECT);
         }
         else
         {
-            Debug.Log("Incorrect");
+            NotifyObservers(NotificationText.INCORRECT);
         }
     }
 

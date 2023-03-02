@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WordSearchGame : MonoBehaviour
+public class WordSearchGame : Subject<NotificationText>
 {
     private Stack<GameObject> currentWordOrder = new Stack<GameObject>();
 
@@ -72,7 +72,7 @@ public class WordSearchGame : MonoBehaviour
             Debug.Log("No legal moves");
         }
 
-        MatchWord();
+        CheckAnswer();
     }
 
     public void RemoveRecentAlphabet()
@@ -191,7 +191,7 @@ public class WordSearchGame : MonoBehaviour
         }
     }
 
-    private void MatchWord()
+    private void CheckAnswer()
     {
         if (currentWordOrder.Count > 0)
         {
@@ -212,8 +212,13 @@ public class WordSearchGame : MonoBehaviour
                 word.GetComponent<WordBox>().WordFounded();
                 //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
                 ScoreSystem.Instance.IncreaseScore(CalculateReward(currentWord));
+                NotifyObservers(NotificationText.CORRECT);
                 ResetWordOrder();
                 ConstructLine();
+            }
+            else
+            {
+                NotifyObservers(NotificationText.INCORRECT);
             }
         }
     }
