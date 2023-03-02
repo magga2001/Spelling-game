@@ -41,8 +41,6 @@ public class Enemy : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        ScoreSystem.Instance.IncreaseScore(reward);
-
         //CombatSystem.Instance.EndCombat();
 
         //Spawn dying effect

@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WordSearchGame : Subject<NotificationText>
+public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
     private Stack<GameObject> currentWordOrder = new Stack<GameObject>();
 
@@ -210,23 +210,14 @@ public class WordSearchGame : Subject<NotificationText>
                 wordsFounded.Add(currentWord);
                 var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
                 word.GetComponent<WordBox>().WordFounded();
-                //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-                ScoreSystem.Instance.IncreaseScore(CalculateReward(currentWord));
-                NotifyObservers(NotificationText.CORRECT);
+                NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.WORDSEARCH ,word.GetComponent<WordBox>().Word, currentWord)));
                 ResetWordOrder();
                 ConstructLine();
             }
             else
             {
-                NotifyObservers(NotificationText.INCORRECT);
+                NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.WORDSEARCH, "", currentWord)));
             }
         }
     }
-
-    private int CalculateReward(string word)
-    {
-        return word.Length * 100;
-    }
-
-
 }

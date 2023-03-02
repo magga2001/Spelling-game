@@ -5499,8 +5499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -1.0854}
+  m_SizeDelta: {x: 395.8806, y: 90.9588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1154514405
 MonoBehaviour:
@@ -8726,7 +8726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 160}
   m_SizeDelta: {x: 369.0844, y: 88.7881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1800498202
@@ -8898,6 +8898,10 @@ GameObject:
   - component: {fileID: 1838735876}
   - component: {fileID: 1838735877}
   - component: {fileID: 1838735879}
+  - component: {fileID: 1838735880}
+  - component: {fileID: 1838735883}
+  - component: {fileID: 1838735882}
+  - component: {fileID: 1838735881}
   - component: {fileID: 1838735878}
   m_Layer: 0
   m_Name: GameManager
@@ -9019,8 +9023,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ff11f803cc4a1478dde463c2b29243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerWeapon: {fileID: 858552216}
+  scale: 100
   scoreUI: {fileID: 2127276046}
+--- !u!114 &1838735880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86708aa62f882b4fa105325f0c05ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellingGames:
+  - {fileID: 1240725773}
+  - {fileID: 1459219001}
+  - {fileID: 707721718}
+  rewardSystem: {fileID: 1838735883}
+  punishmentSystem: {fileID: 1838735882}
+  performanceTracker: {fileID: 1838735881}
+  weapon: {fileID: 858552216}
+  notificationManager: {fileID: 1980515171}
+--- !u!114 &1838735881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be3ce38d6bdaf94192f1890297547b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1838735882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cbffc75292e634e9de2f399486d3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 1838735879}
+  maxStrike: 0
+--- !u!114 &1838735883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba579f9cc0f9a42a7a99882f309eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 1838735879}
 --- !u!1 &1851025621
 GameObject:
   m_ObjectHideFlags: 0
@@ -9601,7 +9665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80927c7ec6cca4ea16ffd7da30ccc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillInTheBlankGame: {fileID: 1459219001}
   VocabularyResultNoti: {fileID: 1800498200}
   VocabularyResultText: {fileID: 1154514405}
   disableNotiTime: 1
@@ -10997,8 +11060,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11170,7 +11233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463052, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463053, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_RootOrder

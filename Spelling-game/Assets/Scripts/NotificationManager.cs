@@ -3,23 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class NotificationManager : MonoBehaviour, IObserver<NotificationText>
+public class NotificationManager : MonoBehaviour
 {
-    [SerializeField] private List<Subject<NotificationText>> spellingGames;
     [SerializeField] private GameObject VocabularyResultNoti;
     [SerializeField] private TextMeshProUGUI VocabularyResultText;
 
     [SerializeField] private float disableNotiTime;
-
-    private void Start()
-    {
-        spellingGames.ForEach((game) => game.AddObserver(this));
-    }
-
-    public void OnNotify(NotificationText text)
-    {
-        DisplayVocabularyResult(text);
-    }
 
     public void DisplayVocabularyResult(NotificationText text)
     {

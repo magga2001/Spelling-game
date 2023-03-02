@@ -5,29 +5,32 @@ using UnityEngine;
 
 public class ScoreSystem : MonoBehaviour
 {
-    private static ScoreSystem instance;
-    public static ScoreSystem Instance { get { return instance; } }
-
-    [SerializeField] private Weapon playerWeapon;
-
+    [SerializeField] private int scale;
     [SerializeField] private TextMeshProUGUI scoreUI;
 
     private int score;
     void Awake()
     {
-        instance = this;
         score = 0;
     }
 
     public void IncreaseScore(int newScore)
     {
-        //playerWeapon.Fire();
-        score += newScore;
+        Debug.Log(newScore);
+        score += newScore * scale;
         scoreUI.text = score.ToString();
     }
 
-    public int GetScore()
+    public void DecreaseScore(int newScore)
     {
-        return score;
+        Debug.Log(newScore);
+        score -= newScore * scale;
+        if(score <= 0)
+        {
+            score = 0;
+        }
+        scoreUI.text = score.ToString();
     }
+
+    public int GetScore() => score;
 }

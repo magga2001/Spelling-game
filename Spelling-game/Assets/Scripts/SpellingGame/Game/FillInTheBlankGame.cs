@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class FillInTheBlankGame : Subject<NotificationText>
+public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
@@ -36,18 +36,17 @@ public class FillInTheBlankGame : Subject<NotificationText>
     public void CheckAnswer()
     {
         string answer = vm.GetCurrentWord().Trim();
+        currentAnswer = currentAnswer.Trim();    
 
         if (answer == currentAnswer.Trim())
         {
             vm.NextWord();
+            NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.FILLINTHEBLANK, answer, currentAnswer)));
             inputText.text = "";
-            //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer));
-            NotifyObservers(NotificationText.CORRECT);
         }
         else
         {
-            NotifyObservers(NotificationText.INCORRECT);
+            NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.FILLINTHEBLANK, answer, currentAnswer)));
         }
     }
 
@@ -60,11 +59,4 @@ public class FillInTheBlankGame : Subject<NotificationText>
 
         word.text = correctWord.Substring(0, number) + "_" + correctWord.Substring(number + 1);
     }
-
-    private int CalculateReward(string word)
-    {
-        return word.Length * 100;
-    }
-
-
 }

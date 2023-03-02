@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TextSpeechGame : Subject<NotificationText>
+public class TextSpeechGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private int round;
@@ -33,24 +33,18 @@ public class TextSpeechGame : Subject<NotificationText>
 
     public void CheckAnswer()
     {
-        string answer = vm.GetCurrentWord();
+        string answer = vm.GetCurrentWord().Trim();
+        currentAnswer = currentAnswer.Trim();
 
         if (answer == currentAnswer)
         {
             vm.NextWord();
+            NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
             inputText.text = "";
-            //For now static, but XP SHOULD INCREASE BY WORD DIFFICULTY... maybe word length
-            ScoreSystem.Instance.IncreaseScore(CalculateReward(answer)); 
-            NotifyObservers(NotificationText.CORRECT);
         }
         else
         {
-            NotifyObservers(NotificationText.INCORRECT);
+            NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
         }
-    }
-
-    private int CalculateReward(string word)
-    {
-        return word.Length * 100;
     }
 }
