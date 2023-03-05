@@ -22,9 +22,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        library.SetUp();
-        spellingDifficultiesManager.SetUp();
-        vocabularyManager.SetUp();
+        SetUpVocabularies();
     }
 
     // Start is called before the first frame update
@@ -37,5 +35,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void SetUpVocabularies()
+    {
+        library.SetUp();
+        spellingDifficultiesManager.SetUp();
+        vocabularyManager.SetUp();
     }
 }
