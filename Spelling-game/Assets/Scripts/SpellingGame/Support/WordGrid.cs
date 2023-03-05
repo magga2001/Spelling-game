@@ -25,6 +25,11 @@ public class WordGrid : MonoBehaviour
     public List<string> Words { get { return words; } set { words = value; } }
     public List<GameObject> WordBoxes { get { return wordBoxes; } set { wordBoxes = value; } }
 
+    private void OnEnable()
+    {
+        InstantiateWordGrid();
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))

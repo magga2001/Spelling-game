@@ -13,15 +13,16 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
     [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        //Temporary
-        if (Input.GetKey(KeyCode.T))
+        if(!vm.IsEmptyVocabularies())
         {
             CreateBlankCharacter();
-        }
+        }        
+    }
 
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             CheckAnswer();
@@ -43,6 +44,7 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
             vm.NextWord();
             NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.FILLINTHEBLANK, answer, currentAnswer)));
             inputText.text = "";
+            CreateBlankCharacter();
         }
         else
         {

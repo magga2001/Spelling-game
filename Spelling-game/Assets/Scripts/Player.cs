@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
         if (lives <= 0)
         {
             life.updateLife(lives);
+            GameManager.Instance.GameIsOver = true;
             Debug.Log("Gameover");
             //Set the game active false
             //Spawn death effect

@@ -40,7 +40,7 @@ public class SpellingGameManager : MonoBehaviour
         games[currentGame].Canvas.SetActive(true);
         games[currentGame].Game.SetActive(true);
 
-        Debug.Log(games[currentGame].Name);
+        //Debug.Log(games[currentGame].Name);
 
     }
 

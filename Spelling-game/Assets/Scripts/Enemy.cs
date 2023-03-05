@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Subject<(GameEvent gameEvent, EnemyData enemy)>
 {
 
-    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int maxHealth;
 
     [SerializeField] private EnemyWeapon weapon;
 
@@ -37,9 +38,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Enemy has died");
-
-        gameObject.SetActive(false);
+        NotifyObservers((GameEvent.ENEMY_DIE, new (this.name, this.gameObject, reward)));
 
         //CombatSystem.Instance.EndCombat();
 

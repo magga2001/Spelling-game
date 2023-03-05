@@ -10,10 +10,12 @@ public class TextSpeechGame : Subject<(PlayerAction, PlayerAnswerData)>
     [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-
+        if (!vm.IsEmptyVocabularies())
+        {
+            //Run the text speech
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +43,7 @@ public class TextSpeechGame : Subject<(PlayerAction, PlayerAnswerData)>
             vm.NextWord();
             NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
             inputText.text = "";
+            //Call the text speech method
         }
         else
         {

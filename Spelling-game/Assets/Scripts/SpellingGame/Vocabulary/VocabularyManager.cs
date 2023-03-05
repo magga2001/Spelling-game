@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+  using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,8 +41,6 @@ public class VocabularyManager : MonoBehaviour
             vocabularies.Enqueue(vocabulary);
         }
 
-        Debug.Log(vocabularies.Count);
-
         DequeueWord();
     }
 
@@ -66,7 +64,7 @@ public class VocabularyManager : MonoBehaviour
         currentWord = word.Word;
         currentDefinition = word.Definition;
 
-        Debug.Log(currentWord);
+        //Debug.Log(currentWord);
     }
 
     public string GetCurrentWord()
@@ -77,5 +75,10 @@ public class VocabularyManager : MonoBehaviour
     public string GetCurrentWordDefinition()
     {
         return currentDefinition;
+    }
+
+    public bool IsEmptyVocabularies()
+    {
+        return vocabularies.Count == 0;
     }
 }

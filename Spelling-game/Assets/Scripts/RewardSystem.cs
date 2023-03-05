@@ -9,4 +9,9 @@ public class RewardSystem : MonoBehaviour
     {
         scoreSystem.IncreaseScore(word.Length);
     }
+
+    public void CalculateReward(int reward)
+    {
+        scoreSystem.IncreaseScore(reward);
+    }
 }

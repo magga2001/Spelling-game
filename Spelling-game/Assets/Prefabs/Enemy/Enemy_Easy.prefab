@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 6060008464930862430}
   - component: {fileID: 6060008464930862433}
   - component: {fileID: 6060008464930862429}
+  - component: {fileID: 3440434321422457479}
   m_Layer: 0
   m_Name: Enemy_Easy
   m_TagString: Untagged
@@ -408,6 +409,19 @@ MonoBehaviour:
   weapon: {fileID: 1066788279578701658}
   reward: 100
   healthBar: {fileID: 8312421692564027272}
+--- !u!114 &3440434321422457479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060008464930862432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5047bc03a5283d04fa072b359c9a3df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6060008464930862429}
 --- !u!1 &6114143718665463554
 GameObject:
   m_ObjectHideFlags: 0
