@@ -8,7 +8,6 @@ using TMPro;
 public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
     [SerializeField] private VocabularyManager vm;
-    [SerializeField] private int round;
     [SerializeField] private TextMeshProUGUI word;
     [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;

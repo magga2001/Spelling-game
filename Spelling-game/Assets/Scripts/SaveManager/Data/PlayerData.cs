@@ -6,11 +6,12 @@ using UnityEngine;
 public class PlayerData
 {
     public int highScore;
-    public IDictionary<string, int> numberNames = new Dictionary<string, int>();
-
-    public PlayerData(int highScore, IDictionary<string, int> numberNames)
+    public List<string> correctWords;
+    public List<string> IncorrectWords;   
+    public PlayerData(int highScore, List<string> correctWords, List<string> IncorrectWords)
     {
         this.highScore = highScore;
-        this.numberNames = numberNames; 
+        this.correctWords = correctWords;   
+        this.IncorrectWords = IncorrectWords;   
     }
 }

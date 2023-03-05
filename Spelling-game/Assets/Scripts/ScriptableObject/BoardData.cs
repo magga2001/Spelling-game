@@ -38,9 +38,9 @@ public class BoardData : ScriptableObject
     {
         try
         {
-            board = SaveManager.LoadInfoFromFile(FileName.puzzle).board;
-            rows = SaveManager.LoadInfoFromFile(FileName.puzzle).rows;  
-            columns = SaveManager.LoadInfoFromFile(FileName.puzzle).columns;
+            board = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).board;
+            rows = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).rows;  
+            columns = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).columns;
         }
         catch
         {
@@ -66,12 +66,12 @@ public class BoardData : ScriptableObject
 
     public void SaveBoard()
     {
-        SaveManager.SaveInfo(FileName.puzzle, board, rows, columns);
+        PuzzleSaveManager.SaveInfo(FileName.puzzle, board, rows, columns);
     }
 
     public void DeleteSavedBoard()
     {
-        SaveManager.DeleteProgess(FileName.puzzle);
+        PuzzleSaveManager.DeleteProgess(FileName.puzzle);
     }
 
     public (string[,] board, int rows , int columns) GetSavedBoardData()

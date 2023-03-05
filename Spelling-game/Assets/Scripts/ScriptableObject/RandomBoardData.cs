@@ -32,9 +32,9 @@ public class RandomBoardData : ScriptableObject
     {
         try
         {
-            board = SaveManager.LoadInfoFromFile(FileName.randomPuzzle).board;
-            rows = SaveManager.LoadInfoFromFile(FileName.randomPuzzle).rows;
-            columns = SaveManager.LoadInfoFromFile(FileName.randomPuzzle).columns;
+            board = PuzzleSaveManager.LoadInfoFromFile(FileName.randomPuzzle).board;
+            rows = PuzzleSaveManager.LoadInfoFromFile(FileName.randomPuzzle).rows;
+            columns = PuzzleSaveManager.LoadInfoFromFile(FileName.randomPuzzle).columns;
         }
         catch
         {
@@ -59,12 +59,12 @@ public class RandomBoardData : ScriptableObject
 
     public void SaveBoard()
     {
-        SaveManager.SaveInfo(FileName.randomPuzzle, board, rows, columns);
+        PuzzleSaveManager.SaveInfo(FileName.randomPuzzle, board, rows, columns);
     }
 
     public void DeleteSavedBoard()
     {
-        SaveManager.DeleteProgess(FileName.randomPuzzle);
+        PuzzleSaveManager.DeleteProgess(FileName.randomPuzzle);
     }
 
     public (string[,] board, int rows, int columns) GetSavedBoardData()

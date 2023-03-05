@@ -39,7 +39,7 @@ public class WordGrid : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SaveManager.DeleteProgess(FileName.puzzle);
+            PuzzleSaveManager.DeleteProgess(FileName.puzzle);
         }
     }
 

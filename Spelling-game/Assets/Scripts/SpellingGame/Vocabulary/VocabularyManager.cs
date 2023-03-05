@@ -14,7 +14,7 @@ public class VocabularyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetUpDifficulty(Difficulties.MEDIUM);
+        SetUpDifficulty(Difficulties.EASY);
     }
 
     public void SetUpDifficulty(Difficulties difficulties)
@@ -63,8 +63,6 @@ public class VocabularyManager : MonoBehaviour
 
         currentWord = word.Word;
         currentDefinition = word.Definition;
-
-        //Debug.Log(currentWord);
     }
 
     public string GetCurrentWord()

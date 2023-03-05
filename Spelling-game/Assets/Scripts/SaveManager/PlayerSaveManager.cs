@@ -1,33 +1,34 @@
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
 
-
-public class SaveManager
+public class PlayerSaveManager
 {
-    public static void SaveInfo(string fileName, string[,] board, int rows, int columns)
+    public static void SavePlayerInfo(int highScore, List<string> correctWords, List<string> IncorrectWords)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + fileName;
+        string path = Application.persistentDataPath + "/player.exe";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PuzzlesData data = new PuzzlesData(board, rows, columns);
+        PlayerData data = new PlayerData(highScore, correctWords,IncorrectWords);
 
         binaryFormatter.Serialize(stream, data);
         stream.Close();
     }
 
-    public static PuzzlesData LoadInfoFromFile(string fileName)
+    public static PlayerData LoadPlayerInfo()
     {
-        string path = Application.persistentDataPath + fileName;
-                       
+        string path = Application.persistentDataPath + "/player.exe";
+
         if (File.Exists(path))
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PuzzlesData data = binaryFormatter.Deserialize(stream) as PuzzlesData;
+            PlayerData data = binaryFormatter.Deserialize(stream) as PlayerData;
 
             stream.Close();
 
@@ -41,9 +42,9 @@ public class SaveManager
 
     }
 
-    public static void DeleteProgess(string fileName)
+    public static void DeleteProgess()
     {
-        string path = Application.persistentDataPath + fileName;
+        string path = Application.persistentDataPath + "/player.exe";
 
         File.Delete(path);
     }
