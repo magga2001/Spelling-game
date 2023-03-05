@@ -5975,7 +5975,7 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00012207031, y: 0.3248291}
   m_SizeDelta: {x: -0.1398, y: 1.5188}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8601,8 +8601,10 @@ GameObject:
   - component: {fileID: 1199538727}
   - component: {fileID: 1199538726}
   - component: {fileID: 1199538731}
+  - component: {fileID: 1199538734}
   - component: {fileID: 1199538730}
   - component: {fileID: 1199538732}
+  - component: {fileID: 1199538733}
   m_Layer: 5
   m_Name: GameOverCanvas
   m_TagString: Untagged
@@ -8750,6 +8752,38 @@ MonoBehaviour:
   highScoreText: {fileID: 1371780520}
   correctWordsText: {fileID: 1666269808}
   incorrectWordsText: {fileID: 1732806961}
+--- !u!95 &1199538733
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199538725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58a0909cc04525a44899a85aae804b8e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1199538734
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199538725}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1216321206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10344,7 +10378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1446510733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10578,7 +10612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e606081afd7146e449b4cd0517704718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vm: {fileID: 0}
+  vm: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
   word: {fileID: 535205641}
   inputText: {fileID: 1132326045}
 --- !u!4 &1459219002
@@ -13783,7 +13817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1459354638436604ab69c52c8429ce6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vocabularyManager: {fileID: 0}
+  library: {fileID: 11400000, guid: d0909b709a0da6742b10abb2884179d8, type: 2}
+  vocabularyManager: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
+  spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}
 --- !u!114 &1838735876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13809,7 +13845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f25a017598c764bbd90ab7cd7a06a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellingDifficultiesManager: {fileID: 0}
+  spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}
 --- !u!114 &1838735878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14672,8 +14708,10 @@ GameObject:
   - component: {fileID: 1986893917}
   - component: {fileID: 1986893916}
   - component: {fileID: 1986893915}
+  - component: {fileID: 1986893922}
   - component: {fileID: 1986893914}
   - component: {fileID: 1986893920}
+  - component: {fileID: 1986893921}
   m_Layer: 5
   m_Name: WinningCanvas
   m_TagString: Untagged
@@ -14821,6 +14859,38 @@ MonoBehaviour:
   highScoreText: {fileID: 704004845}
   correctWordsText: {fileID: 836169799}
   incorrectWordsText: {fileID: 1151488804}
+--- !u!95 &1986893921
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986893913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be1716da1d75a874484eb80d2408854e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1986893922
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986893913}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1987050840
 GameObject:
   m_ObjectHideFlags: 0

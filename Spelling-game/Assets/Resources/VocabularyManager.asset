@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: VocabularyManager
   m_EditorClassIdentifier: 
   library: {fileID: 11400000, guid: d0909b709a0da6742b10abb2884179d8, type: 2}
+  spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}
