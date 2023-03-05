@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62a5027b9aee8c4990918c177b7054b, type: 3}
+  m_Name: VocabularyLibrary
+  m_EditorClassIdentifier: 
+  vocabulariesJson:
+  - {fileID: 4900000, guid: 60d4e81a7e394b347820c160bbea1790, type: 3}
+  - {fileID: 4900000, guid: 45118f2ff6e4ee948a2f236fd6d6133b, type: 3}
+  - {fileID: 4900000, guid: ddf39b97d7564a64c9023b2d59885b82, type: 3}

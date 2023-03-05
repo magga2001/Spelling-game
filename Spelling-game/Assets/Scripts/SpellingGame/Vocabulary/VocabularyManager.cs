@@ -3,24 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VocabularyManager : MonoBehaviour
+[CreateAssetMenu]
+public class VocabularyManager : ScriptableObject
 {
     [SerializeField] private VocabularyLibrary library;
-    private SpellingDifficultiesManager spellingDifficultiesManager;
+    [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
     private Queue<Vocabulary> vocabularies = new ();
     private string currentWord;
     private string currentDefinition;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetUp()
     {
-        SetUpDifficulty(Difficulties.EASY);
+        SetUpDifficulty(spellingDifficultiesManager.Difficulties);
     }
 
     public void SetUpDifficulty(Difficulties difficulties)
     {
         vocabularies.Clear();
-
+         
         var vocabulariesLibrary = new List<Vocabulary>();  
 
         switch (difficulties)
@@ -52,6 +52,10 @@ public class VocabularyManager : MonoBehaviour
         }
         else
         {
+
+            //If hard is now cleared, bring up the incorrect word.
+            //If spelled wrong, put it at the back of the queue.
+
             spellingDifficultiesManager.PromoteDifficulty();
             SetUpDifficulty(spellingDifficultiesManager.Difficulties);
         }

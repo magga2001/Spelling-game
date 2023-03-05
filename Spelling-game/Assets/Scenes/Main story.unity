@@ -1936,7 +1936,7 @@ Transform:
   - {fileID: 76934533}
   - {fileID: 850201966}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344248958
 GameObject:
@@ -3647,7 +3647,7 @@ Transform:
   - {fileID: 1199538729}
   - {fileID: 1986893919}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588645319
 GameObject:
@@ -7859,7 +7859,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 2145948268}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1144388455
 GameObject:
@@ -8418,7 +8418,7 @@ Transform:
   m_Children:
   - {fileID: 654917264}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187432177
 GameObject:
@@ -8993,7 +8993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f942f1f7ba3af0d44837e13f7e948f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vm: {fileID: 1540718554}
+  vm: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
   inputText: {fileID: 486914695}
 --- !u!4 &1240725774
 Transform:
@@ -10578,7 +10578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e606081afd7146e449b4cd0517704718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vm: {fileID: 1540718554}
+  vm: {fileID: 0}
   word: {fileID: 535205641}
   inputText: {fileID: 1132326045}
 --- !u!4 &1459219002
@@ -11044,9 +11044,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1540718555}
   - component: {fileID: 1540718557}
-  - component: {fileID: 1540718554}
-  - component: {fileID: 1540718558}
-  - component: {fileID: 1540718559}
   m_Layer: 0
   m_Name: SpellingGameManager
   m_TagString: Untagged
@@ -11054,19 +11051,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1540718554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540718552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469a0396843c5874fa87eca60072e5b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  library: {fileID: 1540718559}
 --- !u!4 &1540718555
 Transform:
   m_ObjectHideFlags: 0
@@ -11104,37 +11088,6 @@ MonoBehaviour:
   - name: WordSearchGame
     canvas: {fileID: 1771947680}
     game: {fileID: 707721717}
-  - name: RandomWordGame
-    canvas: {fileID: 1563661845}
-    game: {fileID: 218061798}
---- !u!114 &1540718558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540718552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1606d596742954691174928fb0cb47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1540718559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540718552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e62a5027b9aee8c4990918c177b7054b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vocabulariesJson:
-  - {fileID: 4900000, guid: 60d4e81a7e394b347820c160bbea1790, type: 3}
-  - {fileID: 4900000, guid: 45118f2ff6e4ee948a2f236fd6d6133b, type: 3}
-  - {fileID: 4900000, guid: ddf39b97d7564a64c9023b2d59885b82, type: 3}
 --- !u!1 &1558148205
 GameObject:
   m_ObjectHideFlags: 0
@@ -13797,7 +13750,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1838735874
 MonoBehaviour:
@@ -13830,6 +13783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1459354638436604ab69c52c8429ce6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vocabularyManager: {fileID: 0}
 --- !u!114 &1838735876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13855,7 +13809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f25a017598c764bbd90ab7cd7a06a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellingDifficultiesManager: {fileID: 1540718558}
+  spellingDifficultiesManager: {fileID: 0}
 --- !u!114 &1838735878
 MonoBehaviour:
   m_ObjectHideFlags: 0

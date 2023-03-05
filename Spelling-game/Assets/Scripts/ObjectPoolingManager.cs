@@ -107,7 +107,6 @@ public class ObjectPoolingManager : MonoBehaviour
                 {
                     enemy.SetActive(true);
                     enemy.transform.position = enemySpawnLocation.position;
-                    Debug.Log("bruh");
                     return enemy;
                 }
             }

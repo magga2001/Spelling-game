@@ -20,12 +20,14 @@ public class VocabularyList
     public List<Vocabulary> Vocabularies { get { return vocabularies; } set { vocabularies = value; } }
 }
 
-public class VocabularyLibrary : MonoBehaviour
+[CreateAssetMenu]
+public class VocabularyLibrary : ScriptableObject
 {
     [SerializeField] private List<TextAsset> vocabulariesJson;
     private List<VocabularyList> vocabularyCategories = new List<VocabularyList>();
-    void Awake()
+    public void SetUp()
     {
+        vocabularyCategories.Clear();
         foreach (var vocabularyJson in vocabulariesJson)
         {
             if (!string.IsNullOrEmpty(vocabularyJson.text))

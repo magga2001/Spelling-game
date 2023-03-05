@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
 
     public bool GameIsOver { get { return gameIsOver; } set { gameIsOver = value; } }
 
+    [SerializeField] VocabularyLibrary library;
+    [SerializeField] VocabularyManager vocabularyManager;
+    [SerializeField] SpellingDifficultiesManager spellingDifficultiesManager;
+
     private void Awake()
     {
         instance = this;
+        library.SetUp();
+        spellingDifficultiesManager.SetUp();
+        vocabularyManager.SetUp();
     }
 
     // Start is called before the first frame update
@@ -29,5 +36,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 }

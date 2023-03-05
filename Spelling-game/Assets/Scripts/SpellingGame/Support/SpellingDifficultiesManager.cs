@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpellingDifficultiesManager : MonoBehaviour
+[CreateAssetMenu]
+public class SpellingDifficultiesManager : ScriptableObject
 {
     private Difficulties currentDifficulties;
     public Difficulties Difficulties { get { return currentDifficulties; } }    
 
-    private void Awake()
+    public void SetUp()
     {
         currentDifficulties = Difficulties.EASY;
     }
@@ -22,6 +24,8 @@ public class SpellingDifficultiesManager : MonoBehaviour
             case Difficulties.MEDIUM:
                 currentDifficulties = Difficulties.HARD;
                 break;
+            default:
+                break;
         }
     }
 
@@ -34,6 +38,8 @@ public class SpellingDifficultiesManager : MonoBehaviour
                 break;
             case Difficulties.HARD:
                 currentDifficulties = Difficulties.MEDIUM;
+                break;
+            default:
                 break;
         }
     }
