@@ -18,11 +18,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] VocabularyLibrary library;
     [SerializeField] VocabularyManager vocabularyManager;
     [SerializeField] SpellingDifficultiesManager spellingDifficultiesManager;
+    [SerializeField] ScoreSystem scoreSystem;
+    [SerializeField] StrikeSystem strikeSystem;
+    [SerializeField] PerformanceTracker performanceTracker;
 
     private void Awake()
     {
         instance = this;
         SetUpVocabularies();
+        SetUpData();
     }
 
     // Start is called before the first frame update
@@ -42,5 +46,12 @@ public class GameManager : MonoBehaviour
         library.SetUp();
         spellingDifficultiesManager.SetUp();
         vocabularyManager.SetUp();
+    }
+
+    private void SetUpData()
+    {
+        scoreSystem.SetUp();
+        strikeSystem.SetUp();
+        performanceTracker.SetUp();
     }
 }

@@ -4,24 +4,12 @@ using UnityEngine;
 
 public class PunishmentSystem : MonoBehaviour
 {
-    [SerializeField] private ScoreSystem scoreSystem;   
-    [SerializeField] private int maxStrike;
-
-    private int strike;
+    [SerializeField] private ScoreSystem scoreSystem;
+    [SerializeField] private StrikeSystem strikeSystem;
 
     public void CalculatePunishment(string word)
     {
-        IncreaseStrike();
+        strikeSystem.IncreaseStrike();
         scoreSystem.DecreaseScore(word.Length);
-    }
-
-    private void IncreaseStrike()
-    {
-        strike++;
-        if (strike >= maxStrike)
-        {
-            strike = 0;
-            //DO something
-        }
     }
 }

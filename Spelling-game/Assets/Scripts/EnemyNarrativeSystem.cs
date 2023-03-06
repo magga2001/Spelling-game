@@ -6,9 +6,12 @@ public class EnemyNarrativeSystem : MonoBehaviour, IObserver<(GameEvent gameEven
 {
     [SerializeField] private Enemy enemy;
     private RewardSystem rewardSystem;
+    private UpdateUI updateUI;
+
     private void OnEnable()
     {
         rewardSystem = GameObject.FindGameObjectWithTag("GameManager").GetComponent<RewardSystem>();
+        updateUI = GameObject.FindGameObjectWithTag("GameManager").GetComponent<UpdateUI>();
         enemy.RemoveObserver(this);
         enemy.AddObserver(this);
     }
@@ -28,6 +31,7 @@ public class EnemyNarrativeSystem : MonoBehaviour, IObserver<(GameEvent gameEven
     private void Reward(EnemyData enemy)
     {
         rewardSystem.CalculateReward(enemy.Reward);
+        updateUI.UpdateScore();
         enemy.GameObject.SetActive(false);  
     }
 }

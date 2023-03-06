@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LetterBox
   - GameManager
+  - ScoreUI
   layers:
   - Default
   - TransparentFX

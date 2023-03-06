@@ -11,6 +11,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
     [SerializeField] private PerformanceTracker performanceTracker;
     [SerializeField] private Weapon weapon;
     [SerializeField] private NotificationManager notificationManager;
+    [SerializeField] private UpdateUI updateUI;
     private void Start()
     {
         spellingGames.ForEach((game) => game.AddObserver(this));
@@ -33,6 +34,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         weapon.Fire();
         rewardSystem.CalculateReward(answer.PlayerAnswer);
         performanceTracker.AddCorrectWord(answer.PlayerAnswer);
+        updateUI.UpdateScore();
         notificationManager.DisplayVocabularyResult(NotificationText.CORRECT);
     }
 
@@ -40,6 +42,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
     {
         punishmentSystem.CalculatePunishment(answer.PlayerAnswer);
         performanceTracker.AddIncorrectWord(answer.PlayerAnswer);
+        updateUI.UpdateScore();
         notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT);
     }
 }

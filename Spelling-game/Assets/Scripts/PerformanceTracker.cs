@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PerformanceTracker : MonoBehaviour
+[CreateAssetMenu]
+public class PerformanceTracker : ScriptableObject
 {
     private List<string> correctWords = new List<string>();
     private List<string> incorrectWords = new List<string>();
 
-    private void Awake()
+    public void SetUp()
     {
 
         PlayerData data = PlayerSaveManager.LoadPlayerInfo();

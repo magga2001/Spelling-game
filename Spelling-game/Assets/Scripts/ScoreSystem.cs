@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreSystem : MonoBehaviour
+[CreateAssetMenu]
+public class ScoreSystem : ScriptableObject
 {
     [SerializeField] private int scale;
-    [SerializeField] private TextMeshProUGUI scoreUI;
 
     private int highScore;
     private int score;
-    void Awake()
+    public void SetUp()
     {
         score = 0;
 
@@ -31,14 +31,12 @@ public class ScoreSystem : MonoBehaviour
     public void IncreaseScore(int newScore)
     {
         score += newScore * scale;
-        scoreUI.text = score.ToString();
     }
 
     public void DecreaseScore(int newScore)
     {
         score -= newScore * scale;
         score = Math.Max(score, 0);
-        scoreUI.text = score.ToString();
     }
 
     public void UpdateHighScore()

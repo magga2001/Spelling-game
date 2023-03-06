@@ -71,8 +71,6 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         {
             Debug.Log("No legal moves");
         }
-
-        CheckAnswer();
     }
 
     public void RemoveRecentAlphabet()
@@ -191,7 +189,7 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         }
     }
 
-    private void CheckAnswer()
+    public void CheckAnswer()
     {
         if (currentWordOrder.Count > 0)
         {

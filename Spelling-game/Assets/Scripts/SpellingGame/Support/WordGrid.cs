@@ -27,6 +27,7 @@ public class WordGrid : MonoBehaviour
 
     private void OnEnable()
     {
+        ClearBoard();   
         InstantiateWordGrid();
     }
 
@@ -116,13 +117,14 @@ public class WordGrid : MonoBehaviour
         float offset = wordBoxes[0].transform.localScale.x + 0.25f;
 
         int maxPerRow = 3;
+        int maxPerCol = 3;
         float localRowOffset = 0f;
         float localColOffset = 0f;
         int row = 0;
 
         foreach(var word in wordBoxes)
         {
-            word.transform.position = sidePos + new Vector3(-offset * rows / 2 + localRowOffset, offset * columns / 2 - localColOffset, 0f);
+            word.transform.position = sidePos + new Vector3(-offset * maxPerRow / 2 + localRowOffset, offset * maxPerCol / 2 - localColOffset, 0f);
             row++;
             if (row >= maxPerRow)
             {
@@ -136,5 +138,30 @@ public class WordGrid : MonoBehaviour
             }
         }
     }
-    
+
+    public void ClearBoard()
+    {
+        letters.Clear();
+        wordBoxes.Clear();
+    }
+
+    private void OnDisable()
+    {
+        foreach(var letter in letters)
+        {
+            if(letter != null)
+            {
+                letter.SetActive(false);
+            }
+        }
+
+        foreach (var wordBox in wordBoxes)
+        {
+            if (wordBox != null)
+            {
+                wordBox.SetActive(false);
+            }
+        }
+    }
+
 }

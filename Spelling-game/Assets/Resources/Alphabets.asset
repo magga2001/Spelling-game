@@ -21,6 +21,50 @@ MonoBehaviour:
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - alphabet: D
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: E
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: F
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: G
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: H
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: I
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: J
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: K
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: L
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: M
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: N
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: O
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: P
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Q
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: R
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: S
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: T
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: U
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: V
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: W
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: X
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Y
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Z
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   selected_alphabets:
   - alphabet: A
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -29,6 +73,50 @@ MonoBehaviour:
   - alphabet: C
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - alphabet: D
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: E
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: F
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: G
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: H
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: I
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: J
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: K
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: L
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: M
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: N
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: O
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: P
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Q
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: R
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: S
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: T
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: U
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: V
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: W
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: X
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Y
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Z
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   correct_alphabets:
   - alphabet: A
@@ -39,6 +127,50 @@ MonoBehaviour:
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - alphabet: D
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: E
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: F
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: G
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: H
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: I
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: J
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: K
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: L
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: M
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: N
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: O
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: P
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Q
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: R
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: S
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: T
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: U
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: V
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: W
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: X
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Y
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Z
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   wrong_alphabets:
   - alphabet: A
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -47,4 +179,48 @@ MonoBehaviour:
   - alphabet: C
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - alphabet: D
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: E
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: F
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: G
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: H
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: I
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: J
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: K
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: L
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: M
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: N
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: O
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: P
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Q
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: R
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: S
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: T
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: U
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: V
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: W
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: X
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Y
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - alphabet: Z
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
