@@ -7,6 +7,8 @@ using UnityEngine;
 public class StrikeSystem : ScriptableObject
 {
     [SerializeField] private int maxStrike;
+    [SerializeField] private VocabularyManager vocabularyManager;
+    [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
     private int strike;
 
     public void SetUp()
@@ -19,7 +21,9 @@ public class StrikeSystem : ScriptableObject
         if (strike >= maxStrike)
         {
             strike = 0;
-            //DO something
+            spellingDifficultiesManager.DemoteDifficulty();
+            vocabularyManager.SetUpDifficulty(spellingDifficultiesManager.Difficulties);
+
         }
     }
 }
