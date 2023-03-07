@@ -20,7 +20,7 @@ public class Life : MonoBehaviour
         }
     }
 
-    public void updateLife(int lives)
+    public void UpdateLife(int lives)
     {
         if(lives > -1)
         {

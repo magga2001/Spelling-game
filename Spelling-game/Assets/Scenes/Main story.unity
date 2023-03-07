@@ -8874,6 +8874,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75226aab4bc526243b8f9cbe1d161155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
+  performanceTracker: {fileID: 11400000, guid: 136f4809a89a5614fba51b9b54feed24, type: 2}
   scoreText: {fileID: 89007380}
   highScoreText: {fileID: 1371780520}
   correctWordsText: {fileID: 1666269808}
@@ -14306,7 +14308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84931d8db077b6419a41541ddb7f009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1
   lives: 3
   healthBar: {fileID: 1144388457}
   life: {fileID: 1838735874}
@@ -15100,6 +15102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746b1994ea844784e99d2c40051c6be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
+  performanceTracker: {fileID: 11400000, guid: 136f4809a89a5614fba51b9b54feed24, type: 2}
   scoreText: {fileID: 1921313099}
   highScoreText: {fileID: 704004845}
   correctWordsText: {fileID: 836169799}
@@ -17131,7 +17135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463052, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463053, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_RootOrder

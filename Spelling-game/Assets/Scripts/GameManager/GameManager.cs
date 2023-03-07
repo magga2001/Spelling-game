@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            PlayerSaveManager.DeleteProgess();
+        }
     }
 
     private void SetUpVocabularies()

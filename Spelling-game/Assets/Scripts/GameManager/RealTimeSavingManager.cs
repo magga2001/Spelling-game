@@ -8,7 +8,7 @@ public class RealTimeSavingManager : MonoBehaviour
     [SerializeField] PerformanceTracker performanceTracker;
     public void Save()
     {
-        PlayerSaveManager.SavePlayerInfo(scoreSystem.GetHighScore(), performanceTracker.GetCorrectWords(), performanceTracker.GetIncorrectWords());
+        PlayerSaveManager.SavePlayerInfo(scoreSystem.GetUpdateHighScore(), performanceTracker.GetCorrectWords(), performanceTracker.GetIncorrectWords());
     }
 }
  

@@ -24,7 +24,8 @@ public class ScoreSystem : ScriptableObject
         }
         catch (Exception)
         {
-            Debug.Log("File not found");
+            highScore = 0;
+            Debug.Log("Score File not found");
         }
     }
 
@@ -39,9 +40,10 @@ public class ScoreSystem : ScriptableObject
         score = Math.Max(score, 0);
     }
 
-    public void UpdateHighScore()
+    public int GetUpdateHighScore()
     {
         highScore = Math.Max(score, highScore);
+        return highScore;
     }
 
     public int GetScore() => score;

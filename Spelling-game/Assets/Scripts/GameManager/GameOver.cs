@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    [SerializeField] ScoreSystem scoreSystem;
+    [SerializeField] PerformanceTracker performanceTracker;
+
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private TextMeshProUGUI correctWordsText;
@@ -20,10 +23,10 @@ public class GameOver : MonoBehaviour
 
         // highScoreText.text = GameManager.highScore.ToString();
 
-        scoreText.text = 0.ToString();
-        highScoreText.text = 0.ToString();  
-        correctWordsText.text = 0.ToString();   
-        incorrectWordsText.text = 0.ToString(); 
+        scoreText.text = scoreSystem.GetScore().ToString();
+        highScoreText.text = scoreSystem.GetUpdateHighScore().ToString();  
+        correctWordsText.text = performanceTracker.GetCorrectWords().Count.ToString();   
+        incorrectWordsText.text = performanceTracker.GetIncorrectWords().Count.ToString(); 
     }
 
     public void Retry()

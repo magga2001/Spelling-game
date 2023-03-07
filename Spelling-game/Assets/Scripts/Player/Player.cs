@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         currentHealth = 0;
         if (lives <= 0)
         {
-            life.updateLife(lives);
+            life.UpdateLife(lives);
             GameManager.Instance.GameIsOver = true;
             Debug.Log("Gameover");
             //Set the game active false
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("DIED");
-            life.updateLife(lives);
+            life.UpdateLife(lives);
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
         }                                           

@@ -44,6 +44,7 @@ public class PlayerSaveManager
 
     public static void DeleteProgess()
     {
+        Debug.Log("DELETING");
         string path = Application.persistentDataPath + "/player.exe";
 
         File.Delete(path);

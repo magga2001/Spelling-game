@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -20,28 +21,41 @@ public class PerformanceTracker : ScriptableObject
         }
         catch (Exception)
         {
-            Debug.Log("File not found");
+            correctWords.Clear();
+            incorrectWords.Clear();
+            Debug.Log("Performance File not found");
         }
     }
 
     public void AddCorrectWord(string newWord)
     {
-        correctWords.Add(newWord);  
+        if (!correctWords.Contains(newWord))
+        {
+            correctWords.Add(newWord);
+            UpdatePerformanceStat();
+        }
     }
 
     public void AddIncorrectWord(string newWord)
     {
-        incorrectWords.Add(newWord);
+        if (!incorrectWords.Contains(newWord))
+        {
+            incorrectWords.Add(newWord);
+            if(correctWords.Contains(newWord))
+            {
+                correctWords.Remove(newWord);
+            }
+        }
     }
 
     public List<string> GetCorrectWords()
     {
-        return correctWords;  
+        return correctWords.Distinct().ToList();  
     }
 
     public List<string> GetIncorrectWords()
     {
-        return incorrectWords;
+        return incorrectWords.Distinct().ToList();
     }
 
     public void UpdatePerformanceStat()
