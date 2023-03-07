@@ -2401,6 +2401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d75c088628c4c49ab845e222a7ac2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pm: {fileID: 11400000, guid: bf05fdec2111566428e0e42e9b03a971, type: 2}
   boardData: {fileID: 11400000, guid: 7d32017a5753392448eb3132e23c3f56, type: 2}
   alphabetData: {fileID: 11400000, guid: 8ef970c672ffe394b873eb7c3a77d634, type: 2}
   letters: []
@@ -3790,8 +3791,8 @@ Transform:
   m_Children:
   - {fileID: 1446510736}
   - {fileID: 1339455130}
-  - {fileID: 1199538729}
   - {fileID: 1986893919}
+  - {fileID: 1199538729}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8816,7 +8817,7 @@ RectTransform:
   - {fileID: 409771142}
   - {fileID: 832764492}
   m_Father: {fileID: 579944871}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13862,6 +13863,7 @@ GameObject:
   - component: {fileID: 1838735882}
   - component: {fileID: 1838735878}
   - component: {fileID: 1838735885}
+  - component: {fileID: 1838735886}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -13915,8 +13917,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1459354638436604ab69c52c8429ce6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winUI: {fileID: 1986893913}
+  gameOverUI: {fileID: 1199538725}
+  realTimeSavingManager: {fileID: 1838735886}
   library: {fileID: 11400000, guid: d0909b709a0da6742b10abb2884179d8, type: 2}
   vocabularyManager: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
+  puzzlesManager: {fileID: 11400000, guid: bf05fdec2111566428e0e42e9b03a971, type: 2}
   spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}
   scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
   strikeSystem: {fileID: 11400000, guid: 81048ec84663048409fee4ce8ae5fc1f, type: 2}
@@ -14052,6 +14058,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
   scoreUI: {fileID: 2127276046}
+--- !u!114 &1838735886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838735872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d10d9a8add0a4fb20b63419210da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
+  performanceTracker: {fileID: 11400000, guid: 136f4809a89a5614fba51b9b54feed24, type: 2}
 --- !u!1 &1851025621
 GameObject:
   m_ObjectHideFlags: 0
@@ -14138,12 +14158,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1919832445}
   - component: {fileID: 1919832451}
+  - component: {fileID: 1919832452}
   - component: {fileID: 1919832444}
   - component: {fileID: 1919832448}
   - component: {fileID: 1919832447}
   - component: {fileID: 1919832450}
   - component: {fileID: 1919832449}
-  - component: {fileID: 1919832452}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -15061,7 +15081,7 @@ RectTransform:
   - {fileID: 1673795713}
   - {fileID: 1586889083}
   m_Father: {fileID: 579944871}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17111,7 +17131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463052, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463053, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_RootOrder

@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4332edd05bacdc49bc837f72a0a8c42, type: 3}
   m_Name: Puzzles
   m_EditorClassIdentifier: 
+  easyBoards:
+  - {fileID: 11400000, guid: 7d32017a5753392448eb3132e23c3f56, type: 2}
+  mediumBoards:
+  - {fileID: 11400000, guid: ceeb0c0e3bab17f4190375f4e5575fa3, type: 2}
+  hardBoards:
+  - {fileID: 11400000, guid: ece2d547bd13e1b43875ed5d268fa0b6, type: 2}

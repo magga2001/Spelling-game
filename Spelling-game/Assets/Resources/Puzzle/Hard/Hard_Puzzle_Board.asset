@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
   m_Name: Hard_Puzzle_Board
   m_EditorClassIdentifier: 
-  words: []
+  words:
+  - SSS
+  - SSS
