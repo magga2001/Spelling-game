@@ -12,13 +12,13 @@ public class PuzzleSaveManager
         string path = Application.persistentDataPath + fileName;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PuzzlesData data = new PuzzlesData(board, rows, columns);
+        PuzzleData data = new PuzzleData(board, rows, columns);
 
         binaryFormatter.Serialize(stream, data);
         stream.Close();
     }
 
-    public static PuzzlesData LoadInfoFromFile(string fileName)
+    public static PuzzleData LoadInfoFromFile(string fileName)
     {
         string path = Application.persistentDataPath + fileName;
                        
@@ -27,7 +27,7 @@ public class PuzzleSaveManager
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PuzzlesData data = binaryFormatter.Deserialize(stream) as PuzzlesData;
+            PuzzleData data = binaryFormatter.Deserialize(stream) as PuzzleData;
 
             stream.Close();
 

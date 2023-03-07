@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: StrikeSystem
   m_EditorClassIdentifier: 
   maxStrike: 3
+  vocabularyManager: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
+  spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}

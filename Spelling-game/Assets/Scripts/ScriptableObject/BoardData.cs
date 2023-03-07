@@ -10,9 +10,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BoardData : ScriptableObject
 {
+    private string Id;
     private int rows;
     private int columns;
 
+    public string ID { get { return Id; } set { Id = value; } }
     public int Rows { get { return rows; } set { rows = value; } }
     public int Columns { get { return columns; } set { columns = value; } }
 
@@ -38,9 +40,9 @@ public class BoardData : ScriptableObject
     {
         try
         {
-            board = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).board;
-            rows = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).rows;  
-            columns = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle).columns;
+            board = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle + ID).board;
+            rows = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle + ID).rows;  
+            columns = PuzzleSaveManager.LoadInfoFromFile(FileName.puzzle + ID).columns;
         }
         catch
         {
@@ -64,16 +66,16 @@ public class BoardData : ScriptableObject
         CreateNewBoard();
     }
 
-    public void SaveBoard()
+    public void SaveBoard(string id)
     {
-        PuzzleSaveManager.SaveInfo(FileName.puzzle, board, rows, columns);
+        ID = id;
+        PuzzleSaveManager.SaveInfo(FileName.puzzle + ID, board, rows, columns);
     }
 
     public void DeleteSavedBoard()
     {
-        PuzzleSaveManager.DeleteProgess(FileName.puzzle);
+        PuzzleSaveManager.DeleteProgess(FileName.puzzle + ID);
     }
-
     public (string[,] board, int rows , int columns) GetSavedBoardData()
     {
         LoadSavedBoard();

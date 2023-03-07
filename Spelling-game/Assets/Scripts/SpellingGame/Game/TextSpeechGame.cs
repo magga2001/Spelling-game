@@ -46,6 +46,7 @@ public class TextSpeechGame : Subject<(PlayerAction, PlayerAnswerData)>
         }
         else
         {
+            vm.Requeue();
             NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
         }
     }

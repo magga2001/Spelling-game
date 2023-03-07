@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] VocabularyLibrary library;
     [SerializeField] VocabularyManager vocabularyManager;
+    [SerializeField] PuzzlesManager puzzlesManager; 
     [SerializeField] SpellingDifficultiesManager spellingDifficultiesManager;
     [SerializeField] ScoreSystem scoreSystem;
     [SerializeField] StrikeSystem strikeSystem;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         library.SetUp();
         spellingDifficultiesManager.SetUp();
         vocabularyManager.SetUp();
+        puzzlesManager.SetUp();
     }
 
     private void SetUpData()

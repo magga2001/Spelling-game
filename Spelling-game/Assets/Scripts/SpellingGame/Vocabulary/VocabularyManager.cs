@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 [CreateAssetMenu]
 public class VocabularyManager : ScriptableObject
@@ -9,6 +10,7 @@ public class VocabularyManager : ScriptableObject
     [SerializeField] private VocabularyLibrary library;
     [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
     private Queue<Vocabulary> vocabularies = new ();
+    private Vocabulary currentVocabulary;
     private string currentWord;
     private string currentDefinition;
 
@@ -35,6 +37,8 @@ public class VocabularyManager : ScriptableObject
                 vocabulariesLibrary = library.GetHardVocabularies().Vocabularies;
                 break;
         }
+
+        Shuffle(vocabulariesLibrary);
 
         foreach(var vocabulary in vocabulariesLibrary)
         {
@@ -63,10 +67,19 @@ public class VocabularyManager : ScriptableObject
 
     private void DequeueWord()
     {
-        var word = vocabularies.Dequeue();
+        var vocab = vocabularies.Dequeue();
 
-        currentWord = word.Word;
-        currentDefinition = word.Definition;
+        currentVocabulary = vocab;
+        currentWord = vocab.Word;
+        currentDefinition = vocab.Definition;
+    }
+
+    public void Requeue()
+    {
+        if (!vocabularies.Contains(currentVocabulary))
+        {
+            vocabularies.Enqueue(currentVocabulary);
+        }
     }
 
     public string GetCurrentWord()
@@ -82,5 +95,17 @@ public class VocabularyManager : ScriptableObject
     public bool IsEmptyVocabularies()
     {
         return vocabularies.Count == 0;
+    }
+
+    private void Shuffle(List<Vocabulary> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            Random rnd = new();
+            int i = rnd.Next(n + 1);
+            (list[n], list[i]) = (list[i], list[n]);
+        }
     }
 }

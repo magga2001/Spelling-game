@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Random = System.Random;
+using System;
 
 [CustomEditor(typeof(BoardData), false), CanEditMultipleObjects]
 public class BoardDataEditor : Editor
@@ -15,6 +16,7 @@ public class BoardDataEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+
         BoardInitialisation();
         serializedObject.ApplyModifiedProperties();
 
@@ -126,8 +128,10 @@ public class BoardDataEditor : Editor
     {
         if (GUILayout.Button("Save Board"))
         {
-            boardData.SaveBoard();
+            boardData.DeleteSavedBoard();
+            string ID = GenerateID();
             StandardiseBoard();
+            boardData.SaveBoard(ID);
         }
     }
 
@@ -173,5 +177,11 @@ public class BoardDataEditor : Editor
                 }
             }
         }
+    }
+
+    private string GenerateID()
+    {
+        Guid guid = Guid.NewGuid();
+        return guid.ToString();
     }
 }

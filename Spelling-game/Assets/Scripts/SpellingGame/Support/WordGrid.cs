@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static AlphabetData;
 
 public class WordGrid : MonoBehaviour
 {
+    [SerializeField] private PuzzlesManager pm;
     [SerializeField] private BoardData boardData;
     [SerializeField] private AlphabetData alphabetData;
     [SerializeField] private List<GameObject> letters;
@@ -27,21 +27,10 @@ public class WordGrid : MonoBehaviour
 
     private void OnEnable()
     {
-        ClearBoard();   
+        ClearBoard();
+        pm.UpdatePuzzlesDifficulty();
+        boardData = pm.GetCurrentPuzzle();
         InstantiateWordGrid();
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            InstantiateWordGrid();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PuzzleSaveManager.DeleteProgess(FileName.puzzle);
-        }
     }
 
     public void InstantiateWordGrid()
