@@ -26,7 +26,6 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
                 if (hit.collider.CompareTag("LetterBox"))
                 {
                     Debug.Log(hit.transform.GetComponent<LetterBox>().Letter);
-                    hit.transform.GetComponent<LetterBox>().SetSelectedSprite();
                     Main(hit.transform.gameObject, hit.transform.GetComponent<LetterBox>());
                 }
             }
@@ -39,6 +38,9 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         {
             RemoveRecentAlphabet();
             letterBox.Selected = !letterBox.Selected;
+            letterBox.SetDefaultSprite();
+
+            AudioManager.instance.Play("SelectAlphabet");
         }
 
         else if (!letterBox.Selected)
@@ -57,19 +59,26 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         {
             currentWordOrder.Push(alphabet);
             letterBox.Selected = !letterBox.Selected;
+            letterBox.SetSelectedSprite();
+            AudioManager.instance.Play("SelectAlphabet");
         }
         else if (wordOrderLength == 1 && GetFirstLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position).Contains(alphabet.GetComponent<LetterBox>().Position))
         {
             currentWordOrder.Push(alphabet);
             letterBox.Selected = !letterBox.Selected;
+            letterBox.SetSelectedSprite();
+            AudioManager.instance.Play("SelectAlphabet");
         }
         else if (wordOrderLength >= 2 && GetLegalSelection(currentWordOrder.Peek().GetComponent<LetterBox>().Position) == alphabet.GetComponent<LetterBox>().Position)
         {
             currentWordOrder.Push(alphabet);
             letterBox.Selected = !letterBox.Selected;
+            letterBox.SetSelectedSprite();
+            AudioManager.instance.Play("SelectAlphabet");
         }
         else
         {
+            AudioManager.instance.Play("Non-legal");
             Debug.Log("No legal moves");
         }
     }

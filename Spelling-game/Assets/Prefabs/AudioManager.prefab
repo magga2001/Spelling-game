@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &290799382594332681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290799382594332683}
+  - component: {fileID: 290799382594332680}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &290799382594332683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290799382594332681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &290799382594332680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290799382594332681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2f1ea1e98d54a4c83ebb0e0836b6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: BackgroundMusic
+  sounds:
+  - name: Shoot
+    clip: {fileID: 8300000, guid: cb027a04f84700c469c288e4fcc8a5d2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: Correct
+    clip: {fileID: 8300000, guid: 86e670b5786721a4b9bfeb816702251d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: Incorrect
+    clip: {fileID: 8300000, guid: 40afe3bd533b14441a206ee52166186c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 4b182109a1d5d394faf76b676fad9067, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: Teleporting
+    clip: {fileID: 8300000, guid: 3b772a186c2e45d4491a8fae02d22acb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: ClickingButton
+    clip: {fileID: 8300000, guid: b9d7b16a6a026334aa980ef5a580a9e9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: SelectAlphabet
+    clip: {fileID: 8300000, guid: d64c2bf8606903348bcdd88ff291e7b0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: Non-legal
+    clip: {fileID: 8300000, guid: 41101f63916641a48bddff2431e4029a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    music: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: 1b2ec58662d2adb46bdb73a744cce5c3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    music: 1
+    source: {fileID: 0}

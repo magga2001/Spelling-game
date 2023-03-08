@@ -22,6 +22,7 @@ public class Weapon : MonoBehaviour
             GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
             bullet.transform.position = firePoint.transform.position;
             bullet.transform.right = -firePoint.transform.up;
+            AudioManager.instance.Play("Shoot");
         }
     }
 
@@ -30,6 +31,7 @@ public class Weapon : MonoBehaviour
         GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
         bullet.transform.position = firePoint.transform.position;
         bullet.transform.right = -firePoint.transform.up;
+        AudioManager.instance.Play("Shoot");
     }
 }
 

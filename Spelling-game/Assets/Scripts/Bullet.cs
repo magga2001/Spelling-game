@@ -67,6 +67,7 @@ public class Bullet : MonoBehaviour
         if(enemy != null && ShotByPlayer)
         {
             enemy.TakeDamage(damage);
+            AudioManager.instance.Play("Hit");
             gameObject.SetActive(false);
 
             //Audio hits enemy
@@ -78,6 +79,7 @@ public class Bullet : MonoBehaviour
         if(player != null && !ShotByPlayer)
         {
             player.TakeDamage(damage);
+            AudioManager.instance.Play("Hit");
             gameObject.SetActive(false);
         }
     }

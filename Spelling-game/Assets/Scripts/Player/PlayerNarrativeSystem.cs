@@ -36,6 +36,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         performanceTracker.AddCorrectWord(answer.PlayerAnswer);
         performanceTracker.AddCurrentSessionCorrectWord(answer.PlayerAnswer);
         updateUI.UpdateScore();
+        AudioManager.instance.Play("Correct");
         notificationManager.DisplayVocabularyResult(NotificationText.CORRECT);
     }
 
@@ -45,6 +46,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         performanceTracker.AddIncorrectWord(answer.CorrectAnswer);
         performanceTracker.AddCurrentSessionIncorrectWord(answer.CorrectAnswer); 
         updateUI.UpdateScore();
+        AudioManager.instance.Play("Incorrect");
         notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT);
     }
 }
