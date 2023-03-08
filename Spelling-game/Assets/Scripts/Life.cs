@@ -8,15 +8,16 @@ public class Life : MonoBehaviour
     [SerializeField] private Image[] lives;
     [SerializeField] private Sprite activeLife;
     [SerializeField] private Sprite deadLife;
-    [SerializeField] private int number_of_lives;
-    // Start is called before the first frame update
-    void Start()
-    {
-        number_of_lives = lives.Length;
+    private int number_of_lives;
 
-        for(int i = 0; i < number_of_lives; i++)
+    public void SetUp(int number_of_lives)
+    {
+        this.number_of_lives = number_of_lives;
+
+        for (int i = 0; i < number_of_lives; i++)
         {
             lives[i].sprite = activeLife;
+            lives[i].gameObject.SetActive(true);
         }
     }
 
