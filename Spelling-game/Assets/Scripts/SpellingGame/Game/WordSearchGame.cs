@@ -26,6 +26,7 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
                 if (hit.collider.CompareTag("LetterBox"))
                 {
                     Debug.Log(hit.transform.GetComponent<LetterBox>().Letter);
+                    hit.transform.GetComponent<LetterBox>().SetSelectedSprite();
                     Main(hit.transform.gameObject, hit.transform.GetComponent<LetterBox>());
                 }
             }
@@ -208,6 +209,7 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
                 wordsFounded.Add(currentWord);
                 var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
                 word.GetComponent<WordBox>().WordFounded();
+                SetCorrectLetterBox();
                 NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.WORDSEARCH ,word.GetComponent<WordBox>().Word, currentWord)));
                 ResetWordOrder();
                 ConstructLine();
@@ -216,6 +218,14 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
             {
                 NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.WORDSEARCH, "", currentWord)));
             }
+        }
+    }
+
+    private void SetCorrectLetterBox()
+    {
+        foreach(var letterBox in currentWordOrder)
+        {
+            letterBox.GetComponent<LetterBox>().SetCorrectSprite();
         }
     }
 }

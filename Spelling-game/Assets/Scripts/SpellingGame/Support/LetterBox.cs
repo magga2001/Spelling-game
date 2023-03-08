@@ -57,13 +57,23 @@ public class LetterBox : MonoBehaviour
         //this.GetComponent<SpriteRenderer>().sprite = currentSprite;
     }
 
+    public void SetDefaultSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = default_alphabet;
+    }
+
+    public void SetSelectedSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = selected_alphabet;
+    }
+
+    public void SetCorrectSprite()
+    {
+        this.GetComponent<SpriteRenderer>().sprite = correct_alphabet;
+    }
+
     public void SetPosition(int col, int row)
     {
         position = (col, row);
-    }
-
-    public void UpdateCurrentSprite()
-    {
-        //TODO
     }
 }
