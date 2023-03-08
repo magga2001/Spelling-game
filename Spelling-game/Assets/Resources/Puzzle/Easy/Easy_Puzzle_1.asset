@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
   m_Name: Easy_Puzzle_1
   m_EditorClassIdentifier: 
+  Id: 495fd841-a9c6-4c5d-a20f-36b0caac9b80
   words:
   - ABC
   - BAD

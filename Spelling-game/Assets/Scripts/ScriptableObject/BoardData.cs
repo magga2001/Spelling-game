@@ -10,7 +10,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BoardData : ScriptableObject
 {
-    private string Id;
+    [HideInInspector] [SerializeField] private string Id;
     private int rows;
     private int columns;
 

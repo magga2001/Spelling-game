@@ -10,8 +10,8 @@ public class PerformanceTracker : ScriptableObject
     private List<string> currentSessionCorrectWords = new List<string>();
     private List<string> currentSessionIncorrectWords = new List<string>();
 
-    private List<string> correctWords = new List<string>();
-    private List<string> incorrectWords = new List<string>();
+    [HideInInspector] [SerializeField] private List<string> correctWords = new List<string>();
+    [HideInInspector] [SerializeField] private List<string> incorrectWords = new List<string>();
 
     public void SetUp()
     {
