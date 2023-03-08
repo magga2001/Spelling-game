@@ -81,6 +81,7 @@ public class PerformanceTracker : ScriptableObject
 
     public List<string> GetCorrectWords()
     {
+        UpdatePerformanceStat();
         return correctWords.Distinct().ToList();  
     }
 
