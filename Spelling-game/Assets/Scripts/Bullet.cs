@@ -69,10 +69,6 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
             AudioManager.instance.Play("Hit");
             gameObject.SetActive(false);
-
-            //Audio hits enemy
-            //Spawn enemy effect
-            //Set game object to false
         }
 
         Player player = collision.GetComponent<Player>();

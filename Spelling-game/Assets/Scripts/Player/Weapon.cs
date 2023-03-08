@@ -23,6 +23,8 @@ public class Weapon : MonoBehaviour
             bullet.transform.position = firePoint.transform.position;
             bullet.transform.right = -firePoint.transform.up;
             AudioManager.instance.Play("Shoot");
+            GameObject effect = EffectObjectPoolingManager.Instance.GetPlayerShootingEffect();
+            effect.transform.position = firePoint.transform.position;
         }
     }
 

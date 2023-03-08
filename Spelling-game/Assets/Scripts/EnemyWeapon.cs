@@ -61,6 +61,8 @@ public class EnemyWeapon : MonoBehaviour
                 bullet.transform.position = firePoints[i].transform.position;
                 bullet.transform.right = firePoints[i].transform.up;
                 AudioManager.instance.Play("Shoot");
+                GameObject effect = EffectObjectPoolingManager.Instance.GetEnemyShootingEffect();
+                effect.transform.position = firePoints[i].transform.position;
             }
 
             StartCoroutine(FirePause());

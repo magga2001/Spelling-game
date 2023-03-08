@@ -40,11 +40,7 @@ public class Enemy : Subject<(GameEvent gameEvent, EnemyData enemy)>
     {
         NotifyObservers((GameEvent.ENEMY_DIE, new (this.name, this.gameObject, reward)));
 
-        //CombatSystem.Instance.EndCombat();
-
-        //Spawn dying effect
-        //Audio dying effect
-
-        //Maybe spawn a coin?
+        GameObject effect = EffectObjectPoolingManager.Instance.GetExplosionEffect();
+        effect.transform.position = transform.position;
     }
 }
