@@ -9,6 +9,7 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
     [SerializeField] private VocabularyManager vm;
     [SerializeField] private TextMeshProUGUI word;
+    [SerializeField] private TextMeshProUGUI definition;
     [SerializeField] private TMP_InputField inputText;
     private string currentAnswer;
 
@@ -55,10 +56,12 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
     private void CreateBlankCharacter()
     {
         string correctWord = vm.GetCurrentWord();
+        string wordDefinition = vm.GetCurrentWordDefinition();
 
         Random rnd = new();
         int number = rnd.Next(0, correctWord.Length);
 
         word.text = correctWord.Substring(0, number) + "_" + correctWord.Substring(number + 1);
+        definition.text = wordDefinition;
     }
 }
