@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour
                 travelling = false;
                 spellingGameManager.GenerateRandomSpellingGame();
                 cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
+                player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", false);
                 combatSystem.SetUpCombat(combats[currentCombat].EnemyLocation);
             }
         }
@@ -74,6 +75,7 @@ public class LevelManager : MonoBehaviour
             if (player.transform.position == portal.position)
             {
                 travelling = false;
+                player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", false);
             }
         }
     }
@@ -90,6 +92,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator MovingToNextLocation()
     {
         yield return new WaitForSeconds(3);
+        player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", true);
 
         currentCombat++;
         if (currentCombat >= combats.Count)
@@ -116,5 +119,7 @@ public class LevelManager : MonoBehaviour
         travelling = true;
         isSceneOver = false;
         startButton.gameObject.SetActive(false);
+        player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", true);
+
     }
 }
