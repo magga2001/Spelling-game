@@ -7,11 +7,16 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PerformanceTracker : ScriptableObject
 {
+    private List<string> currentSessionCorrectWords = new List<string>();
+    private List<string> currentSessionIncorrectWords = new List<string>();
+
     private List<string> correctWords = new List<string>();
     private List<string> incorrectWords = new List<string>();
 
     public void SetUp()
     {
+        currentSessionCorrectWords.Clear();
+        currentSessionIncorrectWords.Clear();
 
         PlayerData data = PlayerSaveManager.LoadPlayerInfo();
         try
@@ -24,6 +29,21 @@ public class PerformanceTracker : ScriptableObject
             correctWords.Clear();
             incorrectWords.Clear();
             Debug.Log("Performance File not found");
+        }
+    }
+
+    public void AddCurrentSessionCorrectWord(string newWord)
+    {
+        if (!currentSessionCorrectWords.Contains(newWord) && !currentSessionIncorrectWords.Contains(newWord))
+        {
+            currentSessionCorrectWords.Add(newWord);
+        }
+    }
+    public void AddCurrentSessionIncorrectWord(string newWord)
+    {
+        if (!currentSessionIncorrectWords.Contains(newWord))
+        {
+            currentSessionIncorrectWords.Add(newWord);
         }
     }
 
@@ -47,6 +67,17 @@ public class PerformanceTracker : ScriptableObject
             }
         }
     }
+
+    public List<string> GetCurrentSessionCorrectWords()
+    {
+        return currentSessionCorrectWords;
+    }
+
+    public List<string> GetCurrentSessionIncorrectWords()
+    {
+        return currentSessionIncorrectWords;
+    }
+
 
     public List<string> GetCorrectWords()
     {

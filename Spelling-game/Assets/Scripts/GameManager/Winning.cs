@@ -25,8 +25,8 @@ public class Winning : MonoBehaviour
 
         scoreText.text = scoreSystem.GetScore().ToString();
         highScoreText.text = scoreSystem.GetUpdateHighScore().ToString();
-        correctWordsText.text = performanceTracker.GetCorrectWords().Count.ToString();
-        incorrectWordsText.text = performanceTracker.GetIncorrectWords().Count.ToString();
+        correctWordsText.text = performanceTracker.GetCurrentSessionCorrectWords().Count.ToString();
+        incorrectWordsText.text = performanceTracker.GetCurrentSessionIncorrectWords().Count.ToString();
     }
 
     public void Retry()

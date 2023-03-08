@@ -34,6 +34,7 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         weapon.Fire();
         rewardSystem.CalculateReward(answer.PlayerAnswer);
         performanceTracker.AddCorrectWord(answer.PlayerAnswer);
+        performanceTracker.AddCurrentSessionCorrectWord(answer.PlayerAnswer);
         updateUI.UpdateScore();
         notificationManager.DisplayVocabularyResult(NotificationText.CORRECT);
     }
@@ -41,7 +42,8 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
     private void Punish(PlayerAnswerData answer)
     {
         punishmentSystem.CalculatePunishment(answer.PlayerAnswer);
-        performanceTracker.AddIncorrectWord(answer.PlayerAnswer);
+        performanceTracker.AddIncorrectWord(answer.CorrectAnswer);
+        performanceTracker.AddCurrentSessionIncorrectWord(answer.CorrectAnswer); 
         updateUI.UpdateScore();
         notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT);
     }
