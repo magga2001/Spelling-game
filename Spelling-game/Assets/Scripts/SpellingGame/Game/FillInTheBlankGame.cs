@@ -18,7 +18,8 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
         if(!vm.IsEmptyVocabularies())
         {
             CreateBlankCharacter();
-        }        
+        }
+        inputText.ActivateInputField();
     }
 
     void Update()
@@ -51,6 +52,8 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
             vm.Requeue();
             NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.FILLINTHEBLANK, answer, currentAnswer)));
         }
+
+        inputText.ActivateInputField();
     }
 
     private void CreateBlankCharacter()
