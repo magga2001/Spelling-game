@@ -29,11 +29,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] StrikeSystem strikeSystem;
     [SerializeField] PerformanceTracker performanceTracker;
 
+    [SerializeField] private bool isFirstScene;
+
     private void Awake()
     {
         instance = this;
-        SetUpVocabularies();
-        SetUpData();
+        if(isFirstScene)
+        {
+            InGameSaveManager.DeleteProgess();
+            SetUpVocabularies();
+            SetUpData();
+        }
+        else
+        {
+            Debug.Log("Not first scene");
+        }
     }
 
     // Start is called before the first frame update
@@ -46,7 +56,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isLevelComplete)
+
+        if (isLevelComplete)
         {
             WinGame();
         }

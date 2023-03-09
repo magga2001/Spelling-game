@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +7,33 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private int maxHealth;
-    [SerializeField] private int lives;
+    [HideInInspector][SerializeField] private int lives;
+    [SerializeField] private int maxLives;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private Life life;
-    private int currentHealth;
+    [HideInInspector][SerializeField] private int currentHealth;
 
+    public int CurrentHealth { get { return currentHealth; } }
     public int Lives { get { return lives; } set { lives = value; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        life.SetUp(lives);
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //InGameSaveManager.DeleteProgess();
+        InGameData data = InGameSaveManager.LoadInGameInfo();
+        try
+        {
+            currentHealth = data.health;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
+            life.SetUp(maxLives, data.lives);
+        }
+        catch (Exception)
+        {
+            life.SetUp(maxLives, lives);
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+        }
     }
 
     public void TakeDamage(int damage)

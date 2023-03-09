@@ -10,13 +10,20 @@ public class Life : MonoBehaviour
     [SerializeField] private Sprite deadLife;
     private int number_of_lives;
 
-    public void SetUp(int number_of_lives)
+    public void SetUp(int max_lives, int number_of_lives)
     {
         this.number_of_lives = number_of_lives;
 
-        for (int i = 0; i < number_of_lives; i++)
+        for (int i = 0; i < max_lives; i++)
         {
-            lives[i].sprite = activeLife;
+            if(i < number_of_lives)
+            {
+                lives[i].sprite = activeLife;
+            }
+            else
+            {
+                lives[i].sprite = deadLife;
+            }
             lives[i].gameObject.SetActive(true);
         }
     }

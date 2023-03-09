@@ -10,7 +10,7 @@ public class ScoreSystem : ScriptableObject
     [SerializeField] private int scale;
 
     [HideInInspector][SerializeField] private int highScore;
-    private int score;
+    [HideInInspector][SerializeField] private int score;
     public void SetUp()
     {
         score = 0;

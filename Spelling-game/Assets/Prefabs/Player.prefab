@@ -323,8 +323,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   lives: 3
+  maxLives: 3
   healthBar: {fileID: 0}
   life: {fileID: 0}
+  currentHealth: 0
 --- !u!114 &2851380857991383705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +399,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: c7627da97080aa34c87aeda5aba7229d, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1

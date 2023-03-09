@@ -9,6 +9,11 @@ public class UpdateUI : MonoBehaviour
     [SerializeField] private ScoreSystem scoreSystem;
     [SerializeField] private TextMeshProUGUI scoreUI;
 
+    private void Start()
+    {
+        UpdateScore();
+    }
+
     public void UpdateScore()
     {
         scoreUI.text = scoreSystem.GetScore().ToString();

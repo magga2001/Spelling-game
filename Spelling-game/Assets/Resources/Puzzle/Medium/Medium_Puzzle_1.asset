@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
   m_Name: Medium_Puzzle_1
   m_EditorClassIdentifier: 
+  Id: 69275f4d-f41a-4980-b964-8b603efb513b
   words:
   - ABC
   - ABC

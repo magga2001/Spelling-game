@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SpellingGameManager spellingGameManager;
     [SerializeField] private Button startButton;
 
+    private bool enemySpawned;
+
     private int currentCombat = 0;
 
     // Start is called before the first frame update
@@ -37,6 +40,7 @@ public class LevelManager : MonoBehaviour
     {
         combatting = false;
         travelling = false;
+        enemySpawned = false;
     }
 
     // Update is called once per frame
@@ -62,7 +66,11 @@ public class LevelManager : MonoBehaviour
                 spellingGameManager.GenerateRandomSpellingGame();
                 cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
                 player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", false);
-                combatSystem.SetUpCombat(combats[currentCombat].EnemyLocation);
+                if (!enemySpawned)
+                {
+                    combatSystem.SetUpCombat(combats[currentCombat].EnemyLocation);
+                    enemySpawned = true;
+                }
             }
         }
         else
@@ -85,6 +93,7 @@ public class LevelManager : MonoBehaviour
         if (combatting && !travelling)
         {
             combatting = false;
+            enemySpawned = false;
             StartCoroutine(MovingToNextLocation());
         }
     }
@@ -102,8 +111,9 @@ public class LevelManager : MonoBehaviour
             cameraSystem.AdjustWalkingCamera(player.transform);
             spellingGameManager.ResetScreen();
             yield return new WaitForSeconds(8);
-            //transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
-            transition.LoadingLevel(0);
+            RealTimeSavingManager.Instance.SaveCurrentState();
+            transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            //transition.LoadingLevel(0);
 
         }
         else
