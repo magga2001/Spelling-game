@@ -10,43 +10,39 @@ public class SpellingGameManager : MonoBehaviour
     public class SpellingGame
     {
         [SerializeField] private string name;
+        [SerializeField] private SpellingGames gameName;
         [SerializeField] private GameObject canvas;
         [SerializeField] private GameObject game;
 
         public string Name { get { return name; } set { name = value; } }
+
+        public SpellingGames GameName { get { return gameName; } set { gameName = value; } }
         public GameObject Canvas { get { return canvas; } set { canvas = value; } }
         public GameObject Game { get { return game; } set { game = value; } }
     }
 
-    [SerializeField] private SpellingGame[] games;
+    [SerializeField] private List<SpellingGame> games;
 
-    private int currentGame = 0;
+    private SpellingGame currentSpellingGame;
+
+    public void SetUp(SpellingGames game)
+    {
+        currentSpellingGame = games.Find((e) => e.GameName == game);
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            GenerateRandomSpellingGame();
-        }
+
     }
-    public void GenerateRandomSpellingGame()
+    public void DisplaySpellingGame()
     {
-        games[currentGame].Canvas.SetActive(false);
-        games[currentGame].Game.SetActive(false);
 
-        Random rnd = new();
-        int number = rnd.Next(0, games.Length);
-        currentGame = number;
-
-        games[currentGame].Canvas.SetActive(true);
-        games[currentGame].Game.SetActive(true);
-
-        //Debug.Log(games[currentGame].Name);
-
+        currentSpellingGame.Canvas.SetActive(true);
+        currentSpellingGame.Game.SetActive(true);
     }
 
     public void ResetScreen()
     {
-        games[currentGame].Canvas.SetActive(false);
-        games[currentGame].Game.SetActive(false);
+        currentSpellingGame.Canvas.SetActive(false);
+        currentSpellingGame.Game.SetActive(false);
     }
 }

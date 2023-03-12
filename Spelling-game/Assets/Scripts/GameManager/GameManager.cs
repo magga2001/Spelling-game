@@ -23,17 +23,24 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] VocabularyLibrary library;
     [SerializeField] VocabularyManager vocabularyManager;
-    [SerializeField] PuzzlesManager puzzlesManager; 
+    [SerializeField] PuzzlesManager puzzlesManager;
+    [SerializeField] GameMode gameMode;
+    [SerializeField] SpellingGameManager spellingGameManager;   
     [SerializeField] SpellingDifficultiesManager spellingDifficultiesManager;
     [SerializeField] ScoreSystem scoreSystem;
     [SerializeField] StrikeSystem strikeSystem;
     [SerializeField] PerformanceTracker performanceTracker;
 
     [SerializeField] private bool isFirstScene;
+    private bool isEndless;
+    public bool IsEndless() => isEndless;
 
     private void Awake()
     {
         instance = this;
+
+        isEndless = gameMode.IsEndless;
+
         if(isFirstScene)
         {
             InGameSaveManager.DeleteProgess();
@@ -76,13 +83,14 @@ public class GameManager : MonoBehaviour
     private void SetUpVocabularies()
     {
         library.SetUp();
-        spellingDifficultiesManager.SetUp();
+        spellingDifficultiesManager.SetUp(gameMode.Difficulties);
         vocabularyManager.SetUp();
         puzzlesManager.SetUp();
     }
 
     private void SetUpData()
     {
+        spellingGameManager.SetUp(gameMode.Game);
         scoreSystem.SetUp();
         strikeSystem.SetUp();
         performanceTracker.SetUp();

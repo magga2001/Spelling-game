@@ -5052,6 +5052,17 @@ PrefabInstance:
       objectReference: {fileID: 2145948267}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02865cdeec7abda458e7b4e3740c8f37, type: 3}
+--- !u!114 &1397124010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3534901236525915564, guid: 02865cdeec7abda458e7b4e3740c8f37, type: 3}
+  m_PrefabInstance: {fileID: 1397124009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e80486a6e8dcc446b336a3b2850f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1438177476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6085,6 +6096,8 @@ MonoBehaviour:
   library: {fileID: 11400000, guid: d0909b709a0da6742b10abb2884179d8, type: 2}
   vocabularyManager: {fileID: 11400000, guid: 5a7a6bac1246f8047956adafc033dc2a, type: 2}
   puzzlesManager: {fileID: 11400000, guid: bf05fdec2111566428e0e42e9b03a971, type: 2}
+  gameMode: {fileID: 11400000, guid: 8ea8c490b6c6e6847ab165110af16866, type: 2}
+  spellingGameManager: {fileID: 1397124010}
   spellingDifficultiesManager: {fileID: 11400000, guid: 9fde440d1ec0e3545a2b861ae4125307, type: 2}
   scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
   strikeSystem: {fileID: 11400000, guid: 81048ec84663048409fee4ce8ae5fc1f, type: 2}

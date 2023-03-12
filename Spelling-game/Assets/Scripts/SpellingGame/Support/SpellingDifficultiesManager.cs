@@ -9,9 +9,9 @@ public class SpellingDifficultiesManager : ScriptableObject
     private Difficulties currentDifficulties;
     public Difficulties Difficulties { get { return currentDifficulties; } }    
 
-    public void SetUp()
+    public void SetUp(Difficulties difficulties)
     {
-        currentDifficulties = Difficulties.EASY;
+        currentDifficulties = difficulties;
     }
 
     public void PromoteDifficulty()

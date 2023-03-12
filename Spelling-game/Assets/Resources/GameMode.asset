@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
-  m_Name: Hard_Puzzle_Board
+  m_Script: {fileID: 11500000, guid: c2c7fb816c5809c4ba0b52af5a1e28ad, type: 3}
+  m_Name: GameMode
   m_EditorClassIdentifier: 
-  Id: ed721a9e-0a90-4e9e-9a32-bc395c5187a9
-  words:
-  - SSS
-  - SSS

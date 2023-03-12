@@ -60,7 +60,10 @@ public class VocabularyManager : ScriptableObject
             //If hard is now cleared, bring up the incorrect word.
             //If spelled wrong, put it at the back of the queue.
 
-            spellingDifficultiesManager.PromoteDifficulty();
+            if (GameManager.Instance.IsEndless())
+            {
+                spellingDifficultiesManager.PromoteDifficulty();
+            }
             SetUpDifficulty(spellingDifficultiesManager.Difficulties);
         }
     }

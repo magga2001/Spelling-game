@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
                 // So the player can stop at desire location and enter combat mode
                 combatting = true;
                 travelling = false;
-                spellingGameManager.GenerateRandomSpellingGame();
+                spellingGameManager.DisplaySpellingGame();
                 cameraSystem.AdjustFightingCamera(player.transform, combats[currentCombat].EnemyLocation);
                 player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", false);
                 if (!enemySpawned)

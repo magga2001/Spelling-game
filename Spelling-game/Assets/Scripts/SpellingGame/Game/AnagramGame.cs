@@ -46,14 +46,14 @@ public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
         if (answer == currentAnswer)
         {
             vm.NextWord();
-            NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
+            NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.ANAGRAM, answer, currentAnswer)));
             inputText.text = "";
             CreateAnagram();
         }
         else
         {
             vm.Requeue();
-            NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.TEXTSPEECH, answer, currentAnswer)));
+            NotifyObservers((PlayerAction.SPELLED_WRONG, new(SpellingGames.ANAGRAM, answer, currentAnswer)));
         }
         inputText.ActivateInputField();
     }

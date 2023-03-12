@@ -9,7 +9,10 @@ public class PunishmentSystem : MonoBehaviour
 
     public void CalculatePunishment(string word)
     {
-        strikeSystem.IncreaseStrike();
+        if(GameManager.Instance.IsEndless())
+        {
+            strikeSystem.IncreaseStrike();
+        }
         scoreSystem.DecreaseScore(word.Length);
     }
 }
