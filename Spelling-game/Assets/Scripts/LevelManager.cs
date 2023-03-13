@@ -31,6 +31,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SpellingGameManager spellingGameManager;
     [SerializeField] private Button startButton;
 
+    [SerializeField] private bool bossLevel;
+
     private bool enemySpawned;
 
     private int currentCombat = 0;
@@ -68,8 +70,16 @@ public class LevelManager : MonoBehaviour
                 player.gameObject.GetComponentInChildren<Animator>().SetBool("Walking", false);
                 if (!enemySpawned)
                 {
-                    combatSystem.SetUpCombat(combats[currentCombat].EnemyLocation);
-                    enemySpawned = true;
+                    if(!bossLevel)
+                    {
+                        combatSystem.SetUpCombat(combats[currentCombat].EnemyLocation);
+                        enemySpawned = true;
+                    }
+                    else
+                    {
+                        combatSystem.SetUpBossCombat(combats[currentCombat].EnemyLocation);
+                        enemySpawned = true;
+                    }
                 }
             }
         }
@@ -112,8 +122,15 @@ public class LevelManager : MonoBehaviour
             spellingGameManager.ResetScreen();
             yield return new WaitForSeconds(8);
             RealTimeSavingManager.Instance.SaveCurrentState();
-            transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
-            //transition.LoadingLevel(0);
+
+            if(!bossLevel)
+            {
+                transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                GameManager.Instance.IsLevelComplete = true;
+            }
 
         }
         else

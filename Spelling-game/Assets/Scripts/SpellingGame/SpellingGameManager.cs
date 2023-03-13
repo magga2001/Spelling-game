@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
-
 public class SpellingGameManager : MonoBehaviour
 {
     [System.Serializable]

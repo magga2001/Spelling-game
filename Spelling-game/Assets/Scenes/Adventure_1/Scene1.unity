@@ -1148,10 +1148,12 @@ MonoBehaviour:
   easyEnemyPrefab: {fileID: 6060008464930862432, guid: 0d1341f3511619c4fbd68df12bf3af2a, type: 3}
   mediumEnemyPrefab: {fileID: 6060008464930862432, guid: e3ece1ea51d369944a947e7375e3d988, type: 3}
   hardEnemyPrefab: {fileID: 6060008464930862432, guid: 9b385b6b53c4b0b46ab2e46af49ae480, type: 3}
+  bossPrefab: {fileID: 4258352020343734060, guid: 8668331c2f1969e4698311d28fa271ae, type: 3}
   bulletAmount: 10
   easyEnemyAmount: 1
   mediumEnemyAmount: 1
   hardEnemyAmount: 1
+  bossAmount: 1
 --- !u!4 &1718553373
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,6 +1381,7 @@ MonoBehaviour:
     enemyLocation: {fileID: 862922329}
   spellingGameManager: {fileID: 1346794326}
   startButton: {fileID: 2121927136}
+  bossLevel: 0
 --- !u!114 &1838735885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +1841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463052, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1396964806000463053, guid: eee5d5ee95d802548b65464397d170af, type: 3}
       propertyPath: m_RootOrder

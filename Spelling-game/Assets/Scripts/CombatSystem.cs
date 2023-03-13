@@ -16,6 +16,12 @@ public class CombatSystem : Subject<GameEvent>
         currentEnemy.GetComponent<Enemy>().Weapon.StartAttacking();
     }
 
+    public void SetUpBossCombat(Transform enemySpawnLocation)
+    {
+        currentEnemy = ObjectPoolingManager.Instance.GetBoss(enemySpawnLocation);
+        currentEnemy.GetComponent<Enemy>().Weapon.StartAttacking();
+    }
+
     public bool CheckIsCombatSession()
     {
         if (currentEnemy != null)

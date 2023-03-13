@@ -11,17 +11,20 @@ public class ObjectPoolingManager : MonoBehaviour
     [SerializeField] private GameObject easyEnemyPrefab;
     [SerializeField] private GameObject mediumEnemyPrefab;
     [SerializeField] private GameObject hardEnemyPrefab;
+    [SerializeField] private GameObject bossPrefab;
 
     [SerializeField] private int bulletAmount = 10;
     [SerializeField] private int easyEnemyAmount = 1;
     [SerializeField] private int mediumEnemyAmount = 1;
     [SerializeField] private int hardEnemyAmount = 1;
+    [SerializeField] private int bossAmount = 1;
 
 
     private List<GameObject> bullets;
     private List<GameObject> easyEnemies;
     private List<GameObject> mediumEnemies;
     private List<GameObject> hardEnemies;
+    private List<GameObject> bosses;
 
 
     void Awake()
@@ -72,6 +75,17 @@ public class ObjectPoolingManager : MonoBehaviour
             prefabInstance.SetActive(false);
 
             hardEnemies.Add(prefabInstance);
+        }
+
+        bosses = new List<GameObject>(bossAmount);
+        for (int i = 0; i < bossAmount; i++)
+        {
+            GameObject prefabInstance = Instantiate(bossPrefab);
+            //So the prefabInstance will be under this ObjectPooling Manager for organisation
+            prefabInstance.transform.SetParent(transform);
+            prefabInstance.SetActive(false);
+
+            bosses.Add(prefabInstance);
         }
     }
 
@@ -135,7 +149,7 @@ public class ObjectPoolingManager : MonoBehaviour
             mediumEnemies.Add(prefabInstance);
             return prefabInstance;
         }
-        else
+        else 
         {
             foreach (GameObject enemy in hardEnemies)
             {
@@ -153,5 +167,24 @@ public class ObjectPoolingManager : MonoBehaviour
             hardEnemies.Add(prefabInstance);
             return prefabInstance;
         }
+    }
+
+    public GameObject GetBoss(Transform enemySpawnLocation)
+    {
+        foreach (GameObject enemy in bosses)
+        {
+            if (!enemy.activeInHierarchy)
+            {
+                enemy.SetActive(true);
+                enemy.transform.position = enemySpawnLocation.position;
+                return enemy;
+            }
+        }
+        GameObject prefabInstance = Instantiate(bossPrefab);
+        //so the prefabInstance will be under this ObjectPooling Manager for organisation
+        prefabInstance.transform.SetParent(transform);
+        prefabInstance.transform.position = enemySpawnLocation.position;
+        bosses.Add(prefabInstance);
+        return prefabInstance;
     }
 }

@@ -97,12 +97,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   games:
   - name: AnagramGame
+    gameName: 0
     canvas: {fileID: 0}
     game: {fileID: 3534901236916738038}
   - name: FillInTheBlankGame
+    gameName: 1
     canvas: {fileID: 0}
     game: {fileID: 3534901236430587074}
   - name: WordSearchGame
+    gameName: 2
     canvas: {fileID: 0}
     game: {fileID: 3534901237434537743}
 --- !u!1 &3534901236916738038

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private bool isLevelComplete;
 
     public bool GameIsOver { get { return gameIsOver; } set { gameIsOver = value; } }
+    public bool IsLevelComplete { get { return isLevelComplete; } set { isLevelComplete = value; } }
 
     [SerializeField] VocabularyLibrary library;
     [SerializeField] VocabularyManager vocabularyManager;
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Not first scene");
         }
+
+        spellingGameManager.SetUp(gameMode.Game);
     }
 
     // Start is called before the first frame update
@@ -90,7 +93,6 @@ public class GameManager : MonoBehaviour
 
     private void SetUpData()
     {
-        spellingGameManager.SetUp(gameMode.Game);
         scoreSystem.SetUp();
         strikeSystem.SetUp();
         performanceTracker.SetUp();

@@ -76,7 +76,7 @@ public class Pausemenu : MonoBehaviour
 
         GameIsPaused = false;
         //SaveManager.SavePlayerInfo();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(2);
 
 
     }
