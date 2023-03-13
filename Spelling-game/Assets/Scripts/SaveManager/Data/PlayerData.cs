@@ -5,12 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int highScore;
+    public List<HighScoreData> highScores;
     public List<string> correctWords;
     public List<string> IncorrectWords;   
-    public PlayerData(int highScore, List<string> correctWords, List<string> IncorrectWords)
+    public PlayerData(List<HighScoreData> highScores, List<string> correctWords, List<string> IncorrectWords)
     {
-        this.highScore = highScore;
+        this.highScores = highScores;
         this.correctWords = correctWords;   
         this.IncorrectWords = IncorrectWords;   
     }

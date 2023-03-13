@@ -1902,6 +1902,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1187196705}
+    - target: {fileID: 1826984959669827700, guid: 1b9df43929b0b624ba7d3fb14a971095, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1826984960008094375, guid: 1b9df43929b0b624ba7d3fb14a971095, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2004,11 +2008,11 @@ PrefabInstance:
       objectReference: {fileID: 1187196705}
     - target: {fileID: 1826984961344764753, guid: 1b9df43929b0b624ba7d3fb14a971095, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1826984961344764753, guid: 1b9df43929b0b624ba7d3fb14a971095, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9df43929b0b624ba7d3fb14a971095, type: 3}
@@ -2240,10 +2244,22 @@ PrefabInstance:
     - target: {fileID: 7115678641865228979, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1450219941}
+    - target: {fileID: 7115678641865228979, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAnswer
       objectReference: {fileID: 0}
     - target: {fileID: 7115678642638574761, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1883800284}
+    - target: {fileID: 7115678642638574761, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115678642638574761, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnagramGame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7115678642706395666, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2252,10 +2268,22 @@ PrefabInstance:
     - target: {fileID: 7115678642742286363, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1883800284}
+    - target: {fileID: 7115678642742286363, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115678642742286363, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnagramGame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7115678642956703652, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1450219941}
+    - target: {fileID: 7115678642956703652, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckAnswer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}

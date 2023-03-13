@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerSaveManager.DeleteProgess();
         instance = this;
 
         isEndless = gameMode.IsEndless;
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     private void SetUpData()
     {
-        scoreSystem.SetUp();
+        scoreSystem.SetUp(gameMode);
         strikeSystem.SetUp();
         performanceTracker.SetUp();
     }
@@ -102,13 +103,13 @@ public class GameManager : MonoBehaviour
     {
         winUI.SetActive(true);
 
-        realTimeSavingManager.Save();
+        realTimeSavingManager.Save(gameMode);
     }
 
     private void EndGame()
     {
         gameOverUI.SetActive(true);
 
-        realTimeSavingManager.Save();
+        realTimeSavingManager.Save(gameMode);
     }
 }

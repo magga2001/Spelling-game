@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,14 +7,14 @@ using UnityEngine;
 
 public class PlayerSaveManager
 {
-    public static void SavePlayerInfo(int highScore, List<string> correctWords, List<string> IncorrectWords)
+    public static void SavePlayerInfo(List<HighScoreData> highScores, List<string> correctWords, List<string> IncorrectWords)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 
         string path = Application.persistentDataPath + "/player.exe";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(highScore, correctWords,IncorrectWords);
+        PlayerData data = new(highScores, correctWords, IncorrectWords);
 
         binaryFormatter.Serialize(stream, data);
         stream.Close();

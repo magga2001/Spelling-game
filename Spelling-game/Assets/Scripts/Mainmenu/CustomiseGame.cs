@@ -37,7 +37,7 @@ public class CustomiseGame : MonoBehaviour
 
     public void SetGameDifficulty()
     {
-        var difficulty = gameMode.value;
+        var difficulty = difficulties.value;
 
         switch (difficulty)
         {

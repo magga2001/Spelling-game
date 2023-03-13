@@ -11,16 +11,23 @@ public class ScoreSystem : ScriptableObject
 
     [HideInInspector][SerializeField] private int highScore;
     [HideInInspector][SerializeField] private int score;
-    public void SetUp()
+    public void SetUp(GameMode gameMode)
     {
         score = 0;
 
         PlayerData data = PlayerSaveManager.LoadPlayerInfo();
         try
         {
-            highScore = data.highScore;
+            var highScoreData = data.highScores.Find((e) => e.Game == gameMode.Game && e.Difficulties == gameMode.Difficulties);
 
-
+            if (highScoreData != null)
+            {
+                highScore = highScoreData.Score;
+            }
+            else
+            {
+                highScore = 0;
+            }
         }
         catch (Exception)
         {
