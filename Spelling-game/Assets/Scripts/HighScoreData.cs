@@ -5,10 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public class HighScoreData
 {
-    private SpellingGames game;
-    private Difficulties difficulties;
-    private int score;
-    private bool isEndless;
+    [SerializeField] private SpellingGames game;
+    [SerializeField] private Difficulties difficulties;
+    [SerializeField] private int score;
+    [SerializeField] private bool isEndless;
 
     public HighScoreData(SpellingGames game, Difficulties difficulties, int score, bool isEndless)
     {

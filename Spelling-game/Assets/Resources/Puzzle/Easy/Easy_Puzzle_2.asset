@@ -12,5 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
   m_Name: Easy_Puzzle_2
   m_EditorClassIdentifier: 
+  Id: 
+  rows: 3
+  columns: 3
+  board:
+  - column: 0
+    row: 0
+    val: G
+  - column: 0
+    row: 1
+    val: Q
+  - column: 0
+    row: 2
+    val: N
+  - column: 1
+    row: 0
+    val: U
+  - column: 1
+    row: 1
+    val: S
+  - column: 1
+    row: 2
+    val: O
+  - column: 2
+    row: 0
+    val: N
+  - column: 2
+    row: 1
+    val: E
+  - column: 2
+    row: 2
+    val: B
   words:
-  - QQQ
+  - HOT
+  - BAG

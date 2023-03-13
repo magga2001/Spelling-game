@@ -10,28 +10,28 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BoardData : ScriptableObject
 {
-    [HideInInspector] [SerializeField] private string Id;
-    private int rows;
-    private int columns;
+    [HideInInspector][SerializeField] private string Id;
+    [SerializeField] private int rows;
+    [SerializeField] private int columns;
 
     public string ID { get { return Id; } set { Id = value; } }
     public int Rows { get { return rows; } set { rows = value; } }
     public int Columns { get { return columns; } set { columns = value; } }
 
-    private string[,] board;
+    [HideInInspector][SerializeField] private List<Cell> board;
 
     [SerializeField] private List<string> words;
     public List<string> Words { get { return words; } set { words = value; } }
 
     public void CreateNewBoard()
     {
-        board = new string[columns, rows];
+        board = new();
 
         for (int i = 0; i < columns; i++)
         {
             for (int j = 0; j < rows; j++)
             {
-                board[i,j] = "";
+                board.Add(new(i, j, ""));
             }
         }
     }
@@ -52,17 +52,23 @@ public class BoardData : ScriptableObject
 
     public void UpdateBoardData(int column, int row, string data)
     {
-        board[column, row] = data;
+        var cell = board.Find((e) => e.Column == column && e.Row == row);
+        cell.Val = data;
     }
 
-    public string[,] GetBoardData()
+    public List<Cell> GetBoardData()
     {
         return board;
     }
 
+    public Cell GetCell(int column, int row)
+    {
+        return board.Find((e) => e.Column == column && e.Row == row);
+    }
+
     public void ClearBoard()
     {
-        Array.Clear(board, 0, board.Length);
+        board.Clear();
         CreateNewBoard();
     }
 
@@ -76,7 +82,7 @@ public class BoardData : ScriptableObject
     {
         PuzzleSaveManager.DeleteProgess(FileName.puzzle + ID);
     }
-    public (string[,] board, int rows , int columns) GetSavedBoardData()
+    public (List<Cell> board, int rows , int columns) GetSavedBoardData()
     {
         LoadSavedBoard();
         return (board, rows, columns);

@@ -6,12 +6,12 @@ using UnityEngine;
 public class PlayerData
 {
     public List<HighScoreData> highScores;
-    public List<string> correctWords;
+    public List<string> CorrectWords;
     public List<string> IncorrectWords;   
     public PlayerData(List<HighScoreData> highScores, List<string> correctWords, List<string> IncorrectWords)
     {
         this.highScores = highScores;
-        this.correctWords = correctWords;   
+        this.CorrectWords = correctWords;   
         this.IncorrectWords = IncorrectWords;   
     }
 }

@@ -13,12 +13,12 @@ public class WordGrid : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private float margin;
 
-    private string[,] board;
+    private List<Cell> board;
     private int rows;
     private int columns;
     [SerializeField] private List<GameObject> wordBoxes;
 
-    public string[,] Board { get { return board; } set { board = value; } }
+    public List<Cell> Board { get { return board; } set { board = value; } }
     public int Rows { get { return rows; } set { rows = value; } }
     public int Columns { get { return columns; } set { columns = value; } }
 
@@ -35,7 +35,7 @@ public class WordGrid : MonoBehaviour
 
     public void InstantiateWordGrid()
     {
-        board = boardData.GetSavedBoardData().board;
+        //board = boardData.GetSavedBoardData().board;
         rows = boardData.GetSavedBoardData().rows;
         columns = boardData.GetSavedBoardData().columns;
         words = boardData.Words;
@@ -45,10 +45,10 @@ public class WordGrid : MonoBehaviour
         {
             for(int j = 0; j < rows; j++)
             {
-                var letter_default = alphabetData.Default_alphabets.Find(e => e.Alphabet == board[i, j]);
-                var letter_selected = alphabetData.Selected_alphabets.Find(e => e.Alphabet == board[i, j]);
-                var letter_correct = alphabetData.Correct_alphabets.Find(e => e.Alphabet == board[i, j]);
-                var letter_wrong = alphabetData.Wrong_alphabets.Find(e => e.Alphabet == board[i, j]);
+                var letter_default = alphabetData.Default_alphabets.Find(e => e.Alphabet == boardData.GetCell(i, j).Val);
+                var letter_selected = alphabetData.Selected_alphabets.Find(e => e.Alphabet == boardData.GetCell(i, j).Val);
+                var letter_correct = alphabetData.Correct_alphabets.Find(e => e.Alphabet == boardData.GetCell(i, j).Val);
+                var letter_wrong = alphabetData.Wrong_alphabets.Find(e => e.Alphabet == boardData.GetCell(i, j).Val);
 
                 if (letter_default != null && letter_selected != null && letter_correct != null && letter_wrong != null)
                 {

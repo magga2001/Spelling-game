@@ -27,10 +27,24 @@ public class PlayerStat : MonoBehaviour
 
     private void Start()
     {
-        correctWords = performanceTracker.GetCorrectWords();
-        incorrectWords = performanceTracker.GetIncorrectWords();
+        //correctWords = performanceTracker.GetCorrectWords();
+        //incorrectWords = performanceTracker.GetIncorrectWords();
 
-        if(correctWords.Count == 0)
+        PlayerData data = PlayerSaveManager.LoadPlayerInfo();
+
+        try
+        {
+            Debug.Log(data.CorrectWords);
+            correctWords = data.CorrectWords;
+            incorrectWords = data.IncorrectWords;
+        }
+        catch
+        {
+            correctWords = performanceTracker.GetCorrectWords();
+            incorrectWords = performanceTracker.GetIncorrectWords();
+        }
+
+        if (correctWords.Count == 0)
         {
             correctWordsLeftButton.interactable = false;
             correctWordsRightButton.interactable = false;

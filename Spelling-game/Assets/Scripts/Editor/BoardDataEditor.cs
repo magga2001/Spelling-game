@@ -95,7 +95,7 @@ public class BoardDataEditor : Editor
             for (int row = 0; row < boardData.Rows; row++)
             {
                 EditorGUILayout.BeginHorizontal(rowStyle);
-                var character = (string)EditorGUILayout.TextArea(boardData.GetBoardData()[col, row]);
+                var character = (string)EditorGUILayout.TextArea(boardData.GetCell(col,row).Val);
                 boardData.UpdateBoardData(col, row, character);
                 EditorGUILayout.EndHorizontal();
             }
@@ -154,11 +154,11 @@ public class BoardDataEditor : Editor
             {
                 for (int j = 0; j < boardData.Rows; j++)
                 {
-                    if (boardData.GetBoardData()[i,j] == "")
+                    if (boardData.GetCell(i, j).Val == "")
                     {
                         Random rnd = new();
                         int index = rnd.Next(0, alphabets.Length);
-                        boardData.GetBoardData()[i, j] = alphabets[index].ToString();
+                        boardData.GetCell(i, j).Val = alphabets[index].ToString();
                     }
                 }
             }
@@ -171,9 +171,9 @@ public class BoardDataEditor : Editor
         {
             for (int j = 0; j < boardData.Rows; j++)
             {
-                if (boardData.GetBoardData()[i, j] != "")
+                if (boardData.GetCell(i, j).Val != "")
                 {
-                    boardData.GetBoardData()[i, j] = boardData.GetBoardData()[i, j][0].ToString().ToUpper();
+                    boardData.GetCell(i, j).Val = boardData.GetCell(i, j).Val[0].ToString().ToUpper();
                 }
             }
         }

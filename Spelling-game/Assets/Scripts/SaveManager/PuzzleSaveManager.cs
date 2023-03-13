@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using System.Collections.Generic;
 
 public class PuzzleSaveManager
 {
-    public static void SaveInfo(string fileName, string[,] board, int rows, int columns)
+    public static void SaveInfo(string fileName, List<Cell> board, int rows, int columns)
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 

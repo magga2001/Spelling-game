@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu]
 public class PerformanceTracker : ScriptableObject
 {
     private List<string> currentSessionCorrectWords = new List<string>();
     private List<string> currentSessionIncorrectWords = new List<string>();
 
-    [HideInInspector] [SerializeField] private List<string> correctWords = new List<string>();
-    [HideInInspector] [SerializeField] private List<string> incorrectWords = new List<string>();
+    [HideInInspector] [SerializeField] private List<string> correctWords;
+    [HideInInspector] [SerializeField] private List<string> incorrectWords;
 
     public void SetUp()
     {
@@ -21,7 +22,7 @@ public class PerformanceTracker : ScriptableObject
         PlayerData data = PlayerSaveManager.LoadPlayerInfo();
         try
         {
-            correctWords = data.correctWords;
+            correctWords = data.CorrectWords;
             incorrectWords = data.IncorrectWords;
         }
         catch (Exception)
