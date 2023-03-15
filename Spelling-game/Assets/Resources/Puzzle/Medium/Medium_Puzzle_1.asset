@@ -13,6 +13,84 @@ MonoBehaviour:
   m_Name: Medium_Puzzle_1
   m_EditorClassIdentifier: 
   Id: 543d414d-9f64-49ce-b091-f939ca227f41
+  rows: 5
+  columns: 5
+  board:
+  - column: 0
+    row: 0
+    val: G
+  - column: 0
+    row: 1
+    val: P
+  - column: 0
+    row: 2
+    val: H
+  - column: 0
+    row: 3
+    val: Q
+  - column: 0
+    row: 4
+    val: N
+  - column: 1
+    row: 0
+    val: U
+  - column: 1
+    row: 1
+    val: U
+  - column: 1
+    row: 2
+    val: P
+  - column: 1
+    row: 3
+    val: W
+  - column: 1
+    row: 4
+    val: S
+  - column: 2
+    row: 0
+    val: E
+  - column: 2
+    row: 1
+    val: T
+  - column: 2
+    row: 2
+    val: B
+  - column: 2
+    row: 3
+    val: H
+  - column: 2
+    row: 4
+    val: G
+  - column: 3
+    row: 0
+    val: Z
+  - column: 3
+    row: 1
+    val: S
+  - column: 3
+    row: 2
+    val: B
+  - column: 3
+    row: 3
+    val: Y
+  - column: 3
+    row: 4
+    val: F
+  - column: 4
+    row: 0
+    val: P
+  - column: 4
+    row: 1
+    val: I
+  - column: 4
+    row: 2
+    val: T
+  - column: 4
+    row: 3
+    val: F
+  - column: 4
+    row: 4
+    val: L
   words:
   - ABC
   - ABC

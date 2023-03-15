@@ -28,7 +28,6 @@ public class WordGrid : MonoBehaviour
     private void OnEnable()
     {
         ResetBoard();
-        //pm.UpdatePuzzlesDifficulty();
         boardData = pm.GetCurrentPuzzle();
         InstantiateWordGrid();
     }

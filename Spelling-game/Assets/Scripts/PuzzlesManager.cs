@@ -75,14 +75,6 @@ public class PuzzlesManager : ScriptableObject
         return currentPuzzle;
     }
 
-    public void UpdatePuzzlesDifficulty()
-    {
-        if(currentDifficulty != spellingDifficultiesManager.Difficulties)
-        {
-            SetUpDifficulty(spellingDifficultiesManager.Difficulties);
-        }
-    }
-
     private void Shuffle(List<BoardData> list)
     {
         int n = list.Count;

@@ -47,7 +47,7 @@ public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
     public void CheckAnswer()
     {
         string answer = vm.GetCurrentWord().Trim();
-        currentAnswer = currentAnswer.Trim();
+        currentAnswer = currentAnswer.Trim().ToLower();
 
         if (answer == currentAnswer)
         {

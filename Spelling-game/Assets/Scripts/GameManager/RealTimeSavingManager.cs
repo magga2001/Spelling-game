@@ -21,10 +21,11 @@ public class RealTimeSavingManager : MonoBehaviour
     {
         var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties && game.IsEndless == GameManager.Instance.IsEndless());
 
-        Debug.Log(highScore);
-
-        if(highScore != null)
+        if (highScore != null)
         {
+            Debug.Log(highScore.Game);
+            Debug.Log(highScore.Difficulties);
+            Debug.Log(highScore.IsEndless);
             highScore.Score = scoreSystem.GetUpdateHighScore();
         }
         else

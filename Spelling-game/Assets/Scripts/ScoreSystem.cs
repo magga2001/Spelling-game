@@ -18,7 +18,7 @@ public class ScoreSystem : ScriptableObject
         PlayerData data = PlayerSaveManager.LoadPlayerInfo();
         try
         {
-            var highScoreData = data.highScores.Find((e) => e.Game == gameMode.Game && e.Difficulties == gameMode.Difficulties);
+            var highScoreData = data.highScores.Find((e) => e.Game == gameMode.Game && e.Difficulties == gameMode.Difficulties && GameManager.Instance.IsEndless());
 
             if (highScoreData != null)
             {
