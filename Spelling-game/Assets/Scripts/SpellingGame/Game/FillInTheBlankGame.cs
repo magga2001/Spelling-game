@@ -28,6 +28,11 @@ public class FillInTheBlankGame : Subject<(PlayerAction, PlayerAnswerData)>
         {
             CheckAnswer();
         }
+
+        if(GameManager.Instance.GameIsOver)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void UpdateAnswer(string input)

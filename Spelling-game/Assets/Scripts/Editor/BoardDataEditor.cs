@@ -158,7 +158,9 @@ public class BoardDataEditor : Editor
                     {
                         Random rnd = new();
                         int index = rnd.Next(0, alphabets.Length);
-                        boardData.GetCell(i, j).Val = alphabets[index].ToString();
+                        boardData.UpdateBoardData(i, j, alphabets[index].ToString());
+                        //boardData.GetCell(i, j).Val = alphabets[index].ToString();
+                        //EditorUtility.SetDirty(boardData);
                     }
                 }
             }
@@ -173,7 +175,8 @@ public class BoardDataEditor : Editor
             {
                 if (boardData.GetCell(i, j).Val != "")
                 {
-                    boardData.GetCell(i, j).Val = boardData.GetCell(i, j).Val[0].ToString().ToUpper();
+                    boardData.UpdateBoardData(i, j, boardData.GetCell(i, j).Val[0].ToString().ToUpper());
+                    //boardData.GetCell(i, j).Val = boardData.GetCell(i, j).Val[0].ToString().ToUpper();
                 }
             }
         }

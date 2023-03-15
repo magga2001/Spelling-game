@@ -2,16 +2,44 @@
   "difficulty": "medium",
   "vocabularies": [
     {
-      "word": "ampleMedium",
-      "definition": "Something about ample medium"
+      "word": "chronological",
+      "definition": "adj. arranged in order of time or date"
     },
     {
-      "word": "annualMedium",
-      "definition": "Something about annual medium"
+      "word": "cognizant",
+      "definition": "adj. being aware or having knowledge of something"
     },
     {
-      "word": "assumeMedium",
-      "definition": "Something about assume medium"
+      "word": "distort",
+      "definition": "v. to misrepresent"
+    },
+    {
+      "word": "impoverish",
+      "definition": "v. to reduce to poverty"
+    },
+    {
+      "word": "inevitable",
+      "definition": "adj. unable to be avoided"
+    },
+    {
+      "word": "languish",
+      "definition": "v. to become weak"
+    },
+    {
+      "word": "morose",
+      "definition": "adj. gloomy, depressed"
+    },
+    {
+      "word": "proximity",
+      "definition": "n. nearness in time or space"
+    },
+    {
+      "word": "unobtrusive",
+      "definition": "adj. not attracting attention"
+    },
+    {
+      "word": "verdict",
+      "definition": "n. a judgement or decision"
     }
   ]
 }

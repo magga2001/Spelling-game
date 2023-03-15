@@ -13,36 +13,158 @@ MonoBehaviour:
   m_Name: Easy_Puzzle_2
   m_EditorClassIdentifier: 
   Id: 
-  rows: 3
-  columns: 3
+  rows: 7
+  columns: 7
   board:
   - column: 0
     row: 0
-    val: G
+    val: M
   - column: 0
     row: 1
-    val: Q
+    val: L
   - column: 0
     row: 2
-    val: N
+    val: A
+  - column: 0
+    row: 3
+    val: B
+  - column: 0
+    row: 4
+    val: E
+  - column: 0
+    row: 5
+    val: L
+  - column: 0
+    row: 6
+    val: E
   - column: 1
     row: 0
-    val: U
+    val: K
   - column: 1
-    row: 1
-    val: S
-  - column: 1
-    row: 2
-    val: O
-  - column: 2
-    row: 0
-    val: N
-  - column: 2
     row: 1
     val: E
+  - column: 1
+    row: 2
+    val: U
+  - column: 1
+    row: 3
+    val: D
+  - column: 1
+    row: 4
+    val: B
+  - column: 1
+    row: 5
+    val: R
+  - column: 1
+    row: 6
+    val: V
+  - column: 2
+    row: 0
+    val: L
+  - column: 2
+    row: 1
+    val: W
   - column: 2
     row: 2
+    val: N
+  - column: 2
+    row: 3
     val: B
+  - column: 2
+    row: 4
+    val: G
+  - column: 2
+    row: 5
+    val: G
+  - column: 2
+    row: 6
+    val: O
+  - column: 3
+    row: 0
+    val: W
+  - column: 3
+    row: 1
+    val: L
+  - column: 3
+    row: 2
+    val: C
+  - column: 3
+    row: 3
+    val: T
+  - column: 3
+    row: 4
+    val: V
+  - column: 3
+    row: 5
+    val: D
+  - column: 3
+    row: 6
+    val: M
+  - column: 4
+    row: 0
+    val: G
+  - column: 4
+    row: 1
+    val: O
+  - column: 4
+    row: 2
+    val: T
+  - column: 4
+    row: 3
+    val: T
+  - column: 4
+    row: 4
+    val: A
+  - column: 4
+    row: 5
+    val: A
+  - column: 4
+    row: 6
+    val: E
+  - column: 5
+    row: 0
+    val: H
+  - column: 5
+    row: 1
+    val: V
+  - column: 5
+    row: 2
+    val: G
+  - column: 5
+    row: 3
+    val: L
+  - column: 5
+    row: 4
+    val: S
+  - column: 5
+    row: 5
+    val: L
+  - column: 5
+    row: 6
+    val: R
+  - column: 6
+    row: 0
+    val: A
+  - column: 6
+    row: 1
+    val: C
+  - column: 6
+    row: 2
+    val: Q
+  - column: 6
+    row: 3
+    val: U
+  - column: 6
+    row: 4
+    val: I
+  - column: 6
+    row: 5
+    val: R
+  - column: 6
+    row: 6
+    val: E
   words:
-  - HOT
-  - BAG
+  - LABEL
+  - MENTAL
+  - ACQUIRE
+  - REMOVE

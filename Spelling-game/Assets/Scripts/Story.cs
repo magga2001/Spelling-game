@@ -16,13 +16,26 @@ public class Story : MonoBehaviour
         StartCoroutine(StartStory());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            SkipStory();
+        }
+    }
+
+    public void SkipStory()
+    {
+        SceneManager.LoadScene(SceneName.sceneOne);
+    }
+
     IEnumerator StartStory()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         story.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
-using static Cinemachine.CinemachineTriggerAction.ActionSettings;
 
 public class HighScoreDisplay : MonoBehaviour
 {
@@ -34,9 +33,9 @@ public class HighScoreDisplay : MonoBehaviour
         var hasHard = HasHighScores(gameMode, Difficulties.HARD);
         var isEndless = highScores.Contains(highScores.Find((e) => e.Game == gameMode && e.IsEndless == true));
 
-        easyScore.text = hasEasy ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.EASY).Score.ToString() : 0.ToString();
-        mediumScore.text = hasMedium ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.EASY).Score.ToString() : 0.ToString();
-        hardScore.text = hasHard ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.EASY).Score.ToString() : 0.ToString();
+        easyScore.text = hasEasy ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.EASY && e.IsEndless == false).Score.ToString() : 0.ToString();
+        mediumScore.text = hasMedium ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.MEDIUM && e.IsEndless == false).Score.ToString() : 0.ToString();
+        hardScore.text = hasHard ? highScores.Find((e) => e.Game == gameMode && e.Difficulties == Difficulties.HARD && e.IsEndless == false).Score.ToString() : 0.ToString();
         endlessScore.text = isEndless ? highScores.Find((e) => e.Game == gameMode && e.IsEndless == true).Score.ToString() : 0.ToString();
     }
 
@@ -46,7 +45,8 @@ public class HighScoreDisplay : MonoBehaviour
         try
         {
             highScores = data.highScores;
-            Debug.Log(highScores.Find((e) => e.Game == SpellingGames.FILLINTHEBLANK && e.Difficulties == Difficulties.EASY).Score.ToString());
+            //Debug.Log(highScores.Find((e) => e.Game == SpellingGames.FILLINTHEBLANK && e.Difficulties == Difficulties.EASY && e.IsEndless == false).Score.ToString());
+            //Debug.Log(highScores.Find((e) => e.Game == SpellingGames.FILLINTHEBLANK && e.IsEndless == true).Score.ToString());
         }
         catch (Exception)
         {
@@ -73,6 +73,7 @@ public class HighScoreDisplay : MonoBehaviour
 
     private bool HasHighScores(SpellingGames game, Difficulties difficulties)
     {
-        return highScores.Contains(highScores.Find((e) => e.Game == game && e.Difficulties == difficulties));
+        return highScores.Contains(highScores.Find((e) => e.Game == game && e.Difficulties == difficulties && e.IsEndless == false));
     }
 }
+

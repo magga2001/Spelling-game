@@ -5,6 +5,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static AlphabetData;
 
 public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
@@ -13,7 +14,7 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
     [SerializeField] private WordGrid currentWordGrid;
     [SerializeField] private Camera cam;
     [SerializeField] LineRenderer lineRenderer;
-    private List<string> wordsFounded = new List<string>();
+    [SerializeField] private List<string> wordsFounded = new List<string>();
 
     // Update is called once per frame
     void Update()
@@ -25,10 +26,15 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
             {
                 if (hit.collider.CompareTag("LetterBox"))
                 {
-                    Debug.Log(hit.transform.GetComponent<LetterBox>().Letter);
+                    //Debug.Log(hit.transform.GetComponent<LetterBox>().Letter);
                     Main(hit.transform.gameObject, hit.transform.GetComponent<LetterBox>());
                 }
             }
+        }
+
+        if (GameManager.Instance.GameIsOver)
+        {
+            gameObject.SetActive(false);
         }
     }
 
@@ -38,7 +44,14 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         {
             RemoveRecentAlphabet();
             letterBox.Selected = !letterBox.Selected;
-            letterBox.SetDefaultSprite();
+            if(letterBox.Founded)
+            {
+                letterBox.SetCorrectSprite();
+            }
+            else
+            {
+                letterBox.SetDefaultSprite();
+            }
 
             AudioManager.instance.Play("SelectAlphabet");
         }
@@ -218,10 +231,12 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
                 wordsFounded.Add(currentWord);
                 var word = currentWordGrid.WordBoxes.Find(e => e.GetComponent<WordBox>().Word == currentWord);
                 word.GetComponent<WordBox>().WordFounded();
+                //Check all the word that is all founded;
                 SetCorrectLetterBox();
                 NotifyObservers((PlayerAction.SPELLED_CORRECT, new(SpellingGames.WORDSEARCH ,word.GetComponent<WordBox>().Word, currentWord)));
                 ResetWordOrder();
                 ConstructLine();
+                NextPuzzle();
             }
             else
             {
@@ -235,6 +250,27 @@ public class WordSearchGame : Subject<(PlayerAction, PlayerAnswerData)>
         foreach(var letterBox in currentWordOrder)
         {
             letterBox.GetComponent<LetterBox>().SetCorrectSprite();
+            letterBox.GetComponent<LetterBox>().Founded = true;
+            letterBox.GetComponent<LetterBox>().Selected = false;
         }
+    }
+
+    private void NextPuzzle()
+    {
+        foreach(var word in currentWordGrid.WordBoxes)
+        {
+            if (!wordsFounded.Contains(word.GetComponent<WordBox>().Word))
+            {
+                return;
+            };
+        }
+        wordsFounded.Clear();
+        currentWordGrid.NextPuzzle();
+    }
+
+    private void OnDisable()
+    {
+        ResetWordOrder();
+        ConstructLine();
     }
 }

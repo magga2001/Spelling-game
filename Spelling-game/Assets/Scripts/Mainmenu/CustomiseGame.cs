@@ -8,6 +8,7 @@ public class CustomiseGame : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown gameMode;
     [SerializeField] private TMP_Dropdown difficulties;
+    [SerializeField] private TextMeshProUGUI instruction;
     [SerializeField] private GameMode game;
 
     public void SetIsEndlessGame(bool isEndless)
@@ -52,6 +53,26 @@ public class CustomiseGame : MonoBehaviour
                 break;
             default:
                 game.Difficulties = Difficulties.EASY;
+                break;
+        }
+    }
+
+    public void SetInstruction()
+    {
+        var currentGameMode = gameMode.value;
+
+        switch (currentGameMode)
+        {
+            case 0:
+                instruction.text = "You will receive a missing character in a given word. Your task is to type the word as your answer.";
+                break;
+            case 1:
+                instruction.text = "A given word will have multiple characters swapping its position. Your task is to type the word as your answer.";
+                break;
+            case 2:
+                instruction.text = "Searching for words in a given board.";
+                break;
+            default:
                 break;
         }
     }

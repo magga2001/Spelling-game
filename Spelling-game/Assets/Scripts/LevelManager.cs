@@ -120,10 +120,21 @@ public class LevelManager : MonoBehaviour
             travelling = true;
             cameraSystem.AdjustWalkingCamera(player.transform);
             spellingGameManager.ResetScreen();
-            yield return new WaitForSeconds(8);
+            yield return new WaitForSeconds(4);
             RealTimeSavingManager.Instance.SaveCurrentState();
 
-            if(!bossLevel)
+            if(GameManager.Instance.IsEndless())
+            {
+                if(SceneManager.GetActiveScene().buildIndex == 4)
+                {
+                    transition.LoadingLevel(2);
+                }
+                else
+                {
+                    transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+            }
+            else if(!bossLevel && !GameManager.Instance.IsEndless())
             {
                 transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
             }

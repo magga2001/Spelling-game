@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easyBoards:
   - {fileID: 11400000, guid: 7d32017a5753392448eb3132e23c3f56, type: 2}
+  - {fileID: 11400000, guid: 3aee69ce169f6de478e03c07f317d9cf, type: 2}
   mediumBoards:
   - {fileID: 11400000, guid: ceeb0c0e3bab17f4190375f4e5575fa3, type: 2}
   hardBoards:

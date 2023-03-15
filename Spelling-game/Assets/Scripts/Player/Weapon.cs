@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
             bullet.transform.position = firePoint.transform.position;

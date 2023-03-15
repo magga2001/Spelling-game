@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ff11f803cc4a1478dde463c2b29243, type: 3}
   m_Name: ScoreSystem
   m_EditorClassIdentifier: 
-  scale: 100
-  scoreUI: {fileID: 0}
+  scale: 10
+  highScore: 1100000
+  score: 10000

@@ -19,7 +19,9 @@ public class RealTimeSavingManager : MonoBehaviour
     }
     public void Save(GameMode gameMode)
     {
-        var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties);
+        var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties && game.IsEndless == GameManager.Instance.IsEndless());
+
+        Debug.Log(highScore);
 
         if(highScore != null)
         {

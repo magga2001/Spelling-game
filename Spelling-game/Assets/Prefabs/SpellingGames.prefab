@@ -354,5 +354,5 @@ MonoBehaviour:
   letters: []
   words: []
   cam: {fileID: 0}
-  margin: 0.3
+  margin: 0.1
   wordBoxes: []

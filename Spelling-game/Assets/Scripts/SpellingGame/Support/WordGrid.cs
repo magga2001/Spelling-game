@@ -27,8 +27,17 @@ public class WordGrid : MonoBehaviour
 
     private void OnEnable()
     {
-        ClearBoard();
+        ResetBoard();
         pm.UpdatePuzzlesDifficulty();
+        boardData = pm.GetCurrentPuzzle();
+        InstantiateWordGrid();
+    }
+
+    public void NextPuzzle()
+    {
+        ClearBoard();
+        ResetBoard();
+        pm.NextBoard();
         boardData = pm.GetCurrentPuzzle();
         InstantiateWordGrid();
     }
@@ -36,8 +45,8 @@ public class WordGrid : MonoBehaviour
     public void InstantiateWordGrid()
     {
         //board = boardData.GetSavedBoardData().board;
-        rows = boardData.GetSavedBoardData().rows;
-        columns = boardData.GetSavedBoardData().columns;
+        rows = boardData.Rows;
+        columns = boardData.Columns;
         words = boardData.Words;
 
         //Build the board here
@@ -128,17 +137,40 @@ public class WordGrid : MonoBehaviour
         }
     }
 
-    public void ClearBoard()
+    public void ResetBoard()
     {
         letters.Clear();
         wordBoxes.Clear();
     }
 
-    private void OnDisable()
+    public void ClearBoard()
     {
-        foreach(var letter in letters)
+        foreach (var letter in letters)
         {
-            if(letter != null)
+            if (letter != null)
+            {
+                letter.GetComponent<LetterBox>().SetDefaultSprite();
+                letter.GetComponent<LetterBox>().Founded = false;   
+                letter.SetActive(false);
+            }
+        }
+
+        foreach (var wordBox in wordBoxes)
+        {
+            if (wordBox != null)
+            {
+                wordBox.GetComponent<WordBox>().SetDefault();
+                wordBox.GetComponent<WordBox>().Founded = false;
+                wordBox.SetActive(false);
+            }
+        }
+    }
+
+    public void HideBoard()
+    {
+        foreach (var letter in letters)
+        {
+            if (letter != null)
             {
                 letter.SetActive(false);
             }
@@ -151,6 +183,12 @@ public class WordGrid : MonoBehaviour
                 wordBox.SetActive(false);
             }
         }
+    }
+
+    private void OnDisable()
+    {
+        HideBoard();
+        ResetBoard();
     }
 
 }

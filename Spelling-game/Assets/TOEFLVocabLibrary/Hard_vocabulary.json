@@ -2,16 +2,44 @@
   "difficulty": "hard",
   "vocabularies": [
     {
-      "word": "ampleHard",
-      "definition": "Something about ample hard"
+      "word": "soothe",
+      "definition": "v. to calm or comfort"
     },
     {
-      "word": "annualHard",
-      "definition": "Something about annual hard"
+      "word": "wholly",
+      "definition": "adv. completely"
     },
     {
-      "word": "assumeHard",
-      "definition": "Something about assume hard"
+      "word": "vilify",
+      "definition": "v. to speak poorly of; to slander"
+    },
+    {
+      "word": "cease",
+      "definition": "v. to stop"
+    },
+    {
+      "word": "arduous",
+      "definition": "adj. requiring a lot of effort"
+    },
+    {
+      "word": "parsimonious",
+      "definition": "adj. frugal, stingy"
+    },
+    {
+      "word": "peripheral",
+      "definition": "adj. located on the side or edge"
+    },
+    {
+      "word": "incite",
+      "definition": "v. to urge on"
+    },
+    {
+      "word": "eloquent",
+      "definition": "adj. moving speech or writing"
+    },
+    {
+      "word": "cacophony",
+      "definition": "n. a harsh, unpleasant mixture of noise"
     }
   ]
 }

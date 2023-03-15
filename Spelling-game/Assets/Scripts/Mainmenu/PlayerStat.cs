@@ -34,7 +34,6 @@ public class PlayerStat : MonoBehaviour
 
         try
         {
-            Debug.Log(data.CorrectWords);
             correctWords = data.CorrectWords;
             incorrectWords = data.IncorrectWords;
         }

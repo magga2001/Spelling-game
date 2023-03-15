@@ -2,16 +2,44 @@
   "difficulty": "easy",
   "vocabularies": [
     {
-      "word": "axes",
-      "definition": "Something about ample"
+      "word": "select",
+      "definition": "v. to choose"
+    },
+    {
+      "word": "stable",
+      "definition": "adj. unlikely to change or fail"
+    },
+    {
+      "word": "likely",
+      "definition": "adj. probable"
+    },
+    {
+      "word": "deposit",
+      "definition": "v. to deliver and leave an item"
+    },
+    {
+      "word": "cumbersome",
+      "definition": "adj. burdensome; clumsy"
+    },
+    {
+      "word": "boost",
+      "definition": "v. to help raise or increase something"
+    },
+    {
+      "word": "attitude",
+      "definition": "n. manner or feeling"
     },
     {
       "word": "annual",
-      "definition": "Something about annual"
+      "definition": "adj. occurring yearly"
     },
     {
-      "word": "assume",
-      "definition": "Something about assume"
+      "word": "accurate",
+      "definition": "adj. correct; free from errors"
+    },
+    {
+      "word": "minimum",
+      "definition": "n. the smallest or lowest amount possible"
     }
   ]
 }

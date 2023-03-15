@@ -40,6 +40,7 @@ public class WordObjectPoolingManager : MonoBehaviour
             {
                 currentWord.SetActive(true);
                 currentWord.GetComponent<WordBox>().Word = word;
+                currentWord.GetComponent<WordBox>().Founded = false;
                 currentWord.GetComponent<WordBox>().SetWordBoxes();
                 return currentWord;
             }

@@ -53,7 +53,14 @@ public class LetterObjectPoolingManager : MonoBehaviour
                     selected_alphabet,
                     correct_alphabet,
                     wrong_alphabet);
-                letter.GetComponent<LetterBox>().SetDefaultSprite();
+                if(letter.GetComponent<LetterBox>().Founded)
+                {
+                    letter.GetComponent<LetterBox>().SetCorrectSprite();
+                }
+                else
+                {
+                    letter.GetComponent<LetterBox>().SetDefaultSprite();
+                }
                 letter.GetComponent<LetterBox>().SetPosition(col, row);
                 letter.GetComponent<LetterBox>().Selected = false;
                 return letter;
@@ -68,7 +75,14 @@ public class LetterObjectPoolingManager : MonoBehaviour
             selected_alphabet,
             correct_alphabet,
             wrong_alphabet);
-        prefabInstance.GetComponent<LetterBox>().SetDefaultSprite();
+        if (prefabInstance.GetComponent<LetterBox>().Founded)
+        {
+            prefabInstance.GetComponent<LetterBox>().SetCorrectSprite();
+        }
+        else
+        {
+            prefabInstance.GetComponent<LetterBox>().SetDefaultSprite();
+        }
         prefabInstance.GetComponent<LetterBox>().SetPosition(col, row);
         prefabInstance.GetComponent<LetterBox>().Selected = false;
         letters.Add(prefabInstance);

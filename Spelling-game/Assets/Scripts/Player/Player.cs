@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
             life.UpdateLife(lives);
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
         }                                           
     }
 }

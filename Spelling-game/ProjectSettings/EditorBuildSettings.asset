@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure_1/Scene2.unity
     guid: 4b618226d76fb3e43b1fa41564d4abfc
+  - enabled: 1
+    path: Assets/Scenes/Adventure_1/Scene3.unity
+    guid: 8f2c6ee15488248478fdb549e8a41752
+  - enabled: 1
+    path: Assets/Scenes/Adventure_1/Boss.unity
+    guid: fefe3c91123c60148a0030540cacf29d
   m_configObjects: {}

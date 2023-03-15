@@ -1515,6 +1515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreSystem: {fileID: 11400000, guid: b7e2ffe7b35def14da6b82ae49ef3c1b, type: 2}
   performanceTracker: {fileID: 11400000, guid: 136f4809a89a5614fba51b9b54feed24, type: 2}
+  highScores: {fileID: 11400000, guid: 37d74f8265119c34aa8a35e10cc1211e, type: 2}
   player: {fileID: 1919832451}
 --- !u!114 &1883800284 stripped
 MonoBehaviour:

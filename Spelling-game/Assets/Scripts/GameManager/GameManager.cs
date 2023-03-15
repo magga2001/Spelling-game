@@ -33,12 +33,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] PerformanceTracker performanceTracker;
 
     [SerializeField] private bool isFirstScene;
-    private bool isEndless;
+    private bool isEndless = false;
     public bool IsEndless() => isEndless;
 
     private void Awake()
     {
-        PlayerSaveManager.DeleteProgess();
+        //PlayerSaveManager.DeleteProgess();
         instance = this;
 
         isEndless = gameMode.IsEndless;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             PlayerSaveManager.DeleteProgess();
         }

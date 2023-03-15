@@ -35,6 +35,10 @@ public class Background : MonoBehaviour
 
     IEnumerator StartTransition()
     {
+        transition.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+
         currentPoint++;
 
         if (currentPoint >= transitionPosition.Length)
@@ -43,10 +47,18 @@ public class Background : MonoBehaviour
             currentPoint = 0;
         }
 
-        transition.SetActive(true);
+        speed *= 10;
 
-        yield return new WaitForSeconds(3);
-        
+        yield return new WaitForSeconds(2);
+
+        transition.GetComponent<Animator>().SetTrigger("Start");
+
+        speed /= 10;
+
+        yield return new WaitForSeconds(2);
+
+        //yield return new WaitForSeconds(10);
+
         transition.SetActive(false);
         transitioning = false;  
     }

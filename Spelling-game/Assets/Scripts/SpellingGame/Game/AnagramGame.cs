@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using Random = System.Random;
+using Unity.VisualScripting;
 
 public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
 {
@@ -29,6 +30,11 @@ public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
         if (Input.GetKeyDown(KeyCode.Return))
         {
             CheckAnswer();
+        }
+
+        if (GameManager.Instance.GameIsOver)
+        {
+            gameObject.SetActive(false);
         }
     }
 
@@ -63,7 +69,12 @@ public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
         string correctWord = vm.GetCurrentWord();
         string wordDefinition = vm.GetCurrentWordDefinition();
 
-        word.text = Shuffle(correctWord.ToList());
+        var anagramWord = Shuffle(correctWord.ToList());
+        while (correctWord.Equals(anagramWord))
+        {
+            anagramWord = Shuffle(correctWord.ToList());
+        }
+        word.text = anagramWord;
         definition.text = wordDefinition;
 
 
@@ -71,7 +82,8 @@ public class AnagramGame : Subject<(PlayerAction, PlayerAnswerData)>
 
     private string Shuffle(List<char> list)
     {
-        int n = list.Count;
+        Random r = new Random();
+        int n = r.Next(2, list.Count);
         while (n > 1)
         {
             n--;

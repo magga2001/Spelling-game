@@ -14,6 +14,7 @@ public class LetterBox : MonoBehaviour
 
     private Sprite wrong_alphabet;
 
+
     private WordSearchGame wordSearchGame;
 
     private string letter;
@@ -21,19 +22,11 @@ public class LetterBox : MonoBehaviour
     public string Letter { get { return letter; } set { letter = value; } }
     public (int col, int row) Position { get { return position; } set { position = value; } }
 
-    public bool selected;
+    private bool selected;
     public bool Selected { get { return selected; } set { selected = value; } }
 
-    private bool disabled;
-
-    private void OnEnable()
-    {
-        selected = false;
-        disabled = false;
-
-       // Still have to assign 
-       // wordSearchGame = GameObject.Fin
-    }
+    private bool founded;
+    public bool Founded { get { return founded; } set { founded = value; } }
 
     public void SetLetter(string letter)
     {
