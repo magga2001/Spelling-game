@@ -55,6 +55,10 @@ public class PuzzlesManager : ScriptableObject
         }
         else
         {
+            if (GameManager.Instance.IsEndless())
+            {
+                spellingDifficultiesManager.PromoteDifficulty();
+            }
             SetUpDifficulty(spellingDifficultiesManager.Difficulties);
         }
     }
