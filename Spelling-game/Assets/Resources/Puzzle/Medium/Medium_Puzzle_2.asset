@@ -10,122 +10,162 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
-  m_Name: Easy_Puzzle_1
+  m_Name: Medium_Puzzle_2
   m_EditorClassIdentifier: 
-  Id: b544f4be-def3-4241-8036-eb9fc788327c
-  rows: 6
-  columns: 6
+  Id: 
+  rows: 7
+  columns: 7
   board:
   - column: 0
     row: 0
-    val: R
+    val: C
   - column: 0
     row: 1
-    val: I
+    val: O
   - column: 0
     row: 2
-    val: E
+    val: N
   - column: 0
     row: 3
     val: F
   - column: 0
     row: 4
-    val: N
+    val: O
   - column: 0
     row: 5
-    val: Z
-  - column: 1
-    row: 0
-    val: E
-  - column: 1
-    row: 1
-    val: U
-  - column: 1
-    row: 2
+    val: R
+  - column: 0
+    row: 6
     val: M
   - column: 1
+    row: 0
+    val: L
+  - column: 1
+    row: 1
+    val: R
+  - column: 1
+    row: 2
+    val: O
+  - column: 1
     row: 3
-    val: T
+    val: B
   - column: 1
     row: 4
-    val: D
+    val: U
   - column: 1
     row: 5
-    val: E
+    val: S
+  - column: 1
+    row: 6
+    val: T
   - column: 2
     row: 0
-    val: A
+    val: I
   - column: 2
     row: 1
-    val: D
+    val: I
   - column: 2
     row: 2
-    val: D
+    val: U
   - column: 2
     row: 3
-    val: P
+    val: B
   - column: 2
     row: 4
-    val: X
+    val: Q
   - column: 2
     row: 5
-    val: B
-  - column: 3
-    row: 0
-    val: C
-  - column: 3
-    row: 1
+    val: F
+  - column: 2
+    row: 6
     val: O
   - column: 3
-    row: 2
+    row: 0
     val: N
   - column: 3
+    row: 1
+    val: T
+  - column: 3
+    row: 2
+    val: E
+  - column: 3
     row: 3
-    val: P
+    val: D
   - column: 3
     row: 4
-    val: L
+    val: O
   - column: 3
     row: 5
-    val: V
+    val: T
+  - column: 3
+    row: 6
+    val: Q
   - column: 4
     row: 0
-    val: T
+    val: G
   - column: 4
     row: 1
-    val: G
+    val: W
   - column: 4
     row: 2
-    val: G
+    val: H
   - column: 4
     row: 3
-    val: A
+    val: Y
   - column: 4
     row: 4
-    val: V
+    val: E
   - column: 4
     row: 5
+    val: M
+  - column: 4
+    row: 6
+    val: I
+  - column: 5
+    row: 0
+    val: G
+  - column: 5
+    row: 1
     val: Y
   - column: 5
-    row: 0
-    val: R
-  - column: 5
-    row: 1
-    val: E
-  - column: 5
     row: 2
-    val: J
+    val: X
   - column: 5
     row: 3
-    val: E
+    val: P
   - column: 5
     row: 4
-    val: C
+    val: X
   - column: 5
     row: 5
-    val: T
+    val: O
+  - column: 5
+    row: 6
+    val: Z
+  - column: 6
+    row: 0
+    val: C
+  - column: 6
+    row: 1
+    val: E
+  - column: 6
+    row: 2
+    val: D
+  - column: 6
+    row: 3
+    val: E
+  - column: 6
+    row: 4
+    val: P
+  - column: 6
+    row: 5
+    val: M
+  - column: 6
+    row: 6
+    val: I
   words:
-  - REACT
-  - REJECT
-  - IMPLY
-  - DOG
+  - CONFORM
+  - CRUDE
+  - CLING
+  - IMPEDE
+  - ROBUST

@@ -45,8 +45,6 @@ public class HighScoreDisplay : MonoBehaviour
         try
         {
             highScores = data.highScores;
-            //Debug.Log(highScores.Find((e) => e.Game == SpellingGames.FILLINTHEBLANK && e.Difficulties == Difficulties.EASY && e.IsEndless == false).Score.ToString());
-            //Debug.Log(highScores.Find((e) => e.Game == SpellingGames.FILLINTHEBLANK && e.IsEndless == true).Score.ToString());
         }
         catch (Exception)
         {

@@ -13,84 +13,159 @@ MonoBehaviour:
   m_Name: Medium_Puzzle_1
   m_EditorClassIdentifier: 
   Id: 543d414d-9f64-49ce-b091-f939ca227f41
-  rows: 5
-  columns: 5
+  rows: 7
+  columns: 7
   board:
   - column: 0
     row: 0
-    val: G
+    val: L
   - column: 0
     row: 1
-    val: P
+    val: A
   - column: 0
     row: 2
-    val: H
+    val: B
   - column: 0
     row: 3
-    val: Q
+    val: K
   - column: 0
     row: 4
-    val: N
+    val: P
+  - column: 0
+    row: 5
+    val: J
+  - column: 0
+    row: 6
+    val: U
   - column: 1
     row: 0
-    val: U
+    val: A
   - column: 1
     row: 1
-    val: U
+    val: S
   - column: 1
     row: 2
-    val: P
+    val: S
   - column: 1
     row: 3
+    val: A
+  - column: 1
+    row: 4
     val: W
   - column: 1
-    row: 4
-    val: S
+    row: 5
+    val: Q
+  - column: 1
+    row: 6
+    val: I
   - column: 2
     row: 0
-    val: E
+    val: B
   - column: 2
     row: 1
-    val: T
+    val: E
   - column: 2
     row: 2
-    val: B
+    val: Y
   - column: 2
     row: 3
     val: H
   - column: 2
     row: 4
-    val: G
+    val: V
+  - column: 2
+    row: 5
+    val: K
+  - column: 2
+    row: 6
+    val: P
   - column: 3
     row: 0
-    val: Z
+    val: O
   - column: 3
     row: 1
-    val: S
-  - column: 3
-    row: 2
     val: B
   - column: 3
-    row: 3
-    val: Y
-  - column: 3
-    row: 4
-    val: F
-  - column: 4
-    row: 0
-    val: P
-  - column: 4
-    row: 1
-    val: I
-  - column: 4
     row: 2
     val: T
+  - column: 3
+    row: 3
+    val: A
+  - column: 3
+    row: 4
+    val: I
+  - column: 3
+    row: 5
+    val: N
+  - column: 3
+    row: 6
+    val: J
+  - column: 4
+    row: 0
+    val: R
+  - column: 4
+    row: 1
+    val: M
+  - column: 4
+    row: 2
+    val: R
   - column: 4
     row: 3
-    val: F
+    val: K
   - column: 4
     row: 4
-    val: L
+    val: A
+  - column: 4
+    row: 5
+    val: F
+  - column: 4
+    row: 6
+    val: C
+  - column: 5
+    row: 0
+    val: V
+  - column: 5
+    row: 1
+    val: Y
+  - column: 5
+    row: 2
+    val: J
+  - column: 5
+    row: 3
+    val: Y
+  - column: 5
+    row: 4
+    val: B
+  - column: 5
+    row: 5
+    val: J
+  - column: 5
+    row: 6
+    val: T
+  - column: 6
+    row: 0
+    val: P
+  - column: 6
+    row: 1
+    val: R
+  - column: 6
+    row: 2
+    val: O
+  - column: 6
+    row: 3
+    val: C
+  - column: 6
+    row: 4
+    val: E
+  - column: 6
+    row: 5
+    val: E
+  - column: 6
+    row: 6
+    val: D
   words:
-  - ABC
-  - ABC
+  - LABOR
+  - PROCEED
+  - OBTAIN
+  - VARY
+  - SHIFT

@@ -10,122 +10,162 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
-  m_Name: Easy_Puzzle_1
+  m_Name: Medium_Puzzle_3
   m_EditorClassIdentifier: 
-  Id: b544f4be-def3-4241-8036-eb9fc788327c
-  rows: 6
-  columns: 6
+  Id: 
+  rows: 7
+  columns: 7
   board:
   - column: 0
     row: 0
-    val: R
+    val: H
   - column: 0
     row: 1
-    val: I
+    val: H
   - column: 0
     row: 2
-    val: E
+    val: C
   - column: 0
     row: 3
-    val: F
+    val: E
   - column: 0
     row: 4
     val: N
   - column: 0
     row: 5
-    val: Z
+    val: Y
+  - column: 0
+    row: 6
+    val: D
   - column: 1
     row: 0
-    val: E
+    val: W
   - column: 1
     row: 1
-    val: U
+    val: V
   - column: 1
     row: 2
-    val: M
+    val: D
   - column: 1
     row: 3
     val: T
   - column: 1
     row: 4
-    val: D
+    val: K
   - column: 1
     row: 5
+    val: N
+  - column: 1
+    row: 6
     val: E
   - column: 2
     row: 0
-    val: A
+    val: N
   - column: 2
     row: 1
-    val: D
+    val: H
   - column: 2
     row: 2
     val: D
   - column: 2
     row: 3
-    val: P
+    val: L
   - column: 2
     row: 4
-    val: X
+    val: O
   - column: 2
+    row: 5
+    val: Q
+  - column: 2
+    row: 6
+    val: V
+  - column: 3
+    row: 0
+    val: E
+  - column: 3
+    row: 1
+    val: R
+  - column: 3
+    row: 2
+    val: U
+  - column: 3
+    row: 3
+    val: C
+  - column: 3
+    row: 4
+    val: S
+  - column: 3
     row: 5
     val: B
   - column: 3
-    row: 0
-    val: C
-  - column: 3
-    row: 1
+    row: 6
     val: O
-  - column: 3
+  - column: 4
+    row: 0
+    val: Q
+  - column: 4
+    row: 1
+    val: B
+  - column: 4
     row: 2
-    val: N
-  - column: 3
+    val: U
+  - column: 4
     row: 3
-    val: P
-  - column: 3
+    val: S
+  - column: 4
     row: 4
     val: L
-  - column: 3
-    row: 5
-    val: V
-  - column: 4
-    row: 0
-    val: T
-  - column: 4
-    row: 1
-    val: G
-  - column: 4
-    row: 2
-    val: G
-  - column: 4
-    row: 3
-    val: A
-  - column: 4
-    row: 4
-    val: V
   - column: 4
     row: 5
-    val: Y
-  - column: 5
-    row: 0
-    val: R
-  - column: 5
-    row: 1
-    val: E
-  - column: 5
-    row: 2
     val: J
+  - column: 4
+    row: 6
+    val: I
+  - column: 5
+    row: 0
+    val: T
+  - column: 5
+    row: 1
+    val: N
+  - column: 5
+    row: 2
+    val: A
   - column: 5
     row: 3
-    val: E
+    val: I
   - column: 5
     row: 4
-    val: C
+    val: F
   - column: 5
     row: 5
-    val: T
+    val: E
+  - column: 5
+    row: 6
+    val: D
+  - column: 6
+    row: 0
+    val: S
+  - column: 6
+    row: 1
+    val: H
+  - column: 6
+    row: 2
+    val: I
+  - column: 6
+    row: 3
+    val: M
+  - column: 6
+    row: 4
+    val: M
+  - column: 6
+    row: 5
+    val: E
+  - column: 6
+    row: 6
+    val: R
   words:
-  - REACT
-  - REJECT
-  - IMPLY
-  - DOG
+  - OBSCURE
+  - BULKY
+  - DEVOID
+  - DEFIANT
+  - SHIMMER
