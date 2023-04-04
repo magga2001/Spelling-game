@@ -19,17 +19,19 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InGameSaveManager.DeleteProgess();
-        InGameData data = InGameSaveManager.LoadInGameInfo();
+        //Load the data so far every time a scene start in the current game session
+        InGameData data = InGameSaveManager.LoadInfo();
         try
         {
-            currentHealth = data.health;
+            currentHealth = data.Health();
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
-            life.SetUp(maxLives, data.lives);
+            life.SetUp(maxLives, data.Score());
         }
         catch (Exception)
         {
+            //If this is the first scene after entering game session, then set initial state
+            //for the player
             life.SetUp(maxLives, lives);
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
@@ -62,14 +64,14 @@ public class Player : MonoBehaviour
     {
         lives--;
         currentHealth = 0;
+        //If no more lives left, then game is over
         if (lives <= 0)
         {
             life.UpdateLife(lives);
             GameManager.Instance.GameIsOver = true;
             Debug.Log("Gameover");
-            //Set the game active false
-            //Spawn death effect
         }
+        //Otherwise, substract life and refill the health
         else
         {
             Debug.Log("DIED");

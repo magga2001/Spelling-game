@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Puzzles
   m_EditorClassIdentifier: 
   easyBoards:
-  - {fileID: 11400000, guid: 7d32017a5753392448eb3132e23c3f56, type: 2}
   - {fileID: 11400000, guid: 3aee69ce169f6de478e03c07f317d9cf, type: 2}
+  - {fileID: 11400000, guid: 7d32017a5753392448eb3132e23c3f56, type: 2}
+  - {fileID: 11400000, guid: 7f5d0a928617df94496251919b0ef0b7, type: 2}
   mediumBoards:
   - {fileID: 11400000, guid: ceeb0c0e3bab17f4190375f4e5575fa3, type: 2}
+  - {fileID: 11400000, guid: 588fdb1396fe37c4d8e3abab43f46c77, type: 2}
+  - {fileID: 11400000, guid: fbb89e4d945e0e845acdc1dcd3b60a15, type: 2}
   hardBoards:
+  - {fileID: 11400000, guid: 1844207c4f602c746876c8662349699d, type: 2}
+  - {fileID: 11400000, guid: 0a36a9ade94d37d4d810db600b0ca62a, type: 2}
   - {fileID: 11400000, guid: ece2d547bd13e1b43875ed5d268fa0b6, type: 2}

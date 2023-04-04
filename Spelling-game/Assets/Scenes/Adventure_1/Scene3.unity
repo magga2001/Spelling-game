@@ -1464,6 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 1339455126}
   mainCanvas: {fileID: 1446510732}
+  spellingCanvas: {fileID: 7115678642990738991}
   levelLoader: {fileID: 933136426}
 --- !u!114 &1838735880
 MonoBehaviour:
@@ -2409,3 +2410,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+--- !u!1 &7115678642990738991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7115678641221205210, guid: 8948e020209e5c54eaa8a551ad0865cd, type: 3}
+  m_PrefabInstance: {fileID: 7115678642990738990}
+  m_PrefabAsset: {fileID: 0}

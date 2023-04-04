@@ -24,8 +24,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
+        //To maintain it across all the scenes
         DontDestroyOnLoad(this.gameObject);
 
+        // Add all the sounds component for each sound before the game start
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -68,6 +70,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // To play any sound in the sound list by passing in name
     public void Play(String name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);

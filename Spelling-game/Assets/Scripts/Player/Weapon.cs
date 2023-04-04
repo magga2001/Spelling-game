@@ -19,21 +19,19 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
-            bullet.transform.position = firePoint.transform.position;
-            bullet.transform.right = -firePoint.transform.up;
-            AudioManager.instance.Play("Shoot");
-            GameObject effect = EffectObjectPoolingManager.Instance.GetPlayerShootingEffect();
-            effect.transform.position = firePoint.transform.position;
+            Fire();
         }
     }
 
     public void Fire()
     {
+        //Get a bullet from object pooling manager and shoot toward the direction the weapon is facing
         GameObject bullet = ObjectPoolingManager.Instance.GetBullet(true, damage);
         bullet.transform.position = firePoint.transform.position;
         bullet.transform.right = -firePoint.transform.up;
         AudioManager.instance.Play("Shoot");
+        GameObject effect = EffectObjectPoolingManager.Instance.GetPlayerShootingEffect();
+        effect.transform.position = firePoint.transform.position;
     }
 }
 

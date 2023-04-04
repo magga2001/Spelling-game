@@ -38,11 +38,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        //PlayerSaveManager.DeleteProgess();
         instance = this;
 
         isEndless = gameMode.IsEndless;
 
+        //If the scene is first scene, then set up a new game session
+        //Delete the data from previous game session
         if(isFirstScene)
         {
             InGameSaveManager.DeleteProgess();
@@ -57,14 +58,12 @@ public class GameManager : MonoBehaviour
         spellingGameManager.SetUp(gameMode.Game);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         gameIsOver = false;
         isLevelComplete = false;  
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -80,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            PlayerSaveManager.DeleteProgess();
+            //PlayerSaveManager.DeleteProgess();
         }
     }
 

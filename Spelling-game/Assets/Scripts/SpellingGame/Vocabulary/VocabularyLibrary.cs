@@ -25,6 +25,8 @@ public class VocabularyLibrary : ScriptableObject
 {
     [SerializeField] private List<TextAsset> vocabulariesJson;
     private List<VocabularyList> vocabularyCategories = new List<VocabularyList>();
+
+    //Get all the vocabularies from all the JSON files
     public void SetUp()
     {
         vocabularyCategories.Clear();
@@ -35,22 +37,6 @@ public class VocabularyLibrary : ScriptableObject
                 vocabularyCategories.Add(JsonUtility.FromJson<VocabularyList>(vocabularyJson.text));
             }
         }
-
-
-        //For debugging purpose
-        //foreach (var vocabularyCategory in vocabularyCategories)
-        //{
-            //Debug.Log("Difficulty: " + vocabularyCategory.Difficulty);
-            //if (vocabularyCategory.Vocabularies.Count > 0)
-            //{
-                //Debug.Log(vocabularyCategory.Vocabularies[0].Word);
-                //Debug.Log(vocabularyCategory.Vocabularies[0].Definition);
-            //}
-            //else
-            //{
-                //Debug.LogWarning("No vocabularies found for difficulty " + vocabularyCategory.Difficulty);
-            //}
-        //}
     }
 
     public VocabularyList GetEasyVocabularies()

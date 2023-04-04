@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+//This class is to save the data during every game session
 public class RealTimeSavingManager : MonoBehaviour
 {
     [SerializeField] ScoreSystem scoreSystem;
@@ -17,15 +18,16 @@ public class RealTimeSavingManager : MonoBehaviour
     {
         instance = this;
     }
+
+    //Saving data after the game is over
     public void Save(GameMode gameMode)
     {
+
+        //Check if the current game mode, type and difficulties already have high scores before
         var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties && game.IsEndless == GameManager.Instance.IsEndless());
 
         if (highScore != null)
         {
-            Debug.Log(highScore.Game);
-            Debug.Log(highScore.Difficulties);
-            Debug.Log(highScore.IsEndless);
             highScore.Score = scoreSystem.GetUpdateHighScore();
         }
         else
@@ -34,12 +36,14 @@ public class RealTimeSavingManager : MonoBehaviour
             highScores.GetHighScoreDatas().Add(highScore);
         }
 
-        PlayerSaveManager.SavePlayerInfo(highScores.GetHighScoreDatas(), performanceTracker.GetCorrectWords(), performanceTracker.GetIncorrectWords());
+        //Saving high scores, correct words, and incorrect words of the player in the game session
+        PlayerSaveManager.SaveInfo(highScores.GetHighScoreDatas(), performanceTracker.GetCorrectWords(), performanceTracker.GetIncorrectWords());
     }
 
+    //Saving data between scenes
     public void SaveCurrentState()
     {
-        InGameSaveManager.SaveInGameInfo(scoreSystem.GetScore(), player.CurrentHealth, player.Lives);
+        InGameSaveManager.SaveInfo(scoreSystem.GetScore(), player.CurrentHealth, player.Lives);
     }
 
 }

@@ -28,10 +28,6 @@ public class SpellingGameManager : MonoBehaviour
     {
         currentSpellingGame = games.Find((e) => e.GameName == game);
     }
-    private void Update()
-    {
-
-    }
     public void DisplaySpellingGame()
     {
 
@@ -39,6 +35,7 @@ public class SpellingGameManager : MonoBehaviour
         currentSpellingGame.Game.SetActive(true);
     }
 
+    //Hide the spelling game
     public void ResetScreen()
     {
         currentSpellingGame.Canvas.SetActive(false);

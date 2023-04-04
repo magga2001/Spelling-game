@@ -17,12 +17,6 @@ public class GameOver : MonoBehaviour
 
     private void OnEnable()
     {
-        //AudioManager.instance.Play("Gameover");
-
-        //scoreText.text = GameManager.score.ToString();
-
-        // highScoreText.text = GameManager.highScore.ToString();
-
         scoreText.text = scoreSystem.GetScore().ToString();
         highScoreText.text = scoreSystem.GetUpdateHighScore().ToString();  
         correctWordsText.text = performanceTracker.GetCurrentSessionCorrectWords().Count.ToString();   
@@ -31,7 +25,7 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(SceneName.sceneOne);
     }
 
     public void Menu()

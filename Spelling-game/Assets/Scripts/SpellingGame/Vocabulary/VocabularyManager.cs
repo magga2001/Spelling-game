@@ -14,11 +14,13 @@ public class VocabularyManager : ScriptableObject
     private string currentWord;
     private string currentDefinition;
 
+    //Set up the difficulty at the start of the game session
     public void SetUp()
     {
         SetUpDifficulty(spellingDifficultiesManager.Difficulties);
     }
 
+    //Load up all the words from vocabulary library and add to the queue for the game session
     public void SetUpDifficulty(Difficulties difficulties)
     {
         vocabularies.Clear();
@@ -38,7 +40,7 @@ public class VocabularyManager : ScriptableObject
                 break;
         }
 
-        Shuffle(vocabulariesLibrary);
+        Randomize(vocabulariesLibrary);
 
         foreach(var vocabulary in vocabulariesLibrary)
         {
@@ -56,10 +58,8 @@ public class VocabularyManager : ScriptableObject
         }
         else
         {
-
-            //If hard is now cleared, bring up the incorrect word.
-            //If spelled wrong, put it at the back of the queue.
-
+            //If the game is endless, then go to next difficulty
+            //Otherwise stay the same difficulty
             if (GameManager.Instance.IsEndless())
             {
                 spellingDifficultiesManager.PromoteDifficulty();
@@ -77,6 +77,7 @@ public class VocabularyManager : ScriptableObject
         currentDefinition = vocab.Definition;
     }
 
+    //If spelled wrong, put the incorrectly spelt word to the back of the queue.
     public void Requeue()
     {
         if (!vocabularies.Contains(currentVocabulary))
@@ -100,15 +101,16 @@ public class VocabularyManager : ScriptableObject
         return vocabularies.Count == 0;
     }
 
-    private void Shuffle(List<Vocabulary> list)
+    //Shuffle the list for each element to be in random position than the original
+    private void Randomize(List<Vocabulary> inputList)
     {
-        int n = list.Count;
-        while (n > 1)
+        int listSize = inputList.Count;
+        while (listSize > 1)
         {
-            n--;
-            Random rnd = new();
-            int i = rnd.Next(n + 1);
-            (list[n], list[i]) = (list[i], list[n]);
+            listSize--;
+            Random randomGenerator = new();
+            int randomIndex = randomGenerator.Next(listSize + 1);
+            (inputList[listSize], inputList[randomIndex]) = (inputList[randomIndex], inputList[listSize]);
         }
     }
 }
