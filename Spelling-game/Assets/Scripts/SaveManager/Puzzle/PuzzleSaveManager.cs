@@ -3,6 +3,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
 
+//This code is inspired from
+//Thirslund, A. (Director). (2018, December 02). SAVE &amp; LOAD SYSTEM in Unity [Video file]. Retrieved February 15, 2023, from https://www.youtube.com/watch?v=XOjd_qU2Ido
 public class PuzzleSaveManager
 {
     public static void SaveInfo(string fileName, List<Cell> board, int rows, int columns)

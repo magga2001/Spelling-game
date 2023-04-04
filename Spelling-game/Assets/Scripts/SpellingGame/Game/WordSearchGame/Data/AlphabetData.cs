@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//The code is inspired and taken from
+//CodePlanStudio, C. (2020, August 02). Words spy game episode 6 | unity word searching game. Retrieved February 12, 2023, from https://www.youtube.com/watch?v=r4MFdbkIM0M&list=PLJLLSehgFnspMBk7VaLI18Digsj2xuMhT&index=6
 //This class is to store all the English alphabet states to use for Word search puzzles
-
 [System.Serializable]
 [CreateAssetMenu]
 public class AlphabetData : ScriptableObject    

@@ -50,7 +50,8 @@ public class BoardDataEditor : Editor
         }
     }
 
-
+    //The function of the code is taken from
+    //CodePlanStudio, C. (Director). (2020, July 27). Words Spy Game Episode 4 | Unity Word Searching Game [Video file]. Retrieved February 10, 2023, from https://www.youtube.com/watch?v=5XCDkd61-i8&amp;list=PLJLLSehgFnspMBk7VaLI18Digsj2xuMhT&amp;index=4
     //Get all the value and information needed to build the board
     private void BoardInitialisation()
     {
@@ -66,6 +67,8 @@ public class BoardDataEditor : Editor
         }
     }
 
+    //The function of the code is taken from
+    //CodePlanStudio, C. (Director). (2020, July 27). Words Spy Game Episode 4 | Unity Word Searching Game [Video file]. Retrieved February 10, 2023, from https://www.youtube.com/watch?v=5XCDkd61-i8&amp;list=PLJLLSehgFnspMBk7VaLI18Digsj2xuMhT&amp;index=4
     //Draw a board
     private void DrawBoard()
     {

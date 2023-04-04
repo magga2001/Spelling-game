@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 using UnityEngine.Audio;
 
+
+//This code is taken from
+//Thirslund, A. (Director). (2017, May 31). Introduction to AUDIO in Unity [Video file]. In YouTube. Retrieved March 05, 2023, from https://www.youtube.com/watch?v=6OT43pvUyfY&amp;t=644s
 public class AudioManager : MonoBehaviour
 {
     public string music;

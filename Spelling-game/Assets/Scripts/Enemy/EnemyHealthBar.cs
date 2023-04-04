@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This code is taken and inspired from
+//Distorted Pixel Studios, D. (Director). (2020, April 30). 2D Character Hitpoints in Unity / 2023 [Video file]. Retrieved January 30, 2023, from https://www.youtube.com/watch?v=v1UGTTeQzbo
 public class EnemyHealthBar : MonoBehaviour
 {
     private Camera cam;

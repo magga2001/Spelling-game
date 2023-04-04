@@ -11545,7 +11545,7 @@ MonoBehaviour:
   correctWordsRightButton: {fileID: 1842667604}
   incorrectWordsLeftButton: {fileID: 1650519460}
   incorrectWordsRightButton: {fileID: 2095178457}
-  maxWordsPerPage: 2
+  maxWordsPerPage: 5
 --- !u!1 &2017649902
 GameObject:
   m_ObjectHideFlags: 0

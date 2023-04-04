@@ -41,6 +41,8 @@ public class WordGrid : MonoBehaviour
         InstantiateWordGrid();
     }
 
+    //Part of this code function is taken and from
+    //CodePlanStudio, C. (Director). (2020, August 07). Words Spy Game Episode 7 | Unity Word Searching Game [Video file]. Retrieved February 13, 2023, from https://www.youtube.com/watch?v=GrhOUbPiLpM&amp;list=PLJLLSehgFnspMBk7VaLI18Digsj2xuMhT&amp;index=7
     public void InstantiateWordGrid()
     {
         rows = boardData.Rows;

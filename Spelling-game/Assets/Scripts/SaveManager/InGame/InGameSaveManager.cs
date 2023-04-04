@@ -4,6 +4,8 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+//This code is inspired from
+//Thirslund, A. (Director). (2018, December 02). SAVE &amp; LOAD SYSTEM in Unity [Video file]. Retrieved February 15, 2023, from https://www.youtube.com/watch?v=XOjd_qU2Ido
 public class InGameSaveManager
 {
     public static void SaveInfo(int score, int health, int lives)
