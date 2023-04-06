@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayerPlayModeTests
+public class PlayerTest
 {
     private GameObject playerGameObject;
     private Player player;
@@ -43,6 +43,4 @@ public class PlayerPlayModeTests
 
         Assert.AreEqual(initialLives - 1, player.Lives, "Player's lives should decrease by 1 after dying.");
     }
-
-    // Add more tests as needed
 }

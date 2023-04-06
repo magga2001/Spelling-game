@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 
 
-public class PunishmentSystemEditModeTests
+public class PunishmentSystemTest
 {
     private PunishmentSystem punishmentSystem;
     private ScoreSystem scoreSystem;
