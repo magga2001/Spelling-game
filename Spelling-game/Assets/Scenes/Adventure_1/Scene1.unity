@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VocabularyResultNoti: {fileID: 1800498200}
   VocabularyResultText: {fileID: 1154514405}
-  disableNotiTime: 1
+  disableNotiTime: 2
 --- !u!4 &1980515172
 Transform:
   m_ObjectHideFlags: 0
@@ -2133,7 +2133,7 @@ PrefabInstance:
       objectReference: {fileID: 1144388457}
     - target: {fileID: 2851380857991383710, guid: 2c78215ebec17c44484882cd0c4fe018, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c78215ebec17c44484882cd0c4fe018, type: 3}

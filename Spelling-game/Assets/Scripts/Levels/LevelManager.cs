@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -133,7 +132,7 @@ public class LevelManager : MonoBehaviour
             RealTimeSavingManager.Instance.SaveCurrentState();
 
             //If the game is endless, then dont go to boss
-            if(GameManager.Instance.IsEndless())
+            if(GameManager.Instance.IsEndless)
             {
                 if(SceneManager.GetActiveScene().buildIndex == 4)
                 {
@@ -145,7 +144,7 @@ public class LevelManager : MonoBehaviour
                 }
             }
             //If the game is not endless, then go to boss level for the last level to complete the adventure
-            else if(!bossLevel && !GameManager.Instance.IsEndless())
+            else if(!bossLevel && !GameManager.Instance.IsEndless)
             {
                 transition.LoadingLevel(SceneManager.GetActiveScene().buildIndex + 1);
             }

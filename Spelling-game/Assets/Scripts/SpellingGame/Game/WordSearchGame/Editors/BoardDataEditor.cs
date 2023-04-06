@@ -5,6 +5,8 @@ using UnityEditor;
 using Random = System.Random;
 using System;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(BoardData), false), CanEditMultipleObjects]
 public class BoardDataEditor : Editor
 {
@@ -192,3 +194,5 @@ public class BoardDataEditor : Editor
         return guid.ToString();
     }
 }
+
+#endif

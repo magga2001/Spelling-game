@@ -10,7 +10,7 @@ public class PunishmentSystem : MonoBehaviour
     public void CalculatePunishment(string word)
     {
         //Strike system only triggered if game is endless
-        if(GameManager.Instance.IsEndless())
+        if(GameManager.Instance.IsEndless)
         {
             strikeSystem.IncreaseStrike();
         }

@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -34,8 +32,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private bool isFirstScene;
     private bool isEndless = false;
-    public bool IsEndless() => isEndless;
-
+    public bool IsEndless { get { return isEndless; } set { isEndless = value; } }
     private void Awake()
     {
         instance = this;

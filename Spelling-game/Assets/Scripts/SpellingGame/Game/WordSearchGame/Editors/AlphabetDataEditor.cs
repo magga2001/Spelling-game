@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.TerrainTools;
 using UnityEngine;
+
+#if UNITY_EDITOR
 
 [CustomEditor(typeof(AlphabetData), false), CanEditMultipleObjects]
 public class AlphabetDataEditor : Editor
@@ -15,3 +16,5 @@ public class AlphabetDataEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+
+#endif

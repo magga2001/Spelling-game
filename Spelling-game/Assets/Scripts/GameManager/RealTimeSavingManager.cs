@@ -24,7 +24,7 @@ public class RealTimeSavingManager : MonoBehaviour
     {
 
         //Check if the current game mode, type and difficulties already have high scores before
-        var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties && game.IsEndless == GameManager.Instance.IsEndless());
+        var highScore = highScores.GetHighScoreDatas().Find((game) => game.Game == gameMode.Game && game.Difficulties == gameMode.Difficulties && game.IsEndless == GameManager.Instance.IsEndless);
 
         if (highScore != null)
         {
@@ -32,7 +32,7 @@ public class RealTimeSavingManager : MonoBehaviour
         }
         else
         {
-            highScore = new(gameMode.Game, gameMode.Difficulties, scoreSystem.GetUpdateHighScore(), GameManager.Instance.IsEndless());
+            highScore = new(gameMode.Game, gameMode.Difficulties, scoreSystem.GetUpdateHighScore(), GameManager.Instance.IsEndless);
             highScores.GetHighScoreDatas().Add(highScore);
         }
 

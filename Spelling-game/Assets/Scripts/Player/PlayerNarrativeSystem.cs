@@ -37,7 +37,14 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         performanceTracker.AddCurrentSessionCorrectWord(answer.PlayerAnswer);
         updateUI.UpdateScore();
         AudioManager.instance.Play("Correct");
-        notificationManager.DisplayVocabularyResult(NotificationText.CORRECT);
+        if(answer.SpellingGames == SpellingGames.WORDSEARCH)
+        {
+            notificationManager.DisplayVocabularyResult(NotificationText.CORRECT);
+        }
+        else
+        {
+            notificationManager.DisplayVocabularyResult(NotificationText.CORRECT, answer.CorrectAnswer);
+        }
     }
 
     private void Punish(PlayerAnswerData answer)
@@ -47,6 +54,13 @@ public class PlayerNarrativeSystem : MonoBehaviour, IObserver<(PlayerAction acti
         performanceTracker.AddCurrentSessionIncorrectWord(answer.CorrectAnswer); 
         updateUI.UpdateScore();
         AudioManager.instance.Play("Incorrect");
-        notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT);
+        if (answer.SpellingGames == SpellingGames.WORDSEARCH)
+        {
+            notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT);
+        }
+        else
+        {
+            notificationManager.DisplayVocabularyResult(NotificationText.INCORRECT, answer.CorrectAnswer);
+        }
     }
 }

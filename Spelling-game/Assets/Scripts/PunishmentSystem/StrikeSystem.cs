@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 [CreateAssetMenu]
 public class StrikeSystem : ScriptableObject
@@ -10,6 +11,7 @@ public class StrikeSystem : ScriptableObject
     [SerializeField] private VocabularyManager vocabularyManager;
     [SerializeField] private SpellingDifficultiesManager spellingDifficultiesManager;
     private int strike;
+    public int Strike { get { return strike; } set { strike = value; } }
 
     public void SetUp()
     {
@@ -22,9 +24,12 @@ public class StrikeSystem : ScriptableObject
         if (strike >= maxStrike)
         {
             strike = 0;
+            var currentDifficulty = spellingDifficultiesManager.Difficulties;
             spellingDifficultiesManager.DemoteDifficulty();
-            vocabularyManager.SetUpDifficulty(spellingDifficultiesManager.Difficulties);
-
+            if(spellingDifficultiesManager.Difficulties != currentDifficulty)
+            {
+                vocabularyManager.SetUpDifficulty(spellingDifficultiesManager.Difficulties);
+            }
         }
     }
 }

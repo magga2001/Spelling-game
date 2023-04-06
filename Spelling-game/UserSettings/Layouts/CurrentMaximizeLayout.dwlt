@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 210
+  controlID: 15549
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -47,8 +47,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 267
     y: 19
-    width: 1186
-    height: 588
+    width: 1202
+    height: 553
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1186, y: 567}
+  m_TargetSize: {x: 1202, y: 532}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -74,10 +74,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -593
-    m_HBaseRangeMax: 593
-    m_VBaseRangeMin: -283.5
-    m_VBaseRangeMax: 283.5
+    m_HBaseRangeMin: -601
+    m_HBaseRangeMax: 601
+    m_VBaseRangeMin: -266
+    m_VBaseRangeMax: 266
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -95,23 +95,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1186
-      height: 567
+      width: 1202
+      height: 532
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 593, y: 283.5}
+    m_Translation: {x: 601, y: 266}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -593
-      y: -283.5
-      width: 1186
-      height: 567
+      x: -601
+      y: -266
+      width: 1202
+      height: 532
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1186, y: 588}
+  m_LastWindowPixelSize: {x: 1202, y: 553}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -136,12 +136,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1454
+    width: 1470
     height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 211
+  controlID: 15550
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,12 +161,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1454
-    height: 610
+    width: 1470
+    height: 574
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 212
+  controlID: 15551
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,7 +185,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 266
-    height: 610
+    height: 574
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -216,7 +216,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 265
-    height: 589
+    height: 553
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8afaffff
+      m_SelectedIDs: 9c650200
+      m_LastClickedID: 157084
+      m_ExpandedIDs: fad0fdff40d1fdff2cd5fdff3adbfdff14e0fdff4ae4fdff6ee7fdff6aedfdff1ef3fdff66f3fdff52f7fdff60fdfdff3a02feff7006feff9609feff920ffeffe619feff7a1efeffc01efeffa824feffb62afeff902ffeffc633feffec36fefffc3cfeff5651feff4256feff485ffefff065feffbc6bfeff8071feff3877feffd07dfeffa882feff8c87feff748efeff2294feffde98feff82a2feff50abfeffe6b0feffa2bafeff22c0feffdcc4feff76cafeffa4d6feff5cdcfeffc4e7feff76edfeff12f3feff8cf9feffc401ffffec08ffff3409ffff6a0afffff812ffff4013ffff7e14fffff819ffff3a1fffffac27ffff722dffffba2dffff382fffff0c34ffff2a3affffbc43ffff0444ffff8e45ffff004cffff484cffff7a4dffffac55fffff455ffff2c57ffffa45fffff9468ffffdc68ffff1a6affff2c71ffff1285ffff5a85ffff8a86ffff288bffff24a3ffff6ca3ffff9ea4ffff0ea9ffff54afffff9cafffffe2b0ffff08beffff6ac4ffffdecaffff5cd1ffffbed7ffff2cdeffff8afaffff28e501001ce60100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -267,8 +267,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 266
     y: 0
-    width: 1188
-    height: 610
+    width: 1204
+    height: 574
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -300,8 +300,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 266
     y: 73
-    width: 1186
-    height: 589
+    width: 1202
+    height: 553
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.5949814, y: 8.865947, z: 0.004742561}
+    m_Target: {x: 493.2093, y: 196.78065, z: -21.207222}
     speed: 2
-    m_Value: {x: 551.88275, y: 262.2234, z: 1.7878228}
+    m_Value: {x: 493.2093, y: 196.78065, z: -21.207222}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 31.535952
+    m_Target: 385.29507
     speed: 2
-    m_Value: 320.32758
+    m_Value: 385.29507
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -753,9 +753,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 610
-    width: 1454
-    height: 337
+    y: 574
+    width: 1470
+    height: 373
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
@@ -786,9 +786,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 683
-    width: 1453
-    height: 316
+    y: 647
+    width: 1469
+    height: 352
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -806,22 +806,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Menu
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/Menu
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Magga\Desktop\Unity\Spelling-game\Spelling-game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 43}
-    m_SelectedIDs: 74610000
-    m_LastClickedID: 24948
-    m_ExpandedIDs: 000000005061000000ca9a3b
+    scrollPos: {x: 0, y: 200.18149}
+    m_SelectedIDs: 406f0000
+    m_LastClickedID: 28480
+    m_ExpandedIDs: 0000000050610000746100006a8a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -849,7 +849,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005061000000ca9a3b
+    m_ExpandedIDs: 0000000050610000746100006a8a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -874,8 +874,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 9c650200
+    m_LastClickedInstanceID: 157084
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000ea0d01004069000066690000546b0000526b0000eabe00004c6b0000f48e00004e6b0000f4b50200d41806002eaa0000
     m_RenameOverlay:
@@ -926,9 +926,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 683
-    width: 1453
-    height: 316
+    y: 647
+    width: 1469
+    height: 352
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -954,17 +954,42 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 8
-    y: 680
+    y: 640
     width: 1441
-    height: 311
+    height: 367
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 385660
+  m_LastSelectedObjectID: 141804
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 15}
+  - {fileID: 17}
+  m_Position:
+    serializedVersion: 2
+    x: 1470
+    y: 0
+    width: 450
+    height: 947
+  m_MinSize: {x: 100, y: 200}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 15524
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -979,18 +1004,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1454
+    x: 0
     y: 0
-    width: 466
-    height: 947
+    width: 450
+    height: 553
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1010,10 +1035,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1454
+    x: 1470
     y: 73
-    width: 465
-    height: 926
+    width: 449
+    height: 532
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1031,3 +1056,490 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 553
+    width: 450
+    height: 394
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1470
+    y: 626
+    width: 449
+    height: 373
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 15619
+    splitterInitialOffset: 233
+    currentActiveSplitter: -1
+    realSizes:
+    - 134
+    - 169
+    relativeSizes:
+    - 0.44385028
+    - 0.5561497
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 303
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 18}
+    m_NewResultList:
+    - id: 1104
+      uniqueId: '[Spelling-game][suite]'
+      name: Spelling-game
+      fullName: Spelling-game
+      resultStatus: 2
+      duration: 0.0086592
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[PlayMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/PlayMode.dll][suite]'
+      name: PlayMode.dll
+      fullName: C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/PlayMode.dll
+      resultStatus: 2
+      duration: 0.0055912
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Spelling-game][suite]'
+    - id: 1009
+      uniqueId: PlayMode.dll/[PlayMode][PlayerPlayModeTests][suite]
+      name: PlayerPlayModeTests
+      fullName: PlayerPlayModeTests
+      resultStatus: 2
+      duration: 0.0041809
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1012
+      parentUniqueId: '[PlayMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1011
+      uniqueId: PlayMode.dll/PlayerPlayModeTests/[PlayMode][PlayerPlayModeTests.Player_Dies]
+      name: Player_Dies
+      fullName: PlayerPlayModeTests.Player_Dies
+      resultStatus: 2
+      duration: 0.0014831
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Save file not found inC:/Users/Magga/AppData/LocalLow/DefaultCompany/Spelling-game/ingame.exe
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerPlayModeTests][suite]
+    - id: 1010
+      uniqueId: PlayMode.dll/PlayerPlayModeTests/[PlayMode][PlayerPlayModeTests.Player_Health_Increases]
+      name: Player_Health_Increases
+      fullName: PlayerPlayModeTests.Player_Health_Increases
+      resultStatus: 2
+      duration: 0.0012875
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Save file not found inC:/Users/Magga/AppData/LocalLow/DefaultCompany/Spelling-game/ingame.exe
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerPlayModeTests][suite]
+    m_ResultText: 'Player_Dies (0.001s)
+
+      ---
+
+      SetUp : Unhandled log message:
+      ''[Exception] NullReferenceException: Object reference not set to an instance
+      of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+      ---
+
+      Save
+      file not found inC:/Users/Magga/AppData/LocalLow/DefaultCompany/Spelling-game/ingame.exe
+
+      NullReferenceException:
+      Object reference not set to an instance of an object'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 07ace77d
+      m_LastClickedID: 2112334855
+      m_ExpandedIDs: c6453a9f3fd99b4fb09ca85effffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 1
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 18}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Spelling-game][suite]'
+      name: Spelling-game
+      fullName: Spelling-game
+      resultStatus: 2
+      duration: 0.02743
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1004
+      uniqueId: '[EditMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/EditMode.dll][suite]'
+      name: EditMode.dll
+      fullName: C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/EditMode.dll
+      resultStatus: 2
+      duration: 0.0115681
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Spelling-game][suite]'
+    - id: 1001
+      uniqueId: EditMode.dll/[EditMode][PunishmentSystemEditModeTests][suite]
+      name: PunishmentSystemEditModeTests
+      fullName: PunishmentSystemEditModeTests
+      resultStatus: 2
+      duration: 0.0038171
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[EditMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/EditMode.dll][suite]'
+    - id: 1002
+      uniqueId: EditMode.dll/PunishmentSystemEditModeTests/[EditMode][PunishmentSystemEditModeTests.TestPunishmentSystemDecreasesScore]
+      name: TestPunishmentSystemDecreasesScore
+      fullName: PunishmentSystemEditModeTests.TestPunishmentSystemDecreasesScore
+      resultStatus: 2
+      duration: 0.00033
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at PunishmentSystem.CalculatePunishment (System.String word)
+        [0x00000] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\PunishmentSystem\\PunishmentSystem.cs:13
+        \r\n  at PunishmentSystemEditModeTests.TestPunishmentSystemDecreasesScore
+        () [0x0000d] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\PunishmentSystemTest.cs:35
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][PunishmentSystemEditModeTests][suite]
+    - id: 1003
+      uniqueId: EditMode.dll/PunishmentSystemEditModeTests/[EditMode][PunishmentSystemEditModeTests.TestPunishmentSystemIncreasesStrike]
+      name: TestPunishmentSystemIncreasesStrike
+      fullName: PunishmentSystemEditModeTests.TestPunishmentSystemIncreasesStrike
+      resultStatus: 2
+      duration: 0.0002065
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at PunishmentSystemEditModeTests.TestPunishmentSystemIncreasesStrike
+        () [0x0000c] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\PunishmentSystemTest.cs:48
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditMode.dll/[EditMode][PunishmentSystemEditModeTests][suite]
+    - id: 1010
+      uniqueId: EditMode.dll/[EditMode][RewardSystemTest][suite]
+      name: RewardSystemTest
+      fullName: RewardSystemTest
+      resultStatus: 1
+      duration: 0.0029975
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1013
+      parentUniqueId: '[EditMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/EditMode.dll][suite]'
+    - id: 1006
+      uniqueId: EditMode.dll/RewardSystemTest/[EditMode][RewardSystemTest.RewardSystem_CalculateReward_IntValue]
+      name: RewardSystem_CalculateReward_IntValue
+      fullName: RewardSystemTest.RewardSystem_CalculateReward_IntValue
+      resultStatus: 1
+      duration: 0.0001199
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: EditMode.dll/[EditMode][RewardSystemTest][suite]
+    - id: 1005
+      uniqueId: EditMode.dll/RewardSystemTest/[EditMode][RewardSystemTest.RewardSystem_CalculateReward_WordLength]
+      name: RewardSystem_CalculateReward_WordLength
+      fullName: RewardSystemTest.RewardSystem_CalculateReward_WordLength
+      resultStatus: 1
+      duration: 0.0000967
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: EditMode.dll/[EditMode][RewardSystemTest][suite]
+    - id: 1007
+      uniqueId: EditMode.dll/[EditMode][StrikeSystemTest][suite]
+      name: StrikeSystemTest
+      fullName: StrikeSystemTest
+      resultStatus: 2
+      duration: 0.0024377
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: '[EditMode][C:/Users/Magga/Desktop/Unity/Spelling-game/Spelling-game/Library/ScriptAssemblies/EditMode.dll][suite]'
+    - id: 1008
+      uniqueId: EditMode.dll/StrikeSystemTest/[EditMode][StrikeSystemTest.TestStrikeSystemIncreasesStrike]
+      name: TestStrikeSystemIncreasesStrike
+      fullName: StrikeSystemTest.TestStrikeSystemIncreasesStrike
+      resultStatus: 2
+      duration: 0.0001916
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at VocabularyManager.SetUpDifficulty (Difficulties difficulties)
+        [0x00025] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\SpellingGame\\Vocabulary\\VocabularyManager.cs:33
+        \r\n  at StrikeSystem.IncreaseStrike () [0x0002e] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\PunishmentSystem\\StrikeSystem.cs:28
+        \r\n  at StrikeSystemTest.TestStrikeSystemIncreasesStrike () [0x00000] in
+        C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\StrikeSystemTest.cs:26
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: EditMode.dll/[EditMode][StrikeSystemTest][suite]
+    - id: 1009
+      uniqueId: EditMode.dll/StrikeSystemTest/[EditMode][StrikeSystemTest.TestStrikeSystemResetsStrikeAndDemotesDifficulty]
+      name: TestStrikeSystemResetsStrikeAndDemotesDifficulty
+      fullName: StrikeSystemTest.TestStrikeSystemResetsStrikeAndDemotesDifficulty
+      resultStatus: 2
+      duration: 0.0001538
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at VocabularyManager.SetUpDifficulty (Difficulties difficulties)
+        [0x00025] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\SpellingGame\\Vocabulary\\VocabularyManager.cs:33
+        \r\n  at StrikeSystem.IncreaseStrike () [0x0002e] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\PunishmentSystem\\StrikeSystem.cs:28
+        \r\n  at StrikeSystemTest.TestStrikeSystemResetsStrikeAndDemotesDifficulty
+        () [0x00044] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\StrikeSystemTest.cs:39
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: EditMode.dll/[EditMode][StrikeSystemTest][suite]
+    m_ResultText: "TestStrikeSystemIncreasesStrike (0.000s)\n---\nSystem.NullReferenceException
+      : Object reference not set to an instance of an object\n---\nat VocabularyManager.SetUpDifficulty
+      (Difficulties difficulties) [0x00025] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\SpellingGame\\Vocabulary\\VocabularyManager.cs:33
+      \r\n  at StrikeSystem.IncreaseStrike () [0x0002e] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\PunishmentSystem\\StrikeSystem.cs:28
+      \r\n  at StrikeSystemTest.TestStrikeSystemIncreasesStrike () [0x00000] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\StrikeSystemTest.cs:26
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0"
+    m_ResultStacktrace: "  at VocabularyManager.SetUpDifficulty (Difficulties difficulties)
+      [0x00025] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\SpellingGame\\Vocabulary\\VocabularyManager.cs:33
+      \r\n  at StrikeSystem.IncreaseStrike () [0x0002e] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Scripts\\PunishmentSystem\\StrikeSystem.cs:28
+      \r\n  at StrikeSystemTest.TestStrikeSystemIncreasesStrike () [0x00000] in C:\\Users\\Magga\\Desktop\\Unity\\Spelling-game\\Spelling-game\\Assets\\Tests\\EditMode\\StrikeSystemTest.cs:26
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <9aad1b3a47484d63ba2b3985692d80e9>:0 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 46}
+      m_SelectedIDs: f08758fe
+      m_LastClickedID: -27752464
+      m_ExpandedIDs: 27a814b9b00bf7ce8d29d8dd4efc27f629dde33e46e2034d3fd99b4fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized

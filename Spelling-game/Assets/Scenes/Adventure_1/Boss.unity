@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VocabularyResultNoti: {fileID: 1800498200}
   VocabularyResultText: {fileID: 1154514405}
-  disableNotiTime: 1
+  disableNotiTime: 2
 --- !u!4 &1980515172
 Transform:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class PuzzlesManager : ScriptableObject
         {
             //If the game is endless, then go to next difficulty
             //Otherwise stay the same difficulty
-            if (GameManager.Instance.IsEndless())
+            if (GameManager.Instance.IsEndless)
             {
                 spellingDifficultiesManager.PromoteDifficulty();
             }
