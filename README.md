@@ -70,6 +70,16 @@ The following instruction will teach you how to play the Word Search game:
 2. Try to construct the multiple letters into a word that has to be found.
 3. Click the “Confirm" button on the bottom right corner to submit the answer.
 
+## How to run test
+The following instruction will teach you how to run the unit test:
+
+1. Go to the menu bar and click on “Window"
+2. In the drop-down menu, click on General and then select Test Runner from the list. This will open the Test Runner window.
+3. In the Test Runner window, you will see two tabs: EditMode and PlayMode. EditMode tests are unit tests that run without entering Play mode, while PlayMode tests are integration tests that run within the game's Play mode.
+4. Choose the appropriate tab based on the type of tests you want to run.
+5. In the test list, you can see all the available tests in your project. You can run a single, multiple, or all test by selecting the tests you want to run and then clicking the Run Selected button. To run all tests, click the Run All button.
+6. Once the tests have started, the Test Runner will display the progress and results of the tests. The test results will be shown in the form of a green checkmark for passed tests and a red cross for failed tests. You can view detailed information about a test by clicking on it.
+
 ## Resetting game data
 Resetting data within the game means completely starting the game freshly again. The following instruction will instruct you how to delete data within the game:
 
