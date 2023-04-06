@@ -11,9 +11,6 @@ public class PlayerPlayModeTests
     [UnitySetUp]
     public IEnumerator SetUp()
     {
-        // Load a test scene or create necessary objects in the scene
-        // If you have a test scene, you can load it with SceneManager.LoadSceneAsync()
-        // Otherwise, create a player object in the scene
         playerGameObject = new GameObject();
         player = playerGameObject.AddComponent<Player>();
 
