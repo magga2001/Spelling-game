@@ -2,44 +2,104 @@
   "difficulty": "easy",
   "vocabularies": [
     {
-      "word": "select",
-      "definition": "v. to choose"
+      "word": "brief",
+      "definition": "adj. short (in terms of time)"
     },
     {
-      "word": "stable",
-      "definition": "adj. unlikely to change or fail"
+      "word": "inhibit",
+      "definition": "v. to hinder or restrain"
     },
     {
-      "word": "likely",
-      "definition": "adj. probable"
+      "word": "jargon",
+      "definition": "n. words specific to a certain job or group"
     },
     {
-      "word": "deposit",
-      "definition": "v. to deliver and leave an item"
+      "word": "infer",
+      "definition": "v. to guess based on evidence"
     },
     {
-      "word": "cumbersome",
-      "definition": "adj. burdensome; clumsy"
+      "word": "gap",
+      "definition": "n. a space in between two objects"
     },
     {
       "word": "boost",
       "definition": "v. to help raise or increase something"
     },
     {
-      "word": "attitude",
-      "definition": "n. manner or feeling"
+      "word": "likely",
+      "definition": "adj. probable"
     },
     {
-      "word": "annual",
-      "definition": "adj. occurring yearly"
+      "word": "select",
+      "definition": "v. to choose"
     },
     {
-      "word": "accurate",
-      "definition": "adj. correct; free from errors"
+      "word": "terminal",
+      "definition": "adj. situated at the end"
     },
     {
-      "word": "minimum",
-      "definition": "n. the smallest or lowest amount possible"
+      "word": "rank",
+      "definition": "n. an official position or station"
+    },
+    {
+      "word": "focus",
+      "definition": "n. the central point or idea"
+    },
+    {
+      "word": "horror",
+      "definition": "n. an intense feeling of fear"
+    },
+    {
+      "word": "rigid",
+      "definition": "adj. stiff, unyielding"
+    },
+    {
+      "word": "section",
+      "definition": "n. a part of the whole"
+    },
+    {
+      "word": "promote",
+      "definition": "v. to further the progress of something"
+    },
+    {
+      "word": "rotate",
+      "definition": "v. to turn"
+    },
+    {
+      "word": "modify",
+      "definition": "v. to change"
+    },
+    {
+      "word": "deposit",
+      "definition": "v. to deliver and leave an item"
+    },
+    {
+      "word": "origin",
+      "definition": "n. the source; where something began"
+    },
+    {
+      "word": "proceed",
+      "definition": "v. to continue doing something"
+    },
+    {
+      "word": "subtle",
+      "definition": "adj. difficult to notice right away"
+    },
+    {
+      "word": "degrade",
+      "definition": "v. to lower in quality"
+    },
+    {
+      "word": "labor",
+      "definition": "n. work or effort"
+    },
+    {
+      "word": "expose",
+      "definition": "v. to reveal or unmask"
+    },
+    {
+      "word": "vanish",
+      "definition": "v. to disappear quickly"
     }
   ]
 }

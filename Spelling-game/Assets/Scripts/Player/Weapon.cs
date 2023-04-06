@@ -8,15 +8,6 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private int damage;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Fire();
-        }
-    }
-
     public void Fire()
     {
         //Get a bullet from object pooling manager and shoot toward the direction the weapon is facing

@@ -18,155 +18,154 @@ MonoBehaviour:
   board:
   - column: 0
     row: 0
-    val: D
+    val: S
   - column: 0
     row: 1
-    val: E
+    val: Z
   - column: 0
     row: 2
-    val: S
+    val: B
   - column: 0
     row: 3
     val: I
   - column: 0
     row: 4
-    val: S
+    val: C
   - column: 0
     row: 5
-    val: T
+    val: W
   - column: 0
     row: 6
-    val: E
+    val: C
   - column: 1
     row: 0
     val: E
   - column: 1
     row: 1
-    val: R
+    val: G
   - column: 1
     row: 2
-    val: J
-  - column: 1
-    row: 3
     val: I
   - column: 1
+    row: 3
+    val: F
+  - column: 1
+    row: 4
+    val: A
+  - column: 1
+    row: 5
+    val: A
+  - column: 1
+    row: 6
+    val: E
+  - column: 2
+    row: 0
+    val: N
+  - column: 2
+    row: 1
+    val: V
+  - column: 2
+    row: 2
+    val: C
+  - column: 2
+    row: 3
+    val: Y
+  - column: 2
+    row: 4
+    val: L
+  - column: 2
+    row: 5
+    val: Q
+  - column: 2
+    row: 6
+    val: N
+  - column: 3
+    row: 0
+    val: S
+  - column: 3
+    row: 1
+    val: I
+  - column: 3
+    row: 2
+    val: W
+  - column: 3
+    row: 3
+    val: Y
+  - column: 3
     row: 4
     val: M
-  - column: 1
+  - column: 3
     row: 5
-    val: B
-  - column: 1
-    row: 6
-    val: U
-  - column: 2
-    row: 0
-    val: S
-  - column: 2
-    row: 1
-    val: H
-  - column: 2
-    row: 2
-    val: E
-  - column: 2
-    row: 3
-    val: E
-  - column: 2
-    row: 4
-    val: R
-  - column: 2
-    row: 5
-    val: P
-  - column: 2
+    val: N
+  - column: 3
     row: 6
     val: S
-  - column: 3
+  - column: 4
     row: 0
-    val: F
-  - column: 3
+    val: O
+  - column: 4
     row: 1
     val: C
-  - column: 3
+  - column: 4
     row: 2
-    val: B
-  - column: 3
+    val: W
+  - column: 4
     row: 3
-    val: A
-  - column: 3
+    val: R
+  - column: 4
+    row: 4
+    val: V
+  - column: 4
+    row: 5
+    val: V
+  - column: 4
+    row: 6
+    val: U
+  - column: 5
+    row: 0
+    val: R
+  - column: 5
+    row: 1
+    val: N
+  - column: 5
+    row: 2
+    val: G
+  - column: 5
+    row: 3
+    val: I
+  - column: 5
     row: 4
     val: S
-  - column: 3
+  - column: 5
     row: 5
-    val: T
-  - column: 3
-    row: 6
-    val: N
-  - column: 4
-    row: 0
-    val: A
-  - column: 4
-    row: 1
-    val: F
-  - column: 4
-    row: 2
-    val: L
-  - column: 4
-    row: 3
-    val: R
-  - column: 4
-    row: 4
-    val: R
-  - column: 4
-    row: 5
-    val: U
-  - column: 4
-    row: 6
     val: E
   - column: 5
-    row: 0
-    val: A
-  - column: 5
-    row: 1
-    val: P
-  - column: 5
-    row: 2
-    val: A
-  - column: 5
-    row: 3
-    val: T
-  - column: 5
-    row: 4
-    val: H
-  - column: 5
-    row: 5
-    val: Y
-  - column: 5
     row: 6
-    val: N
+    val: R
   - column: 6
     row: 0
-    val: B
+    val: S
   - column: 6
     row: 1
+    val: E
+  - column: 6
+    row: 2
+    val: V
+  - column: 6
+    row: 3
+    val: O
+  - column: 6
+    row: 4
     val: L
   - column: 6
-    row: 2
-    val: A
-  - column: 6
-    row: 3
-    val: T
-  - column: 6
-    row: 4
-    val: A
-  - column: 6
     row: 5
-    val: N
+    val: V
   - column: 6
     row: 6
-    val: T
+    val: E
   words:
-  - DREARY
-  - BLATANT
-  - APATHY
-  - DESIST
-  - SHEER
-  - ENSUE
+  - CALM
+  - RESIGN
+  - EVOLVE
+  - SENSOR
+  - CENSURE

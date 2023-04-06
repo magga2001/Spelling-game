@@ -13,119 +13,159 @@ MonoBehaviour:
   m_Name: Easy_Puzzle_1
   m_EditorClassIdentifier: 
   Id: b544f4be-def3-4241-8036-eb9fc788327c
-  rows: 6
-  columns: 6
+  rows: 7
+  columns: 7
   board:
   - column: 0
     row: 0
-    val: R
+    val: A
   - column: 0
     row: 1
-    val: I
+    val: M
   - column: 0
     row: 2
     val: E
   - column: 0
     row: 3
-    val: F
-  - column: 0
-    row: 4
     val: N
   - column: 0
-    row: 5
-    val: Z
-  - column: 1
-    row: 0
-    val: E
-  - column: 1
-    row: 1
-    val: U
-  - column: 1
-    row: 2
-    val: M
-  - column: 1
-    row: 3
-    val: T
-  - column: 1
     row: 4
     val: D
+  - column: 0
+    row: 5
+    val: W
+  - column: 0
+    row: 6
+    val: S
+  - column: 1
+    row: 0
+    val: A
+  - column: 1
+    row: 1
+    val: L
+  - column: 1
+    row: 2
+    val: C
+  - column: 1
+    row: 3
+    val: V
+  - column: 1
+    row: 4
+    val: F
   - column: 1
     row: 5
+    val: A
+  - column: 1
+    row: 6
     val: E
   - column: 2
     row: 0
-    val: A
+    val: V
   - column: 2
     row: 1
-    val: D
+    val: Y
   - column: 2
     row: 2
-    val: D
+    val: Z
   - column: 2
     row: 3
-    val: P
+    val: S
   - column: 2
     row: 4
     val: X
   - column: 2
     row: 5
-    val: B
-  - column: 3
-    row: 0
-    val: C
-  - column: 3
-    row: 1
-    val: O
-  - column: 3
-    row: 2
-    val: N
-  - column: 3
-    row: 3
-    val: P
-  - column: 3
-    row: 4
+    val: D
+  - column: 2
+    row: 6
     val: L
   - column: 3
-    row: 5
+    row: 0
     val: V
+  - column: 3
+    row: 1
+    val: A
+  - column: 3
+    row: 2
+    val: E
+  - column: 3
+    row: 3
+    val: S
+  - column: 3
+    row: 4
+    val: A
+  - column: 3
+    row: 5
+    val: E
+  - column: 3
+    row: 6
+    val: E
   - column: 4
     row: 0
-    val: T
+    val: U
   - column: 4
     row: 1
-    val: G
+    val: L
   - column: 4
     row: 2
-    val: G
+    val: R
   - column: 4
     row: 3
-    val: A
+    val: J
   - column: 4
     row: 4
-    val: V
+    val: J
   - column: 4
+    row: 5
+    val: N
+  - column: 4
+    row: 6
+    val: C
+  - column: 5
+    row: 0
+    val: S
+  - column: 5
+    row: 1
+    val: N
+  - column: 5
+    row: 2
+    val: W
+  - column: 5
+    row: 3
+    val: G
+  - column: 5
+    row: 4
+    val: P
+  - column: 5
     row: 5
     val: Y
   - column: 5
-    row: 0
-    val: R
-  - column: 5
-    row: 1
-    val: E
-  - column: 5
-    row: 2
-    val: J
-  - column: 5
-    row: 3
-    val: E
-  - column: 5
-    row: 4
-    val: C
-  - column: 5
-    row: 5
+    row: 6
     val: T
+  - column: 6
+    row: 0
+    val: B
+  - column: 6
+    row: 1
+    val: R
+  - column: 6
+    row: 2
+    val: A
+  - column: 6
+    row: 3
+    val: S
+  - column: 6
+    row: 4
+    val: H
+  - column: 6
+    row: 5
+    val: L
+  - column: 6
+    row: 6
+    val: Q
   words:
-  - REACT
-  - REJECT
-  - IMPLY
-  - DOG
+  - AMEND
+  - BRASH
+  - EASE
+  - DENY
+  - SELECT

@@ -18,153 +18,154 @@ MonoBehaviour:
   board:
   - column: 0
     row: 0
-    val: M
-  - column: 0
-    row: 1
     val: L
   - column: 0
-    row: 2
+    row: 1
     val: A
   - column: 0
+    row: 2
+    val: G
+  - column: 0
     row: 3
-    val: B
+    val: P
   - column: 0
     row: 4
-    val: E
+    val: P
   - column: 0
     row: 5
-    val: L
+    val: U
   - column: 0
     row: 6
-    val: E
+    val: X
   - column: 1
     row: 0
-    val: K
+    val: I
   - column: 1
     row: 1
-    val: E
-  - column: 1
-    row: 2
-    val: U
-  - column: 1
-    row: 3
-    val: D
-  - column: 1
-    row: 4
-    val: B
-  - column: 1
-    row: 5
     val: R
   - column: 1
-    row: 6
-    val: V
-  - column: 2
-    row: 0
-    val: L
-  - column: 2
-    row: 1
-    val: W
-  - column: 2
     row: 2
     val: N
+  - column: 1
+    row: 3
+    val: R
+  - column: 1
+    row: 4
+    val: H
+  - column: 1
+    row: 5
+    val: V
+  - column: 1
+    row: 6
+    val: N
+  - column: 2
+    row: 0
+    val: I
+  - column: 2
+    row: 1
+    val: V
+  - column: 2
+    row: 2
+    val: V
   - column: 2
     row: 3
+    val: I
+  - column: 2
+    row: 4
     val: B
   - column: 2
-    row: 4
-    val: G
-  - column: 2
     row: 5
-    val: G
+    val: I
   - column: 2
     row: 6
-    val: O
+    val: I
   - column: 3
     row: 0
-    val: W
+    val: G
   - column: 3
     row: 1
-    val: L
+    val: I
   - column: 3
     row: 2
-    val: C
+    val: J
   - column: 3
     row: 3
-    val: T
+    val: O
   - column: 3
     row: 4
-    val: V
+    val: B
   - column: 3
     row: 5
-    val: D
+    val: E
   - column: 3
+    row: 6
+    val: Y
+  - column: 4
+    row: 0
+    val: R
+  - column: 4
+    row: 1
+    val: K
+  - column: 4
+    row: 2
+    val: F
+  - column: 4
+    row: 3
+    val: R
+  - column: 4
+    row: 4
+    val: P
+  - column: 4
+    row: 5
+    val: X
+  - column: 4
     row: 6
     val: M
-  - column: 4
-    row: 0
-    val: G
-  - column: 4
-    row: 1
-    val: O
-  - column: 4
-    row: 2
-    val: T
-  - column: 4
-    row: 3
-    val: T
-  - column: 4
-    row: 4
-    val: A
-  - column: 4
-    row: 5
-    val: A
-  - column: 4
-    row: 6
-    val: E
   - column: 5
     row: 0
+    val: E
+  - column: 5
+    row: 1
+    val: N
+  - column: 5
+    row: 2
     val: H
   - column: 5
-    row: 1
-    val: V
-  - column: 5
-    row: 2
-    val: G
-  - column: 5
     row: 3
-    val: L
-  - column: 5
-    row: 4
-    val: S
-  - column: 5
-    row: 5
-    val: L
-  - column: 5
-    row: 6
-    val: R
-  - column: 6
-    row: 0
     val: A
-  - column: 6
-    row: 1
-    val: C
-  - column: 6
-    row: 2
-    val: Q
-  - column: 6
-    row: 3
-    val: U
-  - column: 6
+  - column: 5
     row: 4
-    val: I
-  - column: 6
+    val: N
+  - column: 5
     row: 5
-    val: R
-  - column: 6
+    val: C
+  - column: 5
     row: 6
     val: E
+  - column: 6
+    row: 0
+    val: D
+  - column: 6
+    row: 1
+    val: I
+  - column: 6
+    row: 2
+    val: V
+  - column: 6
+    row: 3
+    val: E
+  - column: 6
+    row: 4
+    val: R
+  - column: 6
+    row: 5
+    val: T
+  - column: 6
+    row: 6
+    val: M
   words:
-  - LABEL
-  - MENTAL
-  - ACQUIRE
-  - REMOVE
+  - PRIOR
+  - ENHANCE
+  - OBEY
+  - DIVERT
+  - LAG

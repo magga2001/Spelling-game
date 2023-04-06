@@ -18,154 +18,154 @@ MonoBehaviour:
   board:
   - column: 0
     row: 0
+    val: S
+  - column: 0
+    row: 1
+    val: E
+  - column: 0
+    row: 2
     val: C
   - column: 0
-    row: 1
-    val: O
+    row: 3
+    val: R
   - column: 0
-    row: 2
+    row: 4
     val: N
   - column: 0
-    row: 3
-    val: F
-  - column: 0
-    row: 4
-    val: O
-  - column: 0
     row: 5
-    val: R
+    val: T
   - column: 0
     row: 6
-    val: M
-  - column: 1
-    row: 0
-    val: L
-  - column: 1
-    row: 1
-    val: R
-  - column: 1
-    row: 2
-    val: O
-  - column: 1
-    row: 3
-    val: B
-  - column: 1
-    row: 4
-    val: U
-  - column: 1
-    row: 5
     val: S
   - column: 1
+    row: 0
+    val: U
+  - column: 1
+    row: 1
+    val: L
+  - column: 1
+    row: 2
+    val: D
+  - column: 1
+    row: 3
+    val: E
+  - column: 1
+    row: 4
+    val: B
+  - column: 1
+    row: 5
+    val: P
+  - column: 1
     row: 6
-    val: T
+    val: O
   - column: 2
     row: 0
-    val: I
+    val: S
   - column: 2
     row: 1
-    val: I
+    val: B
   - column: 2
     row: 2
     val: U
   - column: 2
     row: 3
-    val: B
+    val: T
   - column: 2
     row: 4
-    val: Q
+    val: V
   - column: 2
     row: 5
-    val: F
+    val: U
   - column: 2
     row: 6
-    val: O
+    val: M
   - column: 3
+    row: 0
+    val: T
+  - column: 3
+    row: 1
+    val: A
+  - column: 3
+    row: 2
+    val: Z
+  - column: 3
+    row: 3
+    val: A
+  - column: 3
+    row: 4
+    val: W
+  - column: 3
+    row: 5
+    val: R
+  - column: 3
+    row: 6
+    val: B
+  - column: 4
+    row: 0
+    val: A
+  - column: 4
+    row: 1
+    val: T
+  - column: 4
+    row: 2
+    val: R
+  - column: 4
+    row: 3
+    val: I
+  - column: 4
+    row: 4
+    val: X
+  - column: 4
+    row: 5
+    val: S
+  - column: 4
+    row: 6
+    val: E
+  - column: 5
+    row: 0
+    val: I
+  - column: 5
+    row: 1
+    val: S
+  - column: 5
+    row: 2
+    val: S
+  - column: 5
+    row: 3
+    val: N
+  - column: 5
+    row: 4
+    val: K
+  - column: 5
+    row: 5
+    val: I
+  - column: 5
+    row: 6
+    val: R
+  - column: 6
     row: 0
     val: N
-  - column: 3
+  - column: 6
     row: 1
-    val: T
-  - column: 3
+    val: S
+  - column: 6
     row: 2
-    val: E
-  - column: 3
-    row: 3
-    val: D
-  - column: 3
-    row: 4
     val: O
-  - column: 3
-    row: 5
-    val: T
-  - column: 3
-    row: 6
-    val: Q
-  - column: 4
-    row: 0
-    val: G
-  - column: 4
-    row: 1
-    val: W
-  - column: 4
-    row: 2
-    val: H
-  - column: 4
+  - column: 6
     row: 3
-    val: Y
-  - column: 4
+    val: F
+  - column: 6
     row: 4
-    val: E
-  - column: 4
-    row: 5
-    val: M
-  - column: 4
-    row: 6
-    val: I
-  - column: 5
-    row: 0
-    val: G
-  - column: 5
-    row: 1
-    val: Y
-  - column: 5
-    row: 2
-    val: X
-  - column: 5
-    row: 3
-    val: P
-  - column: 5
-    row: 4
-    val: X
-  - column: 5
-    row: 5
-    val: O
-  - column: 5
-    row: 6
-    val: Z
-  - column: 6
-    row: 0
-    val: C
-  - column: 6
-    row: 1
-    val: E
-  - column: 6
-    row: 2
     val: D
   - column: 6
-    row: 3
-    val: E
-  - column: 6
-    row: 4
-    val: P
-  - column: 6
     row: 5
-    val: M
+    val: D
   - column: 6
     row: 6
-    val: I
+    val: A
   words:
-  - CONFORM
-  - CRUDE
-  - CLING
-  - IMPEDE
-  - ROBUST
+  - RETAIN
+  - STABLE
+  - SUSTAIN
+  - DISRUPT
+  - SOMBER

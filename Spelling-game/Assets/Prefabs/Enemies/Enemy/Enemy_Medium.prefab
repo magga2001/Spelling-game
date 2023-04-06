@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ff5405f2d2d4144859d3ac7e9713ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 150
   weapon: {fileID: 1066788279578701658}
   reward: 200
   healthBar: {fileID: 679516647585872148}

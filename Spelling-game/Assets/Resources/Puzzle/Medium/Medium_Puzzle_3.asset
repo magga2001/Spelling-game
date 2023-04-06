@@ -18,154 +18,154 @@ MonoBehaviour:
   board:
   - column: 0
     row: 0
-    val: H
+    val: P
   - column: 0
     row: 1
-    val: H
-  - column: 0
-    row: 2
-    val: C
-  - column: 0
-    row: 3
     val: E
   - column: 0
+    row: 2
+    val: L
+  - column: 0
+    row: 3
+    val: P
+  - column: 0
     row: 4
-    val: N
+    val: B
   - column: 0
     row: 5
-    val: Y
+    val: L
   - column: 0
     row: 6
-    val: D
+    val: U
   - column: 1
     row: 0
-    val: W
+    val: R
   - column: 1
     row: 1
-    val: V
+    val: O
   - column: 1
     row: 2
-    val: D
-  - column: 1
-    row: 3
-    val: T
-  - column: 1
-    row: 4
     val: K
   - column: 1
-    row: 5
+    row: 3
     val: N
   - column: 1
-    row: 6
-    val: E
-  - column: 2
-    row: 0
-    val: N
-  - column: 2
-    row: 1
-    val: H
-  - column: 2
-    row: 2
-    val: D
-  - column: 2
-    row: 3
-    val: L
-  - column: 2
     row: 4
-    val: O
-  - column: 2
-    row: 5
-    val: Q
-  - column: 2
-    row: 6
-    val: V
-  - column: 3
-    row: 0
-    val: E
-  - column: 3
-    row: 1
     val: R
+  - column: 1
+    row: 5
+    val: P
+  - column: 1
+    row: 6
+    val: N
+  - column: 2
+    row: 0
+    val: E
+  - column: 2
+    row: 1
+    val: V
+  - column: 2
+    row: 2
+    val: T
+  - column: 2
+    row: 3
+    val: A
+  - column: 2
+    row: 4
+    val: B
+  - column: 2
+    row: 5
+    val: N
+  - column: 2
+    row: 6
+    val: J
+  - column: 3
+    row: 0
+    val: F
+  - column: 3
+    row: 1
+    val: I
   - column: 3
     row: 2
-    val: U
+    val: O
   - column: 3
     row: 3
-    val: C
+    val: E
   - column: 3
     row: 4
-    val: S
+    val: J
   - column: 3
     row: 5
     val: B
   - column: 3
     row: 6
+    val: U
+  - column: 4
+    row: 0
     val: O
   - column: 4
-    row: 0
-    val: Q
-  - column: 4
     row: 1
     val: B
   - column: 4
-    row: 2
-    val: U
-  - column: 4
-    row: 3
-    val: S
-  - column: 4
-    row: 4
-    val: L
-  - column: 4
-    row: 5
-    val: J
-  - column: 4
-    row: 6
-    val: I
-  - column: 5
-    row: 0
-    val: T
-  - column: 5
-    row: 1
-    val: N
-  - column: 5
     row: 2
     val: A
+  - column: 4
+    row: 3
+    val: O
+  - column: 4
+    row: 4
+    val: N
+  - column: 4
+    row: 5
+    val: S
+  - column: 4
+    row: 6
+    val: S
+  - column: 5
+    row: 0
+    val: R
+  - column: 5
+    row: 1
+    val: T
+  - column: 5
+    row: 2
+    val: J
   - column: 5
     row: 3
-    val: I
+    val: L
   - column: 5
     row: 4
-    val: F
+    val: L
   - column: 5
     row: 5
-    val: E
+    val: T
   - column: 5
     row: 6
-    val: D
+    val: T
   - column: 6
     row: 0
-    val: S
+    val: M
   - column: 6
     row: 1
     val: H
   - column: 6
     row: 2
-    val: I
+    val: G
   - column: 6
     row: 3
-    val: M
+    val: U
   - column: 6
     row: 4
-    val: M
+    val: O
   - column: 6
     row: 5
-    val: E
+    val: N
   - column: 6
     row: 6
-    val: R
+    val: E
   words:
-  - OBSCURE
-  - BULKY
-  - DEVOID
-  - DEFIANT
-  - SHIMMER
+  - POTENT
+  - UPBEAT
+  - ENOUGH
+  - REFORM
+  - UNJUST

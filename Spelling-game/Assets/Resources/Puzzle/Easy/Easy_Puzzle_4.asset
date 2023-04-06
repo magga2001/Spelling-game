@@ -10,162 +10,162 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dab63a991b4d76d42ae000d77d08ad23, type: 3}
-  m_Name: Hard_Puzzle_1
+  m_Name: Easy_Puzzle_4
   m_EditorClassIdentifier: 
-  Id: ed721a9e-0a90-4e9e-9a32-bc395c5187a9
+  Id: 
   rows: 7
   columns: 7
   board:
   - column: 0
     row: 0
-    val: S
+    val: D
   - column: 0
     row: 1
-    val: V
+    val: B
   - column: 0
     row: 2
-    val: I
+    val: O
   - column: 0
     row: 3
     val: A
   - column: 0
     row: 4
-    val: L
+    val: S
   - column: 0
     row: 5
-    val: F
+    val: T
   - column: 0
     row: 6
-    val: A
+    val: S
   - column: 1
     row: 0
     val: E
   - column: 1
     row: 1
-    val: Z
+    val: T
   - column: 1
+    row: 2
+    val: E
+  - column: 1
+    row: 3
+    val: T
+  - column: 1
+    row: 4
+    val: Q
+  - column: 1
+    row: 5
+    val: U
+  - column: 1
+    row: 6
+    val: D
+  - column: 2
+    row: 0
+    val: C
+  - column: 2
+    row: 1
+    val: P
+  - column: 2
+    row: 2
+    val: V
+  - column: 2
+    row: 3
+    val: C
+  - column: 2
+    row: 4
+    val: B
+  - column: 2
+    row: 5
+    val: L
+  - column: 2
+    row: 6
+    val: G
+  - column: 3
+    row: 0
+    val: L
+  - column: 3
+    row: 1
+    val: N
+  - column: 3
     row: 2
     val: N
-  - column: 1
+  - column: 3
     row: 3
-    val: S
-  - column: 1
+    val: T
+  - column: 3
     row: 4
-    val: R
-  - column: 1
-    row: 5
     val: Z
-  - column: 1
-    row: 6
+  - column: 3
+    row: 5
     val: D
-  - column: 2
-    row: 0
-    val: E
-  - column: 2
-    row: 1
+  - column: 3
+    row: 6
     val: X
-  - column: 2
-    row: 2
-    val: F
-  - column: 2
-    row: 3
-    val: L
-  - column: 2
-    row: 4
-    val: O
-  - column: 2
-    row: 5
-    val: W
-  - column: 2
-    row: 6
-    val: W
-  - column: 3
+  - column: 4
     row: 0
-    val: K
-  - column: 3
-    row: 1
-    val: O
-  - column: 3
-    row: 2
-    val: L
-  - column: 3
-    row: 3
-    val: A
-  - column: 3
-    row: 4
-    val: E
-  - column: 3
-    row: 5
-    val: F
-  - column: 3
-    row: 6
     val: I
   - column: 4
-    row: 0
-    val: G
-  - column: 4
     row: 1
+    val: R
+  - column: 4
+    row: 2
+    val: L
+  - column: 4
+    row: 3
+    val: C
+  - column: 4
+    row: 4
     val: J
   - column: 4
-    row: 2
-    val: A
-  - column: 4
-    row: 3
-    val: V
-  - column: 4
-    row: 4
-    val: L
-  - column: 4
     row: 5
-    val: I
+    val: S
   - column: 4
     row: 6
-    val: L
+    val: B
   - column: 5
     row: 0
-    val: C
+    val: N
   - column: 5
     row: 1
-    val: S
-  - column: 5
-    row: 2
-    val: W
-  - column: 5
-    row: 3
-    val: O
-  - column: 5
-    row: 4
     val: E
   - column: 5
+    row: 2
+    val: M
+  - column: 5
+    row: 3
+    val: D
+  - column: 5
+    row: 4
+    val: N
+  - column: 5
     row: 5
-    val: L
+    val: E
   - column: 5
     row: 6
-    val: D
+    val: M
   - column: 6
     row: 0
-    val: G
+    val: E
   - column: 6
     row: 1
-    val: W
+    val: T
   - column: 6
     row: 2
-    val: G
-  - column: 6
-    row: 3
-    val: K
-  - column: 6
-    row: 4
     val: C
   - column: 6
+    row: 3
+    val: A
+  - column: 6
+    row: 4
+    val: P
+  - column: 6
     row: 5
-    val: W
+    val: M
   - column: 6
     row: 6
-    val: P
+    val: I
   words:
-  - FLAW
-  - FALL
-  - FLOW
-  - VIAL
-  - WILD
+  - BOAST
+  - MEND
+  - DECLINE
+  - SUBTLE
+  - IMPACT

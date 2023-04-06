@@ -2,44 +2,104 @@
   "difficulty": "medium",
   "vocabularies": [
     {
-      "word": "chronological",
-      "definition": "adj. arranged in order of time or date"
+      "word": "reform",
+      "definition": "v. to make changes that improve something"
     },
     {
-      "word": "cognizant",
-      "definition": "adj. being aware or having knowledge of something"
+      "word": "widespread",
+      "definition": "adj. occurring over a large region"
     },
     {
-      "word": "distort",
-      "definition": "v. to misrepresent"
+      "word": "safeguard",
+      "definition": "n. something that serves as protection or ensures safety"
     },
     {
-      "word": "impoverish",
-      "definition": "v. to reduce to poverty"
+      "word": "whereas",
+      "definition": "conj. on the contrary"
     },
     {
-      "word": "inevitable",
-      "definition": "adj. unable to be avoided"
+      "word": "dispose",
+      "definition": "v. to get rid of"
     },
     {
-      "word": "languish",
-      "definition": "v. to become weak"
+      "word": "maintain",
+      "definition": "v. to continue at the same leve"
     },
     {
-      "word": "morose",
-      "definition": "adj. gloomy, depressed"
+      "word": "cumbersome",
+      "definition": "adj. burdensome; clumsy"
     },
     {
-      "word": "proximity",
-      "definition": "n. nearness in time or space"
+      "word": "unjust",
+      "definition": "adj. unfair"
+    },
+    {
+      "word": "potent",
+      "definition": "adj. powerful"
+    },
+    {
+      "word": "measure",
+      "definition": "v. to find the size and dimensions of something"
+    },
+    {
+      "word": "contemplate",
+      "definition": "v. to consider thoughtfully"
+    },
+    {
+      "word": "recapitulate",
+      "definition": "v. to give a brief summary"
+    },
+    {
+      "word": "constrain",
+      "definition": "v. to restrict or repress"
+    },
+    {
+      "word": "desirable",
+      "definition": "adj. worth having or wanting"
+    },
+    {
+      "word": "suspicious",
+      "definition": "adj. having the belief that someone is doing something dishonest or illegal"
+    },
+    {
+      "word": "decipher",
+      "definition": "v. to find the meaning of"
+    },
+    {
+      "word": "prosper",
+      "definition": "v. to do well"
+    },
+    {
+      "word": "hackneyed",
+      "definition": "adj. overused and unoriginal"
+    },
+    {
+      "word": "oppress",
+      "definition": "v. to unfairly burden"
+    },
+    {
+      "word": "framework",
+      "definition": "n. a skeletal structure designed to support something"
+    },
+    {
+      "word": "exclude",
+      "definition": "v. to leave out"
+    },
+    {
+      "word": "disrupt",
+      "definition": "v. to interrupt by causing a disturbance"
+    },
+    {
+      "word": "upbeat",
+      "definition": "adj. happy, optimistic"
+    },
+    {
+      "word": "supplant",
+      "definition": "v. to take the place of something else"
     },
     {
       "word": "unobtrusive",
       "definition": "adj. not attracting attention"
-    },
-    {
-      "word": "verdict",
-      "definition": "n. a judgement or decision"
     }
   ]
 }

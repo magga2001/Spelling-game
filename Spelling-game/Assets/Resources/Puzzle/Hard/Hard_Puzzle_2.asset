@@ -18,153 +18,154 @@ MonoBehaviour:
   board:
   - column: 0
     row: 0
-    val: D
+    val: P
   - column: 0
     row: 1
-    val: G
+    val: K
   - column: 0
     row: 2
-    val: V
+    val: P
   - column: 0
     row: 3
-    val: F
+    val: I
   - column: 0
     row: 4
-    val: P
+    val: Q
   - column: 0
     row: 5
-    val: G
+    val: U
   - column: 0
     row: 6
-    val: P
+    val: E
   - column: 1
     row: 0
-    val: R
+    val: H
   - column: 1
     row: 1
-    val: A
+    val: E
   - column: 1
+    row: 2
+    val: E
+  - column: 1
+    row: 3
+    val: Y
+  - column: 1
+    row: 4
+    val: I
+  - column: 1
+    row: 5
+    val: F
+  - column: 1
+    row: 6
+    val: K
+  - column: 2
+    row: 0
+    val: Q
+  - column: 2
+    row: 1
+    val: F
+  - column: 2
+    row: 2
+    val: E
+  - column: 2
+    row: 3
+    val: P
+  - column: 2
+    row: 4
+    val: I
+  - column: 2
+    row: 5
+    val: N
+  - column: 2
+    row: 6
+    val: A
+  - column: 3
+    row: 0
+    val: O
+  - column: 3
+    row: 1
+    val: S
+  - column: 3
     row: 2
     val: K
-  - column: 1
-    row: 3
-    val: G
-  - column: 1
-    row: 4
-    val: R
-  - column: 1
-    row: 5
-    val: V
-  - column: 1
-    row: 6
-    val: B
-  - column: 2
-    row: 0
-    val: O
-  - column: 2
-    row: 1
-    val: M
-  - column: 2
-    row: 2
-    val: I
-  - column: 2
+  - column: 3
     row: 3
     val: N
-  - column: 2
+  - column: 3
     row: 4
     val: O
-  - column: 2
-    row: 5
-    val: U
-  - column: 2
-    row: 6
-    val: S
   - column: 3
+    row: 5
+    val: O
+  - column: 3
+    row: 6
+    val: E
+  - column: 4
     row: 0
+    val: P
+  - column: 4
+    row: 1
+    val: B
+  - column: 4
+    row: 2
+    val: K
+  - column: 4
+    row: 3
     val: W
-  - column: 3
-    row: 1
-    val: Y
-  - column: 3
-    row: 2
-    val: D
-  - column: 3
-    row: 3
-    val: O
-  - column: 3
-    row: 4
-    val: C
-  - column: 3
-    row: 5
-    val: L
-  - column: 3
-    row: 6
-    val: A
   - column: 4
+    row: 4
+    val: D
+  - column: 4
+    row: 5
+    val: W
+  - column: 4
+    row: 6
+    val: P
+  - column: 5
     row: 0
-    val: S
-  - column: 4
+    val: O
+  - column: 5
     row: 1
-    val: D
-  - column: 4
+    val: P
+  - column: 5
     row: 2
-    val: U
-  - column: 4
-    row: 3
-    val: L
-  - column: 4
-    row: 4
-    val: U
-  - column: 4
-    row: 5
-    val: C
-  - column: 4
-    row: 6
     val: N
   - column: 5
-    row: 0
-    val: Y
-  - column: 5
-    row: 1
-    val: V
-  - column: 5
-    row: 2
-    val: Z
-  - column: 5
     row: 3
-    val: B
+    val: O
   - column: 5
     row: 4
-    val: R
+    val: A
   - column: 5
     row: 5
-    val: U
+    val: B
   - column: 5
     row: 6
-    val: L
+    val: G
   - column: 6
     row: 0
-    val: F
+    val: V
   - column: 6
     row: 1
-    val: I
+    val: C
   - column: 6
     row: 2
+    val: S
+  - column: 6
+    row: 3
+    val: J
+  - column: 6
+    row: 4
+    val: P
+  - column: 6
+    row: 5
     val: Q
   - column: 6
-    row: 3
-    val: O
-  - column: 6
-    row: 4
-    val: E
-  - column: 6
-    row: 5
-    val: G
-  - column: 6
     row: 6
-    val: B
+    val: V
   words:
-  - DROWSY
-  - OMINOUS
-  - PROCURE
-  - OBLONG
+  - PEAK
+  - PEEK
+  - PIQUE
+  - KNOWN
+  - KNIFE

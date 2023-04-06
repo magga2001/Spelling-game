@@ -2,44 +2,104 @@
   "difficulty": "hard",
   "vocabularies": [
     {
-      "word": "soothe",
-      "definition": "v. to calm or comfort"
+      "word": "flaw",
+      "definition": "n. a feature that ruins the perfection of something"
     },
     {
-      "word": "wholly",
-      "definition": "adv. completely"
+      "word": "knack",
+      "definition": "n. a special talent or skill"
     },
     {
-      "word": "vilify",
-      "definition": "v. to speak poorly of; to slander"
+      "word": "continuously",
+      "definition": "v. to go on without stopping"
     },
     {
-      "word": "cease",
-      "definition": "v. to stop"
+      "word": "inevitable",
+      "definition": "adj. unable to be avoided"
     },
     {
-      "word": "arduous",
-      "definition": "adj. requiring a lot of effort"
+      "word": "coalesce",
+      "definition": "v. to combine or grow together"
     },
     {
-      "word": "parsimonious",
-      "definition": "adj. frugal, stingy"
+      "word": "chronological",
+      "definition": "adj. arranged in order of time or date"
     },
     {
-      "word": "peripheral",
-      "definition": "adj. located on the side or edge"
+      "word": "brusque",
+      "definition": "adj. abrupt to the point of rudeness"
     },
     {
       "word": "incite",
       "definition": "v. to urge on"
     },
     {
-      "word": "eloquent",
-      "definition": "adj. moving speech or writing"
+      "word": "inside",
+      "definition": "n. the inner side or surface of something"
     },
     {
-      "word": "cacophony",
-      "definition": "n. a harsh, unpleasant mixture of noise"
+      "word": "fall",
+      "definition": "v. move from a higher to a lower level, typically rapidly and without control"
+    },
+    {
+      "word": "soothe",
+      "definition": "v. to calm or comfort"
+    },
+    {
+      "word": "adequate",
+      "definition": "adj. enough to suit your needs"
+    },
+    {
+      "word": "rhetorical",
+      "definition": "adj. used just for style or impact"
+    },
+    {
+      "word": "permeate",
+      "definition": "v. to penetrate or pass through"
+    },
+    {
+      "word": "collapse",
+      "definition": "v. to fall down or break down"
+    },
+    {
+      "word": "parsimonious",
+      "definition": "adj. frugal, stingy"
+    },
+    {
+      "word": "vial",
+      "definition": "n. a small container used to hold liquids"
+    },
+    {
+      "word": "vile",
+      "definition": "adj. extremely unpleasant"
+    },
+    {
+      "word": "cease",
+      "definition": "v. to stop"
+    },
+    {
+      "word": "seize",
+      "definition": "v. take hold of suddenly and forcibly"
+    },
+    {
+      "word": "finite",
+      "definition": "adj. having an end or limits"
+    },
+    {
+      "word": "famine",
+      "definition": "n. a time when there is an extreme lack of food"
+    },
+    {
+      "word": "hierarchy",
+      "definition": "n. a ranking system"
+    },
+    {
+      "word": "wholly",
+      "definition": "adv. completely"
+    },
+    {
+      "word": "indefatigable",
+      "definition": "adj. untiring"
     }
   ]
 }
